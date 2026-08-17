@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แผนเที่ยวญี่ปุ่น โตเกียว・ฟูจิ・คามาคูระ | 3–13 ต.ค. 2569</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F4ED;
+    --ink:#22304F;        /* น้ำเงินคราม (อาอิโซเมะ) */
+    --vermilion:#BC3A2B;  /* แดงชาด โทริอิ */
+    --gold:#C9962E;       /* ทองใบแปะก๊วยฤดูใบไม้ร่วง */
+    --haze:#8DA3C0;       /* ฟ้าหมอกภูเขาฟูจิ */
+    --pine:#3E6B4F;       /* เขียวสนคามาคูระ */
+    --grey:#8B8878;
+    --card:#FFFFFF;
+    --line-w:6px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Sarabun',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+  }
+  .kanji{font-family:'Noto Serif JP',serif}
+  .display{font-family:'Chonburi',cursive}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#1B2A4A 0%,#3D5580 45%,#C9744A 78%,#E8B87A 100%)}
+  .hero-inner{max-width:1000px;margin:0 auto;padding:56px 24px 0;text-align:center;color:#FDF9F0;position:relative;z-index:2}
+  .hero-eyebrow{letter-spacing:.35em;font-size:13px;font-weight:600;text-transform:uppercase;color:#F0D9A8}
+  .hero h1{font-family:'Chonburi';font-size:clamp(30px,6vw,58px);line-height:1.25;margin:14px 0 6px;text-shadow:0 2px 14px rgba(20,30,60,.45)}
+  .hero-kanji{font-family:'Noto Serif JP';font-size:clamp(16px,2.4vw,22px);letter-spacing:.5em;color:#F0D9A8;margin-bottom:10px}
+  .hero-date{display:inline-block;border:1px solid rgba(253,249,240,.55);border-radius:999px;padding:7px 22px;font-weight:600;font-size:15px;background:rgba(20,30,60,.25);backdrop-filter:blur(2px)}
+  .hero svg{display:block;width:100%;height:auto;margin-top:-6px}
+
+  /* ---------- SECTION ---------- */
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+  section{padding:56px 0 8px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:26px}
+  .sec-head .kanji{font-size:26px;color:var(--vermilion)}
+  .sec-head h2{font-family:'Chonburi';font-size:clamp(20px,3.4vw,28px);font-weight:400}
+  .sec-head .sub{margin-left:auto;font-size:13px;color:var(--grey);font-weight:500}
+
+  /* ---------- OVERVIEW TABLE (timetable) ---------- */
+  .tt-scroll{overflow-x:auto;border:2px solid var(--ink);border-radius:10px;background:var(--card);box-shadow:4px 4px 0 rgba(34,48,79,.12)}
+  table.tt{width:100%;border-collapse:collapse;min-width:760px;font-size:14.5px}
+  .tt thead th{background:var(--ink);color:#FDF9F0;text-align:left;padding:11px 14px;font-weight:600;letter-spacing:.03em;white-space:nowrap}
+  .tt tbody td{padding:11px 14px;border-top:1px solid #E5E1D3;vertical-align:top}
+  .tt tbody tr:nth-child(even){background:#FBFAF4}
+  .tt .day-cell{white-space:nowrap;font-weight:700}
+  .tt .day-cell small{display:block;font-weight:400;color:var(--grey)}
+  .zone{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:600;color:#fff;white-space:nowrap}
+  .z-tokyo{background:var(--vermilion)}
+  .z-fuji{background:#37517E}
+  .z-kamakura{background:var(--pine)}
+  .z-travel{background:var(--grey)}
+  .tt .stay{white-space:nowrap;color:var(--ink);font-weight:500}
+
+  /* ---------- TIMELINE (rail line) ---------- */
+  .rail{position:relative;padding:10px 0 30px}
+  .rail::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:var(--line-w);background:linear-gradient(180deg,var(--grey) 0 9%,var(--vermilion) 9% 18%,#37517E 18% 68%,var(--pine) 68% 82%,var(--vermilion) 82% 91%,var(--grey) 91% 100%);border-radius:3px}
+  .day{position:relative;margin:0 0 34px 68px}
+  .day::before{content:attr(data-no);position:absolute;left:-68px;top:22px;width:44px;height:44px;border-radius:50%;background:var(--card);border:4px solid var(--dot,var(--vermilion));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--dot,var(--vermilion));box-shadow:0 0 0 4px var(--paper)}
+  .day-card{background:var(--card);border:1.5px solid #E0DCCB;border-radius:14px;overflow:hidden;box-shadow:5px 6px 0 rgba(34,48,79,.08);transition:transform .18s ease}
+  .day-card:hover{transform:translateY(-3px)}
+  .day-art{width:100%;display:block}
+  .day-body{padding:20px 24px 22px}
+  .day-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+  .day-date{font-weight:700;font-size:14px;letter-spacing:.02em}
+  .day-title{font-family:'Chonburi';font-size:clamp(19px,3vw,24px);margin:2px 0 4px}
+  .day-title .kanji{font-size:.8em;color:var(--grey);margin-left:8px}
+  .slot{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:10px 0;border-top:1px dashed #E0DCCB}
+  .slot:first-of-type{border-top:none;margin-top:8px}
+  .slot b{color:var(--vermilion);font-size:13.5px;letter-spacing:.05em}
+  .slot p{font-size:15px}
+  .slot p .hl{font-weight:600}
+  .tip{margin-top:14px;background:#F4EFE0;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 14px;font-size:14px}
+  .tip b{color:#8A6410}
+
+  /* ---------- PHOTOS ---------- */
+  .photo-row{display:grid;grid-template-columns:1fr;gap:16px;margin:14px 0 4px}
+  .photo-row figure{margin:0}
+  .photo-row img{width:100%;height:auto;border-radius:10px;border:1.5px solid #E0DCCB;display:block;background:#EDE9DC}
+  .photo-row figcaption{font-size:12.5px;color:var(--grey);margin-top:6px;line-height:1.4}
+
+  /* ---------- INFO GRID ---------- */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:30px}
+  .info-card{background:var(--card);border:1.5px solid #E0DCCB;border-radius:14px;padding:20px 22px;box-shadow:4px 5px 0 rgba(34,48,79,.07)}
+  .info-card h3{font-size:16.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .info-card h3 .kanji{color:var(--vermilion);font-size:18px}
+  .info-card ul{list-style:none}
+  .info-card li{padding:5px 0 5px 20px;position:relative;font-size:14.5px}
+  .info-card li::before{content:"◦";position:absolute;left:4px;color:var(--gold);font-weight:700}
+
+  footer{margin-top:50px;background:var(--ink);color:#CBD4E6;text-align:center;padding:26px 20px;font-size:13.5px}
+  footer .kanji{color:#F0D9A8;letter-spacing:.4em;display:block;margin-bottom:6px;font-size:15px}
+
+  @media(max-width:640px){
+    .rail::before{left:18px}
+    .day{margin-left:52px}
+    .day::before{left:-52px;width:36px;height:36px;font-size:13px;border-width:3px}
+    .slot{grid-template-columns:1fr;gap:2px}
+    .day-body{padding:16px 16px 18px}
+  }
+  @media print{
+    .hero{background:#fff;color:var(--ink)}
+    .day-card{box-shadow:none;break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Japan Autumn Trip 2026</div>
+    <h1>โตเกียว・ภูเขาไฟฟูจิ・คามาคูระ</h1>
+    <div class="hero-kanji">東京・富士山・鎌倉</div>
+    <div class="hero-date">🗓️ เสาร์ 3 – อังคาร 13 ต.ค. 2569 &nbsp;|&nbsp; 11 วัน 10 คืน &nbsp;|&nbsp; 👨‍👩‍👧‍👦 ครอบครัว 5 คน (พ่อ แม่ ลูก 2 + อาม่า) &nbsp;|&nbsp; 🚗 ขับรถเที่ยวเอง</div>
+  </div>
+  <!-- ภาพประกอบ: ฟูจิยามเย็น -->
+  <svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ภาพประกอบภูเขาไฟฟูจิยามพระอาทิตย์ตก">
+    <circle cx="880" cy="120" r="58" fill="#F3D9A0" opacity=".95"/>
+    <g opacity=".5" fill="#2B3E63">
+      <path d="M0 260 L120 180 L260 260 Z"/>
+      <path d="M180 268 L330 150 L480 268 Z"/>
+      <path d="M900 265 L1030 175 L1160 265 Z"/>
+    </g>
+    <path d="M340 300 L600 90 L860 300 Z" fill="#31456E"/>
+    <path d="M540 138 L600 90 L660 138 L636 132 L616 146 L600 134 L582 148 L560 132 Z" fill="#F6F4ED"/>
+    <g fill="#F6F4ED" opacity=".85">
+      <ellipse cx="300" cy="205" rx="90" ry="14"/>
+      <ellipse cx="950" cy="170" rx="110" ry="15"/>
+      <ellipse cx="700" cy="235" rx="70" ry="11"/>
+    </g>
+    <rect y="298" width="1200" height="42" fill="#F6F4ED"/>
+    <path d="M0 300 Q300 285 600 300 T1200 300 L1200 340 L0 340 Z" fill="#F6F4ED"/>
+    <!-- โทริอิเล็ก -->
+    <g fill="#BC3A2B" transform="translate(150,238)">
+      <rect x="0" y="10" width="70" height="8" rx="2"/>
+      <rect x="-6" y="-2" width="82" height="9" rx="3"/>
+      <rect x="8" y="10" width="9" height="52"/>
+      <rect x="53" y="10" width="9" height="52"/>
+      <rect x="31" y="18" width="8" height="16"/>
+    </g>
+    <!-- เจดีย์เล็ก -->
+    <g fill="#22304F" transform="translate(1010,214)" opacity=".9">
+      <rect x="26" y="66" width="12" height="20"/>
+      <path d="M6 66 L58 66 L48 54 L16 54 Z"/><rect x="20" y="44" width="24" height="10"/>
+      <path d="M10 44 L54 44 L46 33 L18 33 Z"/><rect x="23" y="24" width="18" height="9"/>
+      <path d="M14 24 L50 24 L42 14 L22 14 Z"/><rect x="30" y="2" width="4" height="12"/>
+    </g>
+  </svg>
+</header>
+
+<main class="wrap">
+<!-- ================= OVERVIEW TABLE ================= -->
+<section id="overview">
+  <div class="sec-head">
+    <span class="kanji">旅程</span>
+    <h2>ตารางรวมทั้งทริป</h2>
+    <span class="sub">โตเกียวสั้น • ฟูจิ–ฮาโกเน่เต็มอิ่ม • เอาท์เล็ตช่วงท้าย</span>
+  </div>
+  <div class="tt-scroll">
+    <table class="tt">
+      <thead>
+        <tr><th>วัน</th><th>โซน</th><th>ไฮไลต์</th><th>ค้างคืนที่</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="day-cell">Day 1<small>เสาร์ 3 ต.ค.</small></td><td><span class="zone z-travel">เดินทาง</span></td><td>บิน กรุงเทพฯ → โตเกียว • เช็คอินชินจูกุ • เดินเล่นเบา ๆ</td><td class="stay">ชินจูกุ 🌙1</td></tr>
+        <tr><td class="day-cell">Day 2<small>อาทิตย์ 4 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว</span></td><td>วันเดียวเก็บไฮไลต์: วัดเซ็นโซจิ–นากามิเสะ • ชิบูย่า Hachiko • ค่ำชินจูกุ</td><td class="stay">ชินจูกุ 🌙2</td></tr>
+        <tr><td class="day-cell">Day 3<small>จันทร์ 5 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td><b>รับรถเช่ามินิแวน 8 ที่นั่ง</b> → ขับสู่คาวากูจิโกะ • Oishi Park • เสาโทริอิลอยฟ้า Tenku no Torii • เข้าบ้านพัก</td><td class="stay">คาวากูจิโกะ 🌙3</td></tr>
+        <tr><td class="day-cell">Day 4<small>อังคาร 6 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>เจดีย์ชูเรโตะ + ถนนฮอนโจ • ศาลเจ้าคิตะกุจิเซ็นเง็น • โอชิโนะฮักไก • สวนดอกไม้ฮานะโนะมิยาโกะ</td><td class="stay">คาวากูจิโกะ 🌙4</td></tr>
+        <tr><td class="day-cell">Day 5<small>พุธ 7 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>หมู่บ้านหลังคาฟาง อิยาชิโนะซาโตะ • ถ้ำน้ำแข็งนารุซาวะ • จุดชมวิวธนบัตร ¥1,000 • ขับขึ้น <b>Fuji Subaru Line ชั้น 5</b> (2,300 ม.)</td><td class="stay">คาวากูจิโกะ 🌙5</td></tr>
+        <tr><td class="day-cell">Day 6<small>พฤหัส 8 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>น้ำตกชิราอิโตะ • ศาลเจ้าใหญ่เซ็นเง็นไทฉะ ฟูจิโนมิยะ • กลับบ้านพักหลังเดิม</td><td class="stay">คาวากูจิโกะ 🌙6</td></tr>
+        <tr><td class="day-cell">Day 7<small>ศุกร์ 9 ต.ค.</small></td><td><span class="zone z-fuji">ฮาโกเน่เดย์ทริป 🚗</span></td><td>ขับไปเช้าเย็นกลับ: หุบเขาโอวาคุดานิ (ไข่ดำ) • เรือโจรสลัดทะเลสาบอาชิ • โทริอิกลางน้ำ • กลับที่พักเดิม</td><td class="stay">คาวากูจิโกะ 🌙7</td></tr>
+        <tr><td class="day-cell">Day 8<small>เสาร์ 10 ต.ค.</small></td><td><span class="zone z-fuji">เอาท์เล็ต→โตเกียว 🚗</span></td><td>เช็คเอาต์ • <b>Gotemba Premium Outlets</b> ครึ่งวันเต็ม (วิวฟูจิ) • ขับกลับโตเกียว <b>คืนรถเช่า</b></td><td class="stay">ชินจูกุ 🌙8</td></tr>
+        <tr><td class="day-cell">Day 9<small>อาทิตย์ 11 ต.ค.</small></td><td><span class="zone z-kamakura">คามาคูระ 🚆</span></td><td>เดย์ทริปนั่งรถไฟ ~1 ชม.: พระใหญ่ไดบุตสึ • วัดฮาเซะเดระ • ถ.โคมาจิ • รถไฟ Enoden → พระอาทิตย์ตกเอโนชิมะ</td><td class="stay">ชินจูกุ 🌙9</td></tr>
+        <tr><td class="day-cell">Day 10<small>จันทร์ 12 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว</span></td><td>วันของฝากส่งท้าย: Don Quijote–ร้านยา • Tokyo Station Character Street • จัดกระเป๋า</td><td class="stay">ชินจูกุ 🌙10</td></tr>
+        <tr><td class="day-cell">Day 11<small>อังคาร 13 ต.ค.</small></td><td><span class="zone z-travel">เดินทาง</span></td><td>บินกลับกรุงเทพฯ • (ถ้าบินนาริตะไฟลต์บ่าย: แวะ Shisui Premium Outlets ใกล้สนามบินได้)</td><td class="stay">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= DAILY PLAN ================= -->
+<section id="daily">
+  <div class="sec-head">
+    <span class="kanji">毎日</span>
+    <h2>แผนการท่องเที่ยวรายวัน</h2>
+    <span class="sub">เส้นสีตามโซน: แดง=โตเกียว น้ำเงิน=ฟูจิ/ฮาโกเน่ เขียว=คามาคูระ</span>
+  </div>
+
+  <div class="rail">
+
+  <!-- DAY 1 -->
+  <article class="day" data-no="1" style="--dot:var(--grey)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="เครื่องบินเหนือเมฆ">
+        <rect width="800" height="170" fill="#31456E"/>
+        <circle cx="660" cy="50" r="26" fill="#F3D9A0"/>
+        <g fill="#F6F4ED" opacity=".9"><ellipse cx="150" cy="130" rx="120" ry="26"/><ellipse cx="420" cy="150" rx="160" ry="30"/><ellipse cx="700" cy="135" rx="130" ry="26"/></g>
+        <g transform="translate(300,55) rotate(-8)">
+          <ellipse cx="60" cy="20" rx="70" ry="16" fill="#F6F4ED"/>
+          <path d="M50 12 L20 -18 L38 -18 L74 12 Z" fill="#BC3A2B"/>
+          <path d="M50 28 L26 52 L42 52 L76 28 Z" fill="#BC3A2B"/>
+          <path d="M118 8 L138 -6 L136 16 Z" fill="#BC3A2B"/>
+          <circle cx="100" cy="17" r="4" fill="#22304F"/><circle cx="84" cy="17" r="4" fill="#22304F"/><circle cx="68" cy="17" r="4" fill="#22304F"/>
+        </g>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">เสาร์ 3 ตุลาคม 2569</span><span class="zone z-travel">วันเดินทาง</span></div>
+        <h3 class="day-title">กรุงเทพฯ → โตเกียว <span class="kanji">出発</span></h3>
+        <div class="slot"><b>เช้า–บ่าย</b><p>ออกเดินทางจากสุวรรณภูมิ/ดอนเมือง → <span class="hl">นาริตะหรือฮาเนดะ</span> (บินตรง ~6 ชม. เวลาญี่ปุ่นเร็วกว่าไทย 2 ชม.)</p></div>
+        <div class="slot"><b>บ่ายแก่</b><p>ผ่าน ตม. • รับ <span class="hl">Suica/Pasmo</span> • นั่งรถไฟ/ลีมูซีนบัสเข้าเมือง เช็คอินโรงแรมย่าน <span class="hl">ชินจูกุ</span> — คืนนี้ยังไม่ใช้รถ เดินทางในเมืองสะดวกกว่า</p></div>
+        <div class="slot"><b>ค่ำ</b><p>มื้อแรกเบา ๆ ใกล้โรงแรม <span class="hl">Omoide Yokocho</span> หรือราเมงชินจูกุ • ให้อาม่าและเด็ก ๆ พักเร็ว เก็บแรงไว้ลุยพรุ่งนี้</p></div>
+        <div class="tip"><b>ทิปส์:</b> ทำ <b>ใบขับขี่สากล (IDP อนุสัญญาเจนีวา 1949)</b> ที่ขนส่งฯ ให้เรียบร้อยก่อนบิน — ญี่ปุ่นไม่รับใบขับขี่ไทยเดี่ยว ๆ • โหลดแอป Google Maps ปักหมุดทุกจุดไว้ล่วงหน้า</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day" data-no="2" style="--dot:var(--vermilion)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ประตูคามินาริมงและสกายทรี">
+        <rect width="800" height="170" fill="#F0E7D2"/>
+        <g fill="#BC3A2B" transform="translate(120,26)">
+          <rect x="-10" y="0" width="240" height="18" rx="4"/>
+          <rect x="6" y="18" width="18" height="108"/><rect x="196" y="18" width="18" height="108"/>
+          <rect x="60" y="30" width="100" height="66" rx="46" fill="#D9432F"/>
+          <ellipse cx="110" cy="63" rx="42" ry="34" fill="#C9302B"/>
+          <rect x="96" y="96" width="28" height="12" fill="#22304F"/>
+        </g>
+        <text x="230" y="96" font-family="'Noto Serif JP',serif" font-size="26" fill="#F6F4ED" text-anchor="middle" font-weight="700">雷門</text>
+        <g fill="#8DA3C0" transform="translate(600,10)">
+          <path d="M40 150 L52 20 L58 20 L70 150 Z"/>
+          <rect x="50" y="0" width="10" height="24"/>
+          <circle cx="55" cy="52" r="14" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
+          <circle cx="55" cy="96" r="11" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
+        </g>
+        <rect y="152" width="800" height="18" fill="#DAD2BC"/>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">อาทิตย์ 4 ตุลาคม 2569</span><span class="zone z-tokyo">โตเกียววันเดียวเก็บครบ</span></div>
+        <h3 class="day-title">อาซากุสะ – ชิบูย่า – ชินจูกุ <span class="kanji">浅草</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Senso-ji_Kaminarimon_201503a.jpg?width=1200" alt="ประตูคามินาริมงโคมแดงยักษ์ วัดเซ็นโซจิ อาซากุสะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ประตูคามินาริมงโคมแดงยักษ์ วัดเซ็นโซจิ อาซากุสะ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p><span class="hl">วัดเซ็นโซจิ</span> ไปก่อน 9:00 คนน้อย ไหว้พระถ่ายรูปโคมแดงคามินาริมง • ช้อปขนม–ของฝากบน <span class="hl">ถนนนากามิเสะ</span> (ลานวัดเรียบ อาม่าเดินสบาย มีม้านั่งพักเยอะ)</p></div>
+        <div class="slot"><b>บ่าย</b><p>นั่งรถไฟไป <span class="hl">ชิบูย่า</span> ถ่ายรูปฮาจิโกะ + ข้าม Shibuya Crossing ให้เด็ก ๆ ตื่นตา • (ตัวเลือก: แยกทีม — พ่อพาเด็กเดินฮาราจูกุ แม่กับอาม่านั่งคาเฟ่)</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>กลับ <span class="hl">ชินจูกุ</span> ชมวิวฟรีตึก Tokyo Metropolitan Government (มีลิฟต์ อาม่าขึ้นสบาย) • มื้อค่ำครอบครัวย่านโรงแรม</p></div>
+        <div class="tip"><b>ทิปส์:</b> ทริปนี้อยู่โตเกียวสั้น เลือกเฉพาะจุดที่ทุกคนอยากเห็นที่สุดพอ — เดี๋ยว Day 10 ยังมีวันช้อปปิ้งเก็บตกอีกหนึ่งวันครับ</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day" data-no="3" style="--dot:#37517E">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ขับมินิแวนสู่ฟูจิ">
+        <rect width="800" height="170" fill="#DCE6F2"/>
+        <path d="M320 140 L560 30 L800 140 Z" fill="#5A76A8"/>
+        <path d="M508 54 L560 30 L612 54 L590 50 L572 60 L556 50 L540 62 L522 50 Z" fill="#F6F4ED"/>
+        <ellipse cx="250" cy="60" rx="70" ry="12" fill="#fff" opacity=".9"/>
+        <rect y="124" width="800" height="46" fill="#6B6A5E"/>
+        <g stroke="#F3D9A0" stroke-width="5" stroke-dasharray="34 26"><line x1="0" y1="147" x2="800" y2="147"/></g>
+        <g transform="translate(90,72)">
+          <path d="M8 26 Q10 8 30 6 L96 2 Q118 0 130 14 L150 30 L150 46 Q150 52 144 52 L8 52 Q2 52 2 46 L2 32 Q2 28 8 26 Z" fill="#BC3A2B"/>
+          <path d="M34 10 L92 7 Q106 6 114 16 L124 27 L34 27 Z" fill="#DCE6F2"/>
+          <line x1="66" y1="8" x2="66" y2="27" stroke="#BC3A2B" stroke-width="4"/>
+          <line x1="96" y1="7" x2="96" y2="27" stroke="#BC3A2B" stroke-width="4"/>
+          <circle cx="36" cy="54" r="12" fill="#22304F"/><circle cx="36" cy="54" r="5" fill="#8B8878"/>
+          <circle cx="118" cy="54" r="12" fill="#22304F"/><circle cx="118" cy="54" r="5" fill="#8B8878"/>
+          <rect x="146" y="30" width="6" height="8" rx="2" fill="#F3D9A0"/>
+        </g>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">จันทร์ 5 ตุลาคม 2569</span><span class="zone z-fuji">รับรถ → โซนฟูจิ 🚗</span></div>
+        <h3 class="day-title">รับรถเช่า → คาวากูจิโกะ <span class="kanji">河口湖</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Lake_Kawaguchi_(2015-10-26).jpg?width=1200" alt="ภูเขาไฟฟูจิจากทะเลสาบคาวากูจิ — ภาพถ่ายช่วงปลายตุลาคม ใกล้เคียงกับที่จะได้เห็นจริง" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ภูเขาไฟฟูจิจากทะเลสาบคาวากูจิ — ภาพถ่ายช่วงปลายตุลาคม ใกล้เคียงกับที่จะได้เห็นจริง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kawaguchi-asama-jinja_entrance.jpg?width=1200" alt="ศาลเจ้าคาวากูจิอาซามะ — โทริอิใหญ่และแนวต้นซีดาร์อายุกว่าพันปี จุดเริ่มทางขึ้นเท็นคุโนะโทริอิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ศาลเจ้าคาวากูจิอาซามะ — โทริอิใหญ่และแนวต้นซีดาร์อายุกว่าพันปี จุดเริ่มทางขึ้นเท็นคุโนะโทริอิ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ • รับ <span class="hl">มินิแวน 8 ที่นั่ง (Toyota Noah/Voxy, Nissan Serena หรือ Honda Step WGN)</span> สาขาชินจูกุ — นั่งครบ 5 คนใน 2 แถวแรก แล้ว<span class="hl">พับเก็บเบาะแถว 3 ทั้งหมด</span> ได้พื้นที่ใส่กระเป๋าใหญ่ 23 กก. 3 ใบ + carry-on 2 ใบ พอดี ๆ • ตรวจรอยรถ ถ่ายรูป/วิดีโอรอบคันก่อนออก</p></div>
+        <div class="slot"><b>บ่าย</b><p>ขับ <span class="hl">ทางด่วนชูโอ ~2 ชม.</span> แวะจุดพักรถ EXPASA Dangozaka • ถึงคาวากูจิโกะ มื้อเที่ยง <span class="hl">โฮโต (Hoto)</span> อุด้งหม้อร้อน • ชม <span class="hl">Oishi Park</span> ทุ่งดอกโคเชียแดง + ฟูจิ — ช่วง 3–13 ต.ค. คือพีคของโคเชียพอดี (ลานจอดฟรี เดินน้อย) • ต่อด้วย <span class="hl">เท็นคุโนะโทริอิ (Tenku no Torii)</span> ศาลเจ้าคาวากูจิอาซามะ — เสาโทริอิแดงลอยฟ้าเฟรมกับฟูจิ จุดถ่ายรูปสุดฮิต (เดินขึ้นเนินจากลานจอด ~10–15 นาที มีค่าบำรุงพื้นที่ ~¥100 อาม่ารอชมต้นสนยักษ์ที่ศาลเจ้าด้านล่างได้)</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>เช็คอิน<span class="hl">บ้านพัก (Airbnb)</span> จัดของเข้าบ้านรอบเดียวอยู่ยาว 5 คืน • แวะซูเปอร์มาร์เก็ตในเมืองตุนของกิน–ผลไม้–น้ำ • มื้อค่ำร้านริมทะเลสาบหรือทำกินเองที่บ้าน</p></div>
+        <div class="tip"><b>ทิปส์:</b> ระบุตอนจองรถ: จำนวนกระเป๋า + <b>คาร์ซีท/บูสเตอร์</b> ถ้าลูกอายุต่ำกว่า 6 ปี (กฎหมายบังคับ) + <b>บัตร ETC</b> • ญี่ปุ่นขับเลนซ้าย–พวงมาลัยขวาเหมือนไทย ปรับตัวง่ายครับ</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day" data-no="4" style="--dot:#37517E">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="เจดีย์ชูเรโตะกับฟูจิ">
+        <rect width="800" height="170" fill="#F2E3D0"/>
+        <circle cx="640" cy="46" r="28" fill="#D9432F" opacity=".85"/>
+        <path d="M300 160 L520 36 L740 160 Z" fill="#5A76A8"/>
+        <path d="M474 62 L520 36 L566 62 L546 58 L532 68 L518 58 L502 70 L488 58 Z" fill="#F6F4ED"/>
+        <g transform="translate(90,18)" fill="#BC3A2B">
+          <rect x="52" y="118" width="16" height="24" fill="#7A2A20"/>
+          <path d="M10 118 L110 118 L96 102 L24 102 Z"/><rect x="40" y="88" width="40" height="14" fill="#7A2A20"/>
+          <path d="M18 88 L102 88 L90 74 L30 74 Z"/><rect x="44" y="61" width="32" height="13" fill="#7A2A20"/>
+          <path d="M25 61 L95 61 L84 48 L36 48 Z"/><rect x="47" y="36" width="26" height="12" fill="#7A2A20"/>
+          <path d="M31 36 L89 36 L79 24 L41 24 Z"/><rect x="57" y="2" width="6" height="22" fill="#7A2A20"/>
+        </g>
+        <g fill="#C9744A"><circle cx="270" cy="120" r="16"/><circle cx="292" cy="140" r="12"/><circle cx="252" cy="142" r="10"/></g>
+        <rect y="156" width="800" height="14" fill="#DAD2BC"/>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">อังคาร 6 ตุลาคม 2569</span><span class="zone z-fuji">ฟูจิฝั่งตะวันออก 🚗</span></div>
+        <h3 class="day-title">ชูเรโตะ – ฮอนโจ – เซ็นเง็น – ฮานะโนะมิยาโกะ <span class="kanji">富士山</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arakurayama_Sengen_Park_-_Japan.jpg?width=1200" alt="เจดีย์ชูเรโตะ + ฟูจิ มุมภาพจำของญี่ปุ่น" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 เจดีย์ชูเรโตะ + ฟูจิ มุมภาพจำของญี่ปุ่น — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oshino-Hakkai-Nakaike.jpg?width=1200" alt="บ่อน้ำใสหมู่บ้านโอชิโนะฮักไก ฉากหลังฟูจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 บ่อน้ำใสหมู่บ้านโอชิโนะฮักไก ฉากหลังฟูจิ — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Fuji_Sengen_Shrine_at_the_base_of_Mt._Fuji_26-Aug-2012.JPG?width=1200" alt="ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น — อาคารแดงชาดกลางป่าซีดาร์ยักษ์ ประตูทางขึ้นฟูจิสายโบราณ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น — อาคารแดงชาดกลางป่าซีดาร์ยักษ์ ประตูทางขึ้นฟูจิสายโบราณ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้าตรู่</b><p><span class="hl">เจดีย์ชูเรโตะ</span> — ขับขึ้นไปจอดลานจอดบนเขา ตัดบันไดไปเยอะ เหลือทางลาดสลับบันไดช่วงสั้น ๆ • ถ้าอาม่าไม่ไหว ชมฟูจิจากลานศาลเจ้าด้านล่างก็สวย ส่วนพ่อแม่ลูกขึ้นเก็บมุม "เจดีย์แดง + ฟูจิ" ด้านบน • เสร็จแล้วขับ 5 นาทีไปเก็บมุม <span class="hl">ถนนฮอนโจ (Honcho Street)</span> ถนนยุคโชวะที่มีฟูจิตั้งเต็มปลายถนน</p></div>
+        <div class="slot"><b>สาย–บ่าย</b><p>ไหว้พระที่ <span class="hl">ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น</span> — อาคารแดงชาด ทางเดินต้นซีดาร์ยักษ์+โคมหิน ประตูทางขึ้นฟูจิสายโบราณ ทางเรียบ อาม่าเดินสบาย • ต่อด้วย <span class="hl">หมู่บ้านโอชิโนะฮักไก</span> บ่อน้ำใส 8 บ่อ • บ่าย <span class="hl">สวนดอกไม้ฮานะโนะมิยาโกะ</span> — ต้นตุลาคมทุ่งโคเชียแดง+คอสมอสบานเต็มทุ่ง ฉากหลังเป็นฟูจิ เด็ก ๆ วิ่งเล่นได้ อาม่ามีรถรางเล็กนั่งชมรอบสวน</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>แวะ <span class="hl">Panorama-dai</span> จุดชมพระอาทิตย์ตกเงาฟูจิสะท้อนทะเลสาบยามานากะ • ขับกลับบ้าน แวะร้านขนม <span class="hl">Fujiyama Cookie / Shingen Mochi</span> ซื้อของฝากท้องถิ่น</p></div>
+        <div class="tip"><b>ทิปส์:</b> ฟูจิเห็นชัดสุดช่วง<b>เช้าตรู่</b> ฟ้ามักเปิดก่อน 10:00 — จัดจุดถ่ายรูปสำคัญไว้ช่วงเช้าเสมอ และเผื่อใจเรื่องเมฆนะครับ</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day" data-no="5" style="--dot:#37517E">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="หมู่บ้านหลังคาฟางอิยาชิโนะซาโตะ">
+        <rect width="800" height="170" fill="#E4EAD9"/>
+        <path d="M420 150 L610 40 L800 150 Z" fill="#5A76A8"/>
+        <path d="M572 62 L610 40 L648 62 L632 58 L620 66 L608 58 L594 68 L582 58 Z" fill="#F6F4ED"/>
+        <g fill="#3E6B4F" opacity=".7"><ellipse cx="90" cy="152" rx="110" ry="30"/><ellipse cx="740" cy="158" rx="90" ry="26"/></g>
+        <!-- บ้านหลังคาฟาง -->
+        <g transform="translate(90,66)">
+          <path d="M0 60 L55 0 L110 60 Z" fill="#8A5A3B"/>
+          <path d="M8 60 L55 9 L102 60 Z" fill="#B9945C"/>
+          <rect x="30" y="60" width="50" height="36" fill="#F0E7D2" stroke="#8A5A3B" stroke-width="3"/>
+          <rect x="48" y="72" width="16" height="24" fill="#5F3A22"/>
+        </g>
+        <g transform="translate(240,84) scale(.8)">
+          <path d="M0 60 L55 0 L110 60 Z" fill="#8A5A3B"/>
+          <path d="M8 60 L55 9 L102 60 Z" fill="#B9945C"/>
+          <rect x="30" y="60" width="50" height="36" fill="#F0E7D2" stroke="#8A5A3B" stroke-width="3"/>
+          <rect x="46" y="74" width="14" height="22" fill="#5F3A22"/>
+        </g>
+        <!-- กังหันน้ำ -->
+        <g transform="translate(380,104)">
+          <circle cx="0" cy="24" r="26" fill="none" stroke="#5F3A22" stroke-width="6"/>
+          <g stroke="#5F3A22" stroke-width="4"><line x1="-26" y1="24" x2="26" y2="24"/><line x1="0" y1="-2" x2="0" y2="50"/><line x1="-18" y1="6" x2="18" y2="42"/><line x1="-18" y1="42" x2="18" y2="6"/></g>
+        </g>
+        <g fill="#C9744A"><circle cx="560" cy="120" r="10"/><circle cx="580" cy="136" r="7"/></g>
+        <rect y="156" width="800" height="14" fill="#D5DCC4"/>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">พุธ 7 ตุลาคม 2569</span><span class="zone z-fuji">ฟูจิฝั่งตะวันตก 🚗</span></div>
+        <h3 class="day-title">อิยาชิโนะซาโตะ – ถ้ำน้ำแข็ง – โมโตสึ <span class="kanji">西湖</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Iyashinosato_village_02.jpg?width=1200" alt="หมู่บ้านหลังคาฟาง อิยาชิโนะซาโตะ เนมบะ ริมทะเลสาบไซโกะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 หมู่บ้านหลังคาฟาง อิยาชิโนะซาโตะ เนมบะ ริมทะเลสาบไซโกะ — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mt.Fuji_5th-station_20061015.jpg?width=1200" alt="ยอดฟูจิมองจาก Fuji Subaru Line ชั้น 5 (2,300 ม.) — นั่งรถขึ้นถึง ไม่ต้องเดินเขา" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ยอดฟูจิมองจาก Fuji Subaru Line ชั้น 5 (2,300 ม.) — นั่งรถขึ้นถึง ไม่ต้องเดินเขา — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>ขับเลียบทะเลสาบไซโกะสู่ <span class="hl">หมู่บ้านอิยาชิโนะซาโตะ เนมบะ</span> — หมู่บ้านบ้านหลังคาฟางโบราณริมน้ำ ฉากหลังฟูจิ มี<span class="hl">ร้านงานคราฟต์–ของฝากทำมือ</span> (ผ้า เครื่องปั้น ธูปหอม) ให้เดินเก็บของฝากไม่ซ้ำใคร ทางเดินไม่ชัน อาม่าเที่ยวสบาย มีชุดกิโมโน/ซามูไรให้เช่าถ่ายรูปด้วย</p></div>
+        <div class="slot"><b>บ่าย</b><p><span class="hl">ถ้ำน้ำแข็งนารุซาวะ + ถ้ำลมฟูงาคุ</span> ถ้ำลาวาอายุพันปี ในถ้ำเย็น ~0–3°C เด็ก ๆ ตื่นเต้นแน่นอน (ในถ้ำมีบันไดชัน–เพดานต่ำ แนะนำอาม่ารอจิบชาที่ร้านหน้าถ้ำ) • ต่อไป <span class="hl">ทะเลสาบโมโตสึ</span> จุดชมวิวเดียวกับ<span class="hl">ภาพฟูจิบนธนบัตร ¥1,000</span> • บ่ายแก่ไฮไลต์พิเศษ: ขับขึ้น <span class="hl">Fuji Subaru Line ชั้น 5 (2,300 ม.)</span> — เดือนตุลาคมรถส่วนตัวขึ้นได้ และต้นลาร์ชบนเขากำลังเปลี่ยนเป็นสีทอง ได้ใกล้ยอดฟูจิสุด ๆ แบบไม่ต้องเดินเขา อาม่านั่งรถขึ้นถึงเลย (ค่าผ่านทางไป–กลับ ~¥2,800)</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>ลงจากเขา เดินเล่นถนนร้านค้าฝั่งเหนือทะเลสาบ คาเฟ่ชมฟูจิแสงเย็น • กลับบ้านพักทำมื้อค่ำสบาย ๆ</p></div>
+        <div class="tip"><b>ทิปส์:</b> เสื้อแขนยาวสำหรับเข้าถ้ำ + เสื้อหนาสำหรับชั้น 5 (บนนั้น ~5–10°C) • ก่อนขึ้น Subaru Line เช็คสถานะถนน/อากาศบนเขาเช้าวันนั้น ฟ้าปิดค่อยสลับไปวันอื่น — อยู่ฐานเดียวสลับวันได้ยืดหยุ่นเต็มที่</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 6 -->
+  <article class="day" data-no="6" style="--dot:#37517E">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="น้ำตกชิราอิโตะ">
+        <rect width="800" height="170" fill="#DCE6F2"/>
+        <path d="M300 170 L520 44 L740 170 Z" fill="#5A76A8" opacity=".55"/>
+        <path d="M478 68 L520 44 L562 68 L544 64 L530 74 L518 64 L504 76 L490 64 Z" fill="#F6F4ED" opacity=".9"/>
+        <!-- หน้าผา -->
+        <rect x="60" y="20" width="360" height="70" rx="8" fill="#6B7A5E"/>
+        <ellipse cx="120" cy="24" rx="70" ry="16" fill="#3E6B4F"/><ellipse cx="250" cy="18" rx="90" ry="18" fill="#4C7A5C"/><ellipse cx="380" cy="24" rx="60" ry="14" fill="#3E6B4F"/>
+        <!-- สายน้ำตก -->
+        <g stroke="#F6F4ED" stroke-width="7" opacity=".95">
+          <line x1="90" y1="88" x2="90" y2="140"/><line x1="118" y1="88" x2="118" y2="140"/><line x1="146" y1="88" x2="146" y2="140"/><line x1="174" y1="88" x2="174" y2="140"/><line x1="202" y1="88" x2="202" y2="140"/><line x1="230" y1="88" x2="230" y2="140"/><line x1="258" y1="88" x2="258" y2="140"/><line x1="286" y1="88" x2="286" y2="140"/><line x1="314" y1="88" x2="314" y2="140"/><line x1="342" y1="88" x2="342" y2="140"/><line x1="370" y1="88" x2="370" y2="140"/><line x1="398" y1="88" x2="398" y2="140"/>
+        </g>
+        <rect y="138" width="800" height="32" fill="#8DB3C9"/>
+        <g fill="#F6F4ED" opacity=".8"><ellipse cx="160" cy="142" rx="40" ry="5"/><ellipse cx="300" cy="146" rx="50" ry="5"/><ellipse cx="420" cy="142" rx="30" ry="4"/></g>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">พฤหัสบดี 8 ตุลาคม 2569</span><span class="zone z-fuji">เดย์ทริปฟูจิโนมิยะ 🚗</span></div>
+        <h3 class="day-title">น้ำตกชิราอิโตะ – เซ็นเง็นไทฉะ <span class="kanji">白糸</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shiraito_Falls_(Shizuoka),_zenkei-1.jpg?width=1200" alt="น้ำตกชิราอิโตะ ม่านน้ำเส้นไหมจากผาหินลาวา (มรดกโลก)" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 น้ำตกชิราอิโตะ ม่านน้ำเส้นไหมจากผาหินลาวา (มรดกโลก) — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>ขับ ~50 นาทีอ้อมฟูจิฝั่งตะวันตกไป <span class="hl">น้ำตกชิราอิโตะ</span> (มรดกโลก) — ม่านน้ำกว้าง 150 ม. ไหลออกจากผาหินลาวาเหมือนเส้นไหมนับพันเส้น สวยติดอันดับของญี่ปุ่น (มีจุดชมด้านบนเดินถึงง่ายสำหรับอาม่า ส่วนทางลงจุดชมล่างเป็นบันได)</p></div>
+        <div class="slot"><b>บ่าย</b><p>ไหว้พระที่ <span class="hl">ศาลเจ้าฟูจิซัน ฮงงู เซ็นเง็นไทฉะ</span> ศาลเจ้าใหญ่ต้นตระกูลของศาลเจ้าฟูจิทั่วประเทศ ลานเรียบร่มรื่น • มื้อเที่ยงลอง <span class="hl">ฟูจิโนมิยะยากิโซบะ</span> เมนู B-กูร์เมต์ชื่อดังของเมือง</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>ขับกลับ<span class="hl">บ้านพักหลังเดิม</span> (~50 นาที) — ไม่ต้องเก็บกระเป๋า มื้อค่ำทำกินเองหรือร้านประจำที่ถูกใจจากคืนก่อน</p></div>
+        <div class="tip"><b>ทิปส์:</b> วันนี้เส้นทางอ้อมฟูจิวิวสวยตลอดทาง แวะจุดจอดถ่ายรูปได้เรื่อย ๆ • มื้อเที่ยงอย่าลืม<b>ฟูจิโนมิยะยากิโซบะ</b>ต้นตำรับ</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 7 -->
+  <article class="day" data-no="7" style="--dot:#37517E">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ฮาโกเน่ โทริอิกลางน้ำและเรือโจรสลัด">
+        <rect width="800" height="170" fill="#DCE6F2"/>
+        <path d="M0 120 L160 40 L340 120 Z" fill="#5A76A8" opacity=".7"/>
+        <path d="M420 120 L580 50 L740 120 Z" fill="#5A76A8" opacity=".5"/>
+        <!-- ไอน้ำโอวาคุดานิ -->
+        <g fill="#F6F4ED" opacity=".85"><ellipse cx="560" cy="46" rx="26" ry="12"/><ellipse cx="580" cy="30" rx="20" ry="10"/><ellipse cx="598" cy="16" rx="14" ry="8"/></g>
+        <rect y="118" width="800" height="52" fill="#7FA0C4"/>
+        <!-- เรือโจรสลัด -->
+        <g transform="translate(470,74)">
+          <path d="M0 46 L150 46 L134 70 L18 70 Z" fill="#BC3A2B"/>
+          <rect x="40" y="6" width="6" height="40" fill="#22304F"/><rect x="96" y="0" width="6" height="46" fill="#22304F"/>
+          <path d="M46 10 L86 20 L46 32 Z" fill="#F6F4ED"/><path d="M102 4 L146 16 L102 30 Z" fill="#F6F4ED"/>
+        </g>
+        <!-- โทริอิกลางน้ำ -->
+        <g fill="#BC3A2B" transform="translate(130,66)">
+          <rect x="-8" y="-4" width="112" height="12" rx="4"/>
+          <rect x="2" y="12" width="92" height="9" rx="2"/>
+          <rect x="12" y="12" width="12" height="66"/>
+          <rect x="72" y="12" width="12" height="66"/>
+          <rect x="43" y="21" width="10" height="20"/>
+        </g>
+        <g fill="#F6F4ED" opacity=".6"><ellipse cx="180" cy="146" rx="60" ry="5"/><ellipse cx="540" cy="152" rx="80" ry="6"/></g>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">ศุกร์ 9 ตุลาคม 2569</span><span class="zone z-fuji">ฮาโกเน่ไปเช้าเย็นกลับ 🚗</span></div>
+        <h3 class="day-title">โอวาคุดานิ – ทะเลสาบอาชิ <span class="kanji">箱根</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E6%B6%8C%E8%B0%B7_-_panoramio.jpg?width=1200" alt="หุบเขาโอวาคุดานิ ควันกำมะถันพวยพุ่ง" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 หุบเขาโอวาคุดานิ ควันกำมะถันพวยพุ่ง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hakone-jinja_torii_-_Hakone,_Japan_-_DSC05478.jpg?width=1200" alt="เสาโทริอิแห่งสันติภาพกลางทะเลสาบอาชิ ศาลเจ้าฮาโกเน่" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 เสาโทริอิแห่งสันติภาพกลางทะเลสาบอาชิ ศาลเจ้าฮาโกเน่ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>ออก ~8:00 ขับผ่านโกเทมบะ ~1 ชม. 10 นาที ขึ้น <span class="hl">หุบเขาโอวาคุดานิ</span> หุบเขาภูเขาไฟควันกำมะถันพวยพุ่ง — ชิม<span class="hl">ไข่ดำต้มบ่อกำมะถัน</span> ตำนานว่ากิน 1 ฟองอายุยืน 7 ปี (ให้อาม่ากิน 2 ฟองเลย 😄) จุดชมวิวใกล้ลานจอด เดินน้อย วันฟ้าใสเห็นฟูจิเต็มตา</p></div>
+        <div class="slot"><b>บ่าย</b><p>ลงมาริม <span class="hl">ทะเลสาบอาชิ</span> ล่อง<span class="hl">เรือโจรสลัด</span> โมโตฮาโกเนะ⇄โทเง็นได (เด็ก ๆ ชอบมาก นั่งชมวิวสบายทั้งครอบครัว) • ไหว้ <span class="hl">ศาลเจ้าฮาโกเน่</span> + ถ่ายรูป<span class="hl">เสาโทริอิแดงกลางน้ำ</span> (คิวถ่ายรูปอาจยาว ผลัดกันถ่ายได้)</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>ก่อนกลับแวะร้านของฝาก<span class="hl">งานไม้โยเซกิ</span>ย่านโมโตฮาโกเนะ (กล่องกลไก Trick Box เด็กและผู้ใหญ่ชอบ) • ขับกลับคาวากูจิโกะถึงราว 18:30 คืนสุดท้ายที่บ้านหลังนี้ เริ่มทยอยจัดกระเป๋า</p></div>
+        <div class="tip"><b>ทิปส์:</b> โอวาคุดานิบางวันปิดชั่วคราวถ้าก๊าซภูเขาไฟเข้ม เช็คสถานะเช้าวันไปก่อนขับขึ้น • ถนนฮาโกเน่โค้งเยอะ ใครเมารถง่ายกินยากันเมาก่อนออก นั่งแถวหน้า มองไกล ๆ ช่วยได้</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 8 -->
+  <article class="day" data-no="8" style="--dot:var(--pine)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ช้อปปิ้งเอาท์เล็ตโกเทมบะ">
+        <rect width="800" height="170" fill="#F0E7D2"/>
+        <path d="M480 170 L640 60 L800 170 Z" fill="#5A76A8" opacity=".6"/>
+        <path d="M604 86 L640 60 L676 86 L660 82 L648 92 L638 82 L624 94 L612 82 Z" fill="#F6F4ED"/>
+        <g transform="translate(100,52)">
+          <rect x="0" y="16" width="72" height="84" rx="6" fill="#BC3A2B"/>
+          <path d="M18 16 Q18 -8 36 -8 Q54 -8 54 16" stroke="#7A2A20" stroke-width="6" fill="none"/>
+          <text x="36" y="66" font-family="'Noto Serif JP',serif" font-size="24" fill="#F6F4ED" text-anchor="middle">土産</text>
+          <rect x="96" y="34" width="58" height="66" rx="6" fill="#37517E"/>
+          <path d="M110 34 Q110 14 125 14 Q140 14 140 34" stroke="#22304F" stroke-width="5" fill="none"/>
+          <rect x="176" y="48" width="46" height="52" rx="6" fill="#C9962E"/>
+          <path d="M187 48 Q187 32 199 32 Q211 32 211 48" stroke="#8A6410" stroke-width="4" fill="none"/>
+        </g>
+        <!-- ชิงช้าสวรรค์เอาท์เล็ต -->
+        <g transform="translate(400,84)">
+          <circle cx="0" cy="0" r="52" fill="none" stroke="#37517E" stroke-width="5"/>
+          <g stroke="#37517E" stroke-width="3"><line x1="-52" y1="0" x2="52" y2="0"/><line x1="0" y1="-52" x2="0" y2="52"/><line x1="-37" y1="-37" x2="37" y2="37"/><line x1="-37" y1="37" x2="37" y2="-37"/></g>
+          <g fill="#BC3A2B"><circle cx="0" cy="-52" r="8"/><circle cx="52" cy="0" r="8"/><circle cx="0" cy="52" r="8"/><circle cx="-52" cy="0" r="8"/></g>
+          <g fill="#C9962E"><circle cx="37" cy="-37" r="8"/><circle cx="37" cy="37" r="8"/><circle cx="-37" cy="37" r="8"/><circle cx="-37" cy="-37" r="8"/></g>
+          <path d="M-22 52 L0 6 L22 52" stroke="#22304F" stroke-width="5" fill="none"/>
+        </g>
+        <rect y="152" width="800" height="18" fill="#DAD2BC"/>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">เสาร์ 10 ตุลาคม 2569</span><span class="zone z-fuji">เอาท์เล็ต → คืนรถโตเกียว 🚗</span></div>
+        <h3 class="day-title">Gotemba Outlets → กลับโตเกียว <span class="kanji">御殿場</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gotemba_premium_outlets1.jpg?width=1200" alt="Gotemba Premium Outlets เอาท์เล็ตใหญ่สุดในญี่ปุ่น เชิงเขาฟูจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 Gotemba Premium Outlets เอาท์เล็ตใหญ่สุดในญี่ปุ่น เชิงเขาฟูจิ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า–เที่ยง</b><p>เช็คเอาต์อำลาคาวากูจิโกะ ขับ ~45 นาทีถึง <span class="hl">Gotemba Premium Outlets</span> เอาท์เล็ตใหญ่สุดในญี่ปุ่น 290+ ร้าน — ไปให้ถึงตอนเปิด 10:00 คนยังน้อย • มีชิงช้าสวรรค์ สนามเด็กเล่น ฟู้ดคอร์ทใหญ่ และเก้าอี้พักทั่วห้าง วางแผนแยกทีมช้อปแล้วนัดจุดรวมพลกันตอนเที่ยง</p></div>
+        <div class="slot"><b>บ่าย</b><p>ช้อปต่อถึง ~15:00 แล้วขับทางด่วนโทเม ~1.5–2 ชม. กลับ<span class="hl">โตเกียว</span></p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p><span class="hl">เติมน้ำมันเต็มถังแล้วคืนรถเช่าสาขาชินจูกุ</span> (เช็คของทุกซอกโดยเฉพาะใต้เบาะและช่องประตูสไลด์ 😄) • เช็คอินโรงแรมชินจูกุ มื้อค่ำสบาย ๆ พักเก็บแรง</p></div>
+        <div class="tip"><b>ทิปส์:</b> ที่โกเทมบะ ใช้พาสปอร์ตรับคูปอง/ทำ Tax-Free ได้หลายร้าน ซื้อเสื้อหนาวลดราคาถูกกว่าในเมืองเยอะ • เสาร์เย็นทางด่วนขาเข้าโตเกียวรถหนาแน่น ออกจากเอาท์เล็ตไม่เกิน 15:00–15:30 จะพอดี</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 9 -->
+  <article class="day" data-no="9" style="--dot:var(--pine)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="พระใหญ่ไดบุตสึคามาคูระ">
+        <rect width="800" height="170" fill="#E4EAD9"/>
+        <g fill="#3E6B4F" opacity=".8"><ellipse cx="110" cy="150" rx="90" ry="34"/><ellipse cx="690" cy="150" rx="100" ry="38"/><ellipse cx="200" cy="164" rx="120" ry="30"/></g>
+        <g transform="translate(320,22)" fill="#5F7464">
+          <ellipse cx="80" cy="132" rx="86" ry="20" fill="#4C5F52"/>
+          <path d="M14 132 Q14 84 40 72 L120 72 Q146 84 146 132 Z"/>
+          <circle cx="80" cy="46" r="30"/>
+          <path d="M50 40 Q80 18 110 40 L110 30 Q80 8 50 30 Z" fill="#4C5F52"/>
+          <circle cx="80" cy="14" r="7" fill="#4C5F52"/>
+          <ellipse cx="66" cy="44" rx="4" ry="2" fill="#3B4A40"/><ellipse cx="94" cy="44" rx="4" ry="2" fill="#3B4A40"/>
+          <path d="M72 58 Q80 62 88 58" stroke="#3B4A40" stroke-width="2.5" fill="none"/>
+          <ellipse cx="80" cy="104" rx="26" ry="12" fill="#4C5F52"/>
+        </g>
+        <text x="560" y="60" font-family="'Noto Serif JP',serif" font-size="30" fill="#3E6B4F" font-weight="700">大仏</text>
+        <g fill="#C9744A"><circle cx="250" cy="60" r="10"/><circle cx="268" cy="76" r="7"/><circle cx="560" cy="110" r="8"/></g>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">อาทิตย์ 11 ตุลาคม 2569</span><span class="zone z-kamakura">เดย์ทริปรถไฟ 🚆</span></div>
+        <h3 class="day-title">พระใหญ่คามาคูระ – เอโนชิมะ <span class="kanji">鎌倉</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Buddha_of_K%C5%8Dtoku-in_(Kamakura_Daibutsu).jpg?width=1200" alt="พระใหญ่ไดบุตสึ วัดโคโตกุอิน คามาคูระ อายุเกือบ 800 ปี" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 พระใหญ่ไดบุตสึ วัดโคโตกุอิน คามาคูระ อายุเกือบ 800 ปี — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>ไม่ต้องขับแล้ววันนี้! นั่งรถไฟจากชินจูกุ/โตเกียว → <span class="hl">สถานีคามาคูระ</span> (~1 ชม. มีที่นั่งสบาย) ต่อรถไฟท้องถิ่น Enoden ลงสถานี Hase • สักการะ <span class="hl">พระใหญ่ไดบุตสึ วัดโคโตกุอิน</span> พระพุทธรูปสำริดสูง 11.3 ม. อายุเกือบ 800 ปี — ลานวัดเรียบ อาม่าไหว้พระสบาย (เข้าชมด้านในองค์พระได้ด้วย)</p></div>
+        <div class="slot"><b>สาย–บ่าย</b><p><span class="hl">วัดฮาเซะเดระ</span> เจ้าแม่กวนอิม 11 พักตร์ + วิวทะเล — มีทางลาดถึงชั้นกลาง อาม่าพักที่ศาลาชมสวนได้ • มื้อเที่ยง + เดินกิน–ซื้อของฝากบน <span class="hl">ถนนโคมาจิ</span> (ไอศกรีมมันม่วง เซมเบ้ย่าง ผงคุกกี้นกพิราบ Hato Sabure ของฝากตำนานคามาคูระ)</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>นั่ง <span class="hl">Enoden เลียบทะเล</span> (ผ่านจุดกั้นรถไฟหน้าโรงเรียนคามาคูระโคโคอันโด่งดัง) → ชม<span class="hl">พระอาทิตย์ตกที่เอโนชิมะ</span> ฟ้าเปิดเห็นเงาฟูจิเหนือทะเล • มื้อค่ำ<span class="hl">ชิราสึด้ง</span>เมนูดังประจำถิ่น • รถไฟกลับถึงชินจูกุ ~20:30</p></div>
+        <div class="tip"><b>ทิปส์:</b> ซื้อ <b>Enoden 1-Day Pass "Noriorikun"</b> ขึ้นลงได้ทั้งวัน คุ้มมาก • วันอาทิตย์คามาคูระคนเยอะ ออกจากโตเกียวก่อน 8:00 จะทันไหว้พระใหญ่แบบสงบ ๆ</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 10 -->
+  <article class="day" data-no="10" style="--dot:var(--vermilion)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="สถานีโตเกียวอิฐแดง">
+        <rect width="800" height="170" fill="#DCE6F2"/>
+        <g fill="#8DA3C0" opacity=".5"><rect x="30" y="20" width="60" height="80"/><rect x="110" y="36" width="46" height="64"/><rect x="660" y="26" width="56" height="74"/><rect x="590" y="44" width="50" height="56"/></g>
+        <!-- สถานีโตเกียว -->
+        <g transform="translate(170,64)">
+          <rect x="0" y="30" width="460" height="76" fill="#A34A38"/>
+          <g fill="#F0E7D2"><rect x="20" y="46" width="22" height="30" rx="10"/><rect x="60" y="46" width="22" height="30" rx="10"/><rect x="100" y="46" width="22" height="30" rx="10"/><rect x="160" y="46" width="22" height="30" rx="10"/><rect x="200" y="46" width="22" height="30" rx="10"/><rect x="240" y="46" width="22" height="30" rx="10"/><rect x="280" y="46" width="22" height="30" rx="10"/><rect x="340" y="46" width="22" height="30" rx="10"/><rect x="380" y="46" width="22" height="30" rx="10"/><rect x="420" y="46" width="22" height="30" rx="10"/></g>
+          <g stroke="#F0E7D2" stroke-width="2" opacity=".5"><line x1="0" y1="60" x2="460" y2="60"/><line x1="0" y1="90" x2="460" y2="90"/></g>
+          <!-- โดมสองฝั่ง -->
+          <g fill="#3E4A5E">
+            <path d="M10 30 Q60 -18 110 30 Z"/><rect x="52" y="-16" width="16" height="14" rx="6"/>
+            <path d="M350 30 Q400 -18 450 30 Z"/><rect x="392" y="-16" width="16" height="14" rx="6"/>
+          </g>
+          <rect x="150" y="10" width="160" height="20" fill="#A34A38"/>
+          <rect x="150" y="4" width="160" height="8" fill="#3E4A5E"/>
+        </g>
+        <rect y="156" width="800" height="14" fill="#B9C4D6"/>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">จันทร์ 12 ตุลาคม 2569</span><span class="zone z-tokyo">วันของฝากส่งท้าย</span></div>
+        <h3 class="day-title">ช้อปของฝากรอบสุดท้าย <span class="kanji">土産</span></h3>
+        <div class="photo-row single"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo-STA_Marunouchi-Entrance_2023.jpg?width=1200" alt="สถานีโตเกียว ตึกอิฐแดงฝั่งมารุโนะอุจิ — ชั้นใต้ดินคือแหล่งของฝาก" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สถานีโตเกียว ตึกอิฐแดงฝั่งมารุโนะอุจิ — ชั้นใต้ดินคือแหล่งของฝาก — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า–เที่ยง</b><p>สาย ๆ ตื่นสบาย • <span class="hl">Don Quijote + ร้านยา (Matsumoto Kiyoshi/Sundrug)</span> ชินจูกุ — ขนม คิทแคทรสพิเศษ ยาสามัญ เครื่องสำอาง ครบจบที่เดียว ทำ Tax-Free ได้</p></div>
+        <div class="slot"><b>บ่าย</b><p>นั่งรถไฟไป <span class="hl">สถานีโตเกียว</span> ตึกอิฐแดงร้อยปี — ชั้นใต้ดิน <span class="hl">Character Street</span> ของฝากลิขสิทธิ์ทุกค่าย (กันดั้ม โปเกมอน จิบลิ ซานริโอ้) + โซนขนมดัง <span class="hl">Tokyo Banana / Press Butter Sand / N.Y.C.SAND</span> ซื้อวันนี้เก็บได้ถึงวันบินพอดี</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>มื้อพิเศษส่งท้ายทริป (ยากินิคุ/ชาบู/ซูชิสายพาน ให้เด็ก ๆ เลือก) • กลับโรงแรม<span class="hl">จัดกระเป๋า</span> — แยกของ Tax-Free ห้ามแกะถุงซีล ชั่งน้ำหนักไม่ให้เกินโควตา 23 กก./ใบ</p></div>
+        <div class="tip"><b>ทิปส์:</b> ของหนัก/ขวดแก้วให้กระจายลง 3 ใบใหญ่ อย่ารวมใบเดียว • ถ้าของเยอะเกิน ใช้บริการส่งกระเป๋า TA-Q-BIN (Yamato) จากโรงแรมไปสนามบินล่วงหน้า สบายตัววันบิน</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 11 -->
+  <article class="day" data-no="11" style="--dot:var(--grey)">
+    <div class="day-card">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="บินกลับ">
+        <rect width="800" height="170" fill="#E8B87A"/>
+        <circle cx="150" cy="60" r="34" fill="#D9432F" opacity=".9"/>
+        <path d="M540 170 L660 96 L780 170 Z" fill="#5A76A8" opacity=".8"/>
+        <path d="M636 110 L660 96 L684 110 L674 108 L666 114 L658 108 L650 115 L642 108 Z" fill="#F6F4ED"/>
+        <g fill="#F6F4ED" opacity=".85"><ellipse cx="300" cy="140" rx="140" ry="22"/><ellipse cx="620" cy="150" rx="120" ry="18"/></g>
+        <g transform="translate(330,50) rotate(6)">
+          <ellipse cx="60" cy="20" rx="70" ry="16" fill="#F6F4ED"/>
+          <path d="M50 12 L20 -18 L38 -18 L74 12 Z" fill="#22304F"/>
+          <path d="M50 28 L26 52 L42 52 L76 28 Z" fill="#22304F"/>
+          <path d="M118 8 L138 -6 L136 16 Z" fill="#22304F"/>
+          <circle cx="100" cy="17" r="4" fill="#BC3A2B"/><circle cx="84" cy="17" r="4" fill="#BC3A2B"/><circle cx="68" cy="17" r="4" fill="#BC3A2B"/>
+        </g>
+        <text x="90" y="150" font-family="'Noto Serif JP',serif" font-size="22" fill="#7A2A20">また来ます</text>
+      </svg>
+      <div class="day-body">
+        <div class="day-meta"><span class="day-date">อังคาร 13 ตุลาคม 2569</span><span class="zone z-travel">วันเดินทางกลับ</span></div>
+        <h3 class="day-title">โตเกียว → กรุงเทพฯ <span class="kanji">帰国</span></h3>
+        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ • เผื่อเวลาไปสนามบิน <span class="hl">อย่างน้อย 3–3.5 ชม.ก่อนไฟลต์</span> (นาริตะไกลกว่าฮาเนดะ) — เดินทางกับอาม่าและกระเป๋า 5 ใบ แนะนำ<span class="hl">ลีมูซีนบัสจากหน้าโรงแรม</span>หรือรถไฟ N'EX สบายสุด</p></div>
+        <div class="slot"><b>ตัวเลือกโบนัส</b><p>ถ้าบิน<span class="hl">นาริตะ</span>ไฟลต์บ่าย/เย็น: <span class="hl">Shisui Premium Outlets</span> อยู่ห่างสนามบินแค่ ~15 นาที มีบัสรับส่งจากสนามบิน — เก็บเอาท์เล็ตรอบสองแบบเฉียดขาขึ้นเครื่องได้จริง</p></div>
+        <div class="slot"><b>ก่อนขึ้นเครื่อง</b><p>ของฝากโค้งสุดท้าย Royce'–Shiroi Koibito ในสนามบิน • ใช้เยนเหรียญให้หมดที่ตู้กาชาปอง • บินกลับถึงไทยโดยสวัสดิภาพ — おつかれさまでした!</p></div>
+        <div class="tip"><b>ทิปส์:</b> คืน Suica/Pasmo แบบการ์ดที่สนามบินได้ หรือเก็บไว้ทริปหน้า (บัตรมีอายุ 10 ปีนับจากใช้ครั้งสุดท้าย)</div>
+      </div>
+    </div>
+  </article>
+
+  </div><!-- /rail -->
+</section>
+
+<!-- ================= PRACTICAL INFO ================= -->
+<section id="info">
+  <div class="sec-head">
+    <span class="kanji">準備</span>
+    <h2>ข้อมูลเตรียมตัว</h2>
+    <span class="sub">ตุลาคม = ต้นฤดูใบไม้ร่วง</span>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3><span class="kanji">車</span> รถเช่า — สเปคที่ต้องจอง</h3>
+      <ul>
+        <li><b>มินิแวน 8 ที่นั่ง:</b> Toyota Noah/Voxy, Nissan Serena, Honda Step WGN — นั่ง 5 คนใน 2 แถวแรก พับเก็บเบาะแถว 3 ทั้งหมด → ใส่กระเป๋าใหญ่ 23 กก. ได้ 3 ใบ + carry-on 2 ใบ สบาย</li>
+        <li>รุ่น 7 ที่นั่ง/SUV ทั่วไป (Sienta, RAV4) <b>ไม่พอ</b> สำหรับ 5 คน + กระเป๋าชุดนี้</li>
+        <li>งบเหลือ: Alphard/Vellfire นั่งหรูขึ้น กระเป๋าลงครบเช่นกัน</li>
+        <li>แจ้งตอนจอง: จำนวนกระเป๋า • คาร์ซีท/บูสเตอร์ (บังคับถ้าเด็กอายุต่ำกว่า 6 ปี) • บัตร ETC • ประกัน CDW+NOC</li>
+        <li>เอกสารขับ: IDP (เจนีวา 1949) + ใบขับขี่ไทย + พาสปอร์ต พกครบ 3 อย่าง</li>
+        <li>ขับเลนซ้ายเหมือนไทย • ค่าทางด่วนรวมทั้งทริป ~¥10,000–14,000 • คืนรถเติมน้ำมันเต็มถัง</li>
+        <li>นำทางด้วย<b>เบอร์โทรสถานที่</b>หรือ Map Code จะแม่นสุด</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3><span class="kanji">天気</span> สภาพอากาศเดือนตุลาคม</h3>
+      <ul>
+        <li>โตเกียว ~16–23°C เย็นสบาย</li>
+        <li>คาวากูจิโกะ–ฮาโกเน่ (บนเขา) เช้า–ค่ำ ~8–16°C เตรียมแจ็คเก็ตให้อาม่าและเด็ก</li>
+        <li>ในถ้ำน้ำแข็ง ~0–3°C ตลอดปี ต้องมีเสื้อแขนยาว</li>
+        <li>ต้น ต.ค. อาจมีฝน/ไต้ฝุ่นท้ายฤดู เช็คพยากรณ์รายวัน แผนขับรถสลับวันได้ยืดหยุ่น</li>
+        <li>ฟูจิเริ่มมีหิมะแต้มยอด + ใบไม้เริ่มเปลี่ยนสี ธรรมชาติสวยสุดช่วงหนึ่งของปี</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3><span class="kanji">予約</span> ต้องจองล่วงหน้า</h3>
+      <ul>
+        <li><b>รถเช่ามินิแวน 8 ที่นั่ง + คาร์ซีท</b> — ต.ค. เป็นไฮซีซั่น รุ่นใหญ่หมดเร็ว จองก่อน 1–2 เดือน</li>
+        <li><b>บ้านพัก Airbnb คาวากูจิโกะ 5 คืนรวด (ฐานเดียว)</b> — บ้านทั้งหลังสำหรับ 5 คน ต.ค. เป็นไฮซีซั่น จองเร็วสุดยิ่งดี พักยาวหลายที่มีส่วนลดรายสัปดาห์</li>
+        <li>โซนหาบ้านง่าย: <b>Funatsu/Kodachi</b> (ใกล้สถานี+ร้านอาหาร), <b>ฝั่ง Oishi</b> (วิวฟูจิจากบ้าน), <b>ชิโมโยชิดะ</b> (ถูกกว่า ~20–30% ใกล้ชูเรโตะ)</li>
+        <li>เช็คก่อนจอง: ที่จอดรถฟรีในที่พัก (มินิแวนคันใหญ่) • มีเตียง/ห้องนอนชั้นล่างให้อาม่า (ไม่ใช่ฟูกล้วน) • ฮีตเตอร์ (คืน ต.ค. ~8°C) • ครัวพร้อมอุปกรณ์ • มีเลขใบอนุญาตที่พัก (民泊) กำกับ</li>
+        <li>เรือโจรสลัด/จุดชมวิวส่วนใหญ่ซื้อตั๋วหน้างานได้ ไม่ต้องเครียด</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3><span class="kanji">家族</span> เที่ยวกับอาม่า &amp; เด็ก ๆ</h3>
+      <ul>
+        <li>วันละ 2–3 จุดหลักพอ ใช้รถเป็นฐานพัก — เหนื่อยเมื่อไหร่กลับมานั่งพักในรถได้เสมอ</li>
+        <li>จุดธรรมชาติที่เลือกไว้ส่วนใหญ่ชมได้จากใกล้ลานจอด (Oishi Park, โมโตสึ, โอวาคุดานิ)</li>
+        <li>จุดที่มีบันได (ชูเรโตะ, ถ้ำ, จุดชมล่างน้ำตก) มีแผนสำรองให้อาม่ารอจุดวิวสวย/ร้านชาเสมอ</li>
+        <li>พกกระติกน้ำอุ่น + ขนมติดรถ • แวะจุดพักรถ (Michi-no-Eki) เข้าห้องน้ำทุก 1–1.5 ชม.</li>
+        <li>พกบัตรที่อยู่โรงแรมภาษาญี่ปุ่นให้อาม่าและเด็กติดตัวเสมอ</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3><span class="kanji">土産</span> แผนที่ของฝากทั้งทริป</h3>
+      <ul>
+        <li>คาวากูจิโกะ: Fujiyama Cookie, ชินเก็นโมจิ, งานคราฟต์อิยาชิโนะซาโตะ</li>
+        <li>ฮาโกเน่: กล่องไม้กลไกโยเซกิ, ไข่ดำของที่ระลึก</li>
+        <li>โกเทมบะเอาท์เล็ต: เสื้อผ้า/รองเท้าแบรนด์ลดหนัก (Day 8)</li>
+        <li>คามาคูระ: คุกกี้นกพิราบ Hato Sabure</li>
+        <li>โตเกียว Day 10: Tokyo Banana, Press Butter Sand, Don Quijote, ร้านยา</li>
+        <li>Tax-Free ครบ ¥5,500/ร้าน ใช้พาสปอร์ต — ห้ามแกะถุงซีลจนกว่าจะออกนอกญี่ปุ่น</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3><span class="kanji">荷物</span> ของที่ควรพก</h3>
+      <ul>
+        <li>รองเท้าเดินสบายทุกคน + รองเท้าพื้นยึดเกาะสำหรับวันเข้าถ้ำ</li>
+        <li>แจ็คเก็ต/เสื้อกันลม + ร่มพับ + ยากันเมารถ</li>
+        <li>ปลั๊กญี่ปุ่นขาแบน (Type A) + พาวเวอร์แบงก์ + สาย USB ในรถ</li>
+        <li>ยาประจำตัวอาม่าพร้อมชื่อยาภาษาอังกฤษ เผื่อกรณีฉุกเฉิน</li>
+        <li>พาสปอร์ตพกติดตัวเพื่อซื้อ Tax-Free</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span class="kanji">良い旅を</span>
+  แผนขับรถเที่ยวญี่ปุ่น 3–13 ตุลาคม 2569 • นอนแค่ 2 ที่: ชินจูกุ + คาวากูจิโกะ • โตเกียว・รอบฟูจิ・ฮาโกเน่・คามาคูระ — ขอให้ครอบครัวเที่ยวให้สนุกครับ 🗻🚗
+</footer>
+
+</body>
+</html>
