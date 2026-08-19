@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แผนเที่ยวญี่ปุ่น โตเกียว・ฟูจิ・ฮาโกเน่・คามาคูระ | 3–13 ต.ค. 2569</title>
+<title>แผนเที่ยวญี่ปุ่น ฟูจิ・โตเกียว 2 ฐาน | 3–13 ต.ค. 2569</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -65,7 +65,7 @@
 
   /* ---------- TIMELINE (rail line) ---------- */
   .rail{position:relative;padding:10px 0 30px}
-  .rail::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:var(--line-w);background:linear-gradient(180deg,var(--grey) 0 9.1%,#37517E 9.1% 36.4%,#6B4E8E 36.4% 45.5%,var(--pine) 45.5% 54.5%,var(--vermilion) 54.5% 90.9%,var(--grey) 90.9% 100%);border-radius:3px}
+  .rail::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:var(--line-w);background:linear-gradient(180deg,var(--grey) 0 9.1%,#37517E 9.1% 45.5%,var(--grey) 45.5% 54.5%,var(--vermilion) 54.5% 90.9%,var(--grey) 90.9% 100%);border-radius:3px}
   .day{position:relative;margin:0 0 34px 68px}
   .day::before{content:attr(data-no);position:absolute;left:-68px;top:22px;width:44px;height:44px;border-radius:50%;background:var(--card);border:4px solid var(--dot,var(--vermilion));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--dot,var(--vermilion));box-shadow:0 0 0 4px var(--paper)}
   .day-card{background:var(--card);border:1.5px solid #E0DCCB;border-radius:14px;overflow:hidden;box-shadow:5px 6px 0 rgba(34,48,79,.08);transition:transform .18s ease}
@@ -106,7 +106,7 @@
   footer .kanji{color:#F0D9A8;letter-spacing:.4em;display:block;margin-bottom:6px;font-size:15px}
 
   @media(max-width:640px){
-    .rail::before{left:18px}
+    .rail::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:var(--line-w);background:linear-gradient(180deg,var(--grey) 0 9.1%,#37517E 9.1% 45.5%,var(--grey) 45.5% 54.5%,var(--vermilion) 54.5% 90.9%,var(--grey) 90.9% 100%);border-radius:3px}
     .day{margin-left:52px}
     .day::before{left:-52px;width:36px;height:36px;font-size:13px;border-width:3px}
     .slot{grid-template-columns:1fr;gap:2px}
@@ -119,18 +119,16 @@
     .day-card{box-shadow:none;break-inside:avoid}
   }
 </style>
-</head>
-<body>
+</head><body>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Japan Autumn Trip 2026</div>
-    <h1>โตเกียว・ฟูจิ・ฮาโกเน่・คามาคูระ</h1>
-    <div class="hero-kanji">東京・富士山・箱根・鎌倉</div>
-    <div class="hero-date">🗓️ เสาร์ 3 – อังคาร 13 ต.ค. 2569 &nbsp;|&nbsp; 11 วัน 10 คืน &nbsp;|&nbsp; 👨‍👩‍👧‍👦 ครอบครัว 5 คน (พ่อ แม่ ลูก 2 + อาม่า) &nbsp;|&nbsp; 🚗 ขับรถเที่ยวเอง</div>
+    <h1>ฟูจิ &amp; โตเกียว — นอนแค่ 2 ที่</h1>
+    <div class="hero-kanji">富士山・東京</div>
+    <div class="hero-date">🗓️ เสาร์ 3 – อังคาร 13 ต.ค. 2569 &nbsp;|&nbsp; 11 วัน 10 คืน &nbsp;|&nbsp; 👨‍👩‍👧‍👦 ครอบครัว 5 คน (พ่อ แม่ ลูก 6 + 4 ขวบ + อาม่า) &nbsp;|&nbsp; 🚗 ขับรถช่วงฟูจิ 🚃 โตเกียวนั่งรถไฟ</div>
   </div>
-  <!-- ภาพประกอบ: ฟูจิยามเย็น -->
   <svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ภาพประกอบภูเขาไฟฟูจิยามพระอาทิตย์ตก">
     <circle cx="880" cy="120" r="58" fill="#F3D9A0" opacity=".95"/>
     <g opacity=".5" fill="#2B3E63">
@@ -166,30 +164,35 @@
 </header>
 
 <main class="wrap">
-<!-- ================= OVERVIEW TABLE ================= -->
+<!-- ================= OVERVIEW ================= -->
 <section id="overview">
   <div class="sec-head">
     <span class="kanji">旅程</span>
     <h2>ตารางรวมทั้งทริป</h2>
-    <span class="sub">ชินจูกุ 5 คืน (หัว 1 + ท้าย 4) • คาวากูจิโกะ 3 คืน • ฮาโกเน่ 1 คืน • คามาคูระ 1 คืน • ขับทุกขาไม่เกิน 2 ชม.</span>
+    <span class="sub">คาวากูจิโกะ 5 คืน → โตเกียว 5 คืน • ย้ายที่พักครั้งเดียวทั้งทริป • ขับรถไปทางเดียว ไม่ย้อนข้ามฟาก</span>
   </div>
+
+  <div class="tip" style="margin-bottom:22px">
+    <b>โครงทริปนี้แก้อะไรจากเวอร์ชันก่อน:</b> เดิมนอน 4 ฐาน (โตเกียว→ฟูจิ→ฮาโกเน่→คามาคูระ→โตเกียว) ต้อง<b>เช็คอิน 5 ครั้ง</b> และมีคืนเดี่ยว 2 คืนติดกันซึ่ง Airbnb แทบจองไม่ได้ • เวอร์ชันนี้เหลือ <b>2 ฐาน ย้ายครั้งเดียว</b> จัดกระเป๋า 2 รอบจบ ได้เวลาเที่ยวคืนมาเต็ม ๆ และค่าที่พักถูกลงมาก
+  </div>
+
   <div class="tt-scroll">
     <table class="tt">
       <thead>
         <tr><th>วัน</th><th>โซน</th><th>ไฮไลต์</th><th>ค้างคืนที่</th></tr>
       </thead>
       <tbody>
-        <tr><td class="day-cell">Day 1<small>เสาร์ 3 ต.ค.</small></td><td><span class="zone z-travel">เดินทาง</span></td><td>บิน กรุงเทพฯ → โตเกียว • เช็คอินชินจูกุ พักผ่อน</td><td class="stay">ชินจูกุ 🌙1</td></tr>
-        <tr><td class="day-cell">Day 2<small>อาทิตย์ 4 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td><b>รับรถเช่ามินิแวน 8 ที่นั่ง</b> → คาวากูจิโกะ • Oishi Park 🟢 ริมทะเลสาบ (แวะเก็บองุ่นคัตสึนุมะระหว่างทางได้) • เข้าบ้านพัก</td><td class="stay">คาวากูจิโกะ 🌙2</td></tr>
-        <tr><td class="day-cell">Day 3<small>จันทร์ 5 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>เจดีย์ชูเรโตะเช้าตรู่ + ถนนฮอนโจ • ศาลเจ้าคิตะกุจิเซ็นเง็น • โยชิดะอุด้ง • กระเช้า+เรือทะเลสาบ</td><td class="stay">คาวากูจิโกะ 🌙3</td></tr>
-        <tr><td class="day-cell">Day 4<small>อังคาร 6 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>ขับขึ้น <b>Fuji Subaru Line ชั้น 5</b> (ลาร์ชสีทอง) • โอชิโนะฮักไก • คอสมอสฮานะโนะมิยาโกะ • พระอาทิตย์ตก Panorama-dai</td><td class="stay">คาวากูจิโกะ 🌙4</td></tr>
-        <tr><td class="day-cell">Day 5<small>พุธ 7 ต.ค.</small></td><td><span class="zone z-hakone">ฮาโกเน่ 🚗</span></td><td>ขับแค่ <b>~1–1.5 ชม.</b> สู่<b>ฮาโกเน่</b> • เรือโจรสลัดทะเลสาบอาชิ + โทริอิกลางน้ำ • โอวาคุดานิไข่ดำ • คืนนี้เรียวกังออนเซ็น</td><td class="stay">ฮาโกเน่ 🌙5</td></tr>
-        <tr><td class="day-cell">Day 6<small>พฤหัส 8 ต.ค.</small></td><td><span class="zone z-kamakura">คามาคูระ 🚗</span></td><td>ขับ <b>~1–1.5 ชม.</b> สู่คามาคูระ • <b>พระใหญ่ไดบุตสึ</b> • วัดฮาเซเดระ • พระอาทิตย์ตกทะเลเอโนะชิมะ</td><td class="stay">คามาคูระ 🌙6</td></tr>
-        <tr><td class="day-cell">Day 7<small>ศุกร์ 9 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว 🚗</span></td><td>เช้าสึรุโกะโอกะฮาจิมังกู + ถนนโคมาจิ • ขับ <b>~1–1.5 ชม.</b> กลับโตเกียว <b>คืนรถเช่า</b> • บ่าย <b>Azabudai Hills</b> (ตึกสูงสุดญี่ปุ่น เปิด 2023) • ค่ำ Kabukicho Tower</td><td class="stay">ชินจูกุ 🌙7</td></tr>
-        <tr><td class="day-cell">Day 8<small>เสาร์ 10 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว</span></td><td>ช้อปปิ้งฮาราจูกุ: ทาเคชิตะ + <b>Harakado</b> (เปิด 2024) + โอโมเตะซันโด • บ่ายชิบูย่า • เย็น <b>Shibuya Sky</b> ชมพระอาทิตย์ตกบนดาดฟ้า 229 ม.</td><td class="stay">ชินจูกุ 🌙8</td></tr>
-        <tr><td class="day-cell">Day 9<small>อาทิตย์ 11 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว</span></td><td>เช้า <b>teamLab Planets</b> โทโยสุ (จองล่วงหน้า) • บ่าย วัดเซ็นโซจิ + นากามิเสะ • ค่ำ สกายทรี/โซลามาจิ</td><td class="stay">ชินจูกุ 🌙9</td></tr>
-        <tr><td class="day-cell">Day 10<small>จันทร์ 12 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว</span></td><td>วันหยุด Sports Day: เก็บของฝาก Tokyo Station Character Street + Don Quijote + ร้านยา • มื้อพิเศษปิดทริป</td><td class="stay">ชินจูกุ 🌙10</td></tr>
-        <tr><td class="day-cell">Day 11<small>อังคาร 13 ต.ค.</small></td><td><span class="zone z-travel">เดินทาง</span></td><td>บินกลับกรุงเทพฯ • (บินนาริตะไฟลต์บ่าย: แวะ Shisui Premium Outlets ได้)</td><td class="stay">—</td></tr>
+        <tr><td class="day-cell">Day 1<small>เสาร์ 3 ต.ค.</small></td><td><span class="zone z-travel">บิน + ขับ</span></td><td>ถึงญี่ปุ่น <b>รับรถที่สนามบิน ขับตรงเข้าคาวากูจิโกะเลย</b> ไม่แวะค้างโตเกียว • เข้าบ้านพัก ตุนเสบียง</td><td class="stay">คาวากูจิโกะ 🌙1</td></tr>
+        <tr><td class="day-cell">Day 2<small>อาทิตย์ 4 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>Oishi Park 🟢 ริมทะเลสาบ • สะพานคาวากูจิโกะโอฮาชิ • กระเช้าพาโนรามา + ล่องเรือ 🟢</td><td class="stay">คาวากูจิโกะ 🌙2</td></tr>
+        <tr><td class="day-cell">Day 3<small>จันทร์ 5 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>เจดีย์ชูเรโตะเช้าตรู่ + ถนนฮอนโจ • ศาลเจ้าคิตะกุจิเซ็นเง็น • โยชิดะอุด้ง • <b>Thomas Land</b> 🚂</td><td class="stay">คาวากูจิโกะ 🌙3</td></tr>
+        <tr><td class="day-cell">Day 4<small>อังคาร 6 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>ขับขึ้น <b>Subaru Line ชั้น 5</b> (ลาร์ชสีทอง 2,305 ม.) • โอชิโนะฮักไก • คอสมอสฮานะโนะมิยาโกะ • Panorama-dai</td><td class="stay">คาวากูจิโกะ 🌙4</td></tr>
+        <tr><td class="day-cell">Day 5<small>พุธ 7 ต.ค.</small></td><td><span class="zone z-fuji">ฟูจิ 🚗</span></td><td>ทะเลสาบฝั่งตะวันตก: อิยาชิโนะซาโตะหลังคาฟาง • ทะเลสาบโชจิ • <b>โมโตสึ วิวหลังแบงก์ ¥1,000</b></td><td class="stay">คาวากูจิโกะ 🌙5</td></tr>
+        <tr><td class="day-cell">Day 6<small>พฤหัส 8 ต.ค.</small></td><td><span class="zone z-travel">ย้ายฐาน 🚗</span></td><td><b>ขับ ~2 ชม. เข้าโตเกียว คืนรถ</b> (ย้ายครั้งเดียวของทริป) • บ่ายพักขาที่ <b>สวนชินจูกุเกียวเอ็น</b> 🟢</td><td class="stay">โตเกียว 🌙6</td></tr>
+        <tr><td class="day-cell">Day 7<small>ศุกร์ 9 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว 🚃</span></td><td>เช้า <b>teamLab Planets</b> (จองล่วงหน้า) • บ่าย วัดเซ็นโซจิ + นากามิเสะ • ค่ำ <b>อควาเรียมสุมิดะ</b> 🐧</td><td class="stay">โตเกียว 🌙7</td></tr>
+        <tr><td class="day-cell">Day 8<small>เสาร์ 10 ต.ค.</small></td><td><span class="zone z-tokyo">โตเกียว 🚃</span></td><td>ฮาราจูกุ ทาเคชิตะ + <b>Harakado</b> • โอโมเตะซันโด • ชิบูย่า • <b>Pokémon Center + Nintendo TOKYO</b> 🎮</td><td class="stay">โตเกียว 🌙8</td></tr>
+        <tr><td class="day-cell">Day 9<small>อาทิตย์ 11 ต.ค.</small></td><td><span class="zone z-kamakura">คามาคูระ 🚃</span></td><td><b>เดย์ทริปนั่งรถไฟ ~1 ชม.</b> (ไม่ย้ายที่พัก) • พระใหญ่ไดบุตสึ • ถนนโคมาจิ • รถไฟเอโนเด็นเลียบทะเล • เอโนะชิมะ</td><td class="stay">โตเกียว 🌙9</td></tr>
+        <tr><td class="day-cell">Day 10<small>จันทร์ 12 ต.ค.</small></td><td><span class="zone z-tokyo">ของฝาก 🚃</span></td><td>วันหยุด Sports Day • <b>อุเอโนะ</b>: ร้านของเล่นยามาชิโรยะ + อาเมโยโกะ + <b>ตึกม่วงทาเคยะ</b> • Tokyo Station • มื้อปิดทริป</td><td class="stay">โตเกียว 🌙10</td></tr>
+        <tr><td class="day-cell">Day 11<small>อังคาร 13 ต.ค.</small></td><td><span class="zone z-travel">บินกลับ</span></td><td>เช็คเอาต์ • บินกลับกรุงเทพฯ</td><td class="stay">—</td></tr>
       </tbody>
     </table>
   </div>
@@ -221,14 +224,14 @@
         </g>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">เสาร์ 3 ตุลาคม 2569</span><span class="zone z-travel">วันเดินทาง</span></div>
-        <h3 class="day-title">กรุงเทพฯ → โตเกียว <span class="kanji">出発</span></h3>
-        <div class="slot"><b>เช้า–บ่าย</b><p>บินตรง ~6 ชม. ถึง<span class="hl">นาริตะ/ฮาเนดะ</span> (เวลาญี่ปุ่นเร็วกว่าไทย 2 ชม.) • รับ Suica/Pasmo</p></div>
-        <div class="slot"><b>เข้าเมืองทางไหนดี?</b><p>เทียบ 3 ทาง (นาริตะ→ชินจูกุ, 5 คน + กระเป๋า 5 ใบ):<br>① <span class="hl">ลีมูซีนบัส ✅ แนะนำ</span> ~¥14,500–16,000 — กระเป๋าโหลดใต้ท้องรถ ส่งถึงหน้าโรงแรมใหญ่ในชินจูกุ <b>เดินน้อยที่สุด</b><br>② <span class="hl">N'EX</span> ~¥13,000–14,500 — ถูกกว่านิดเดียว แต่สถานีชินจูกุใหญ่เป็นเขาวงกต ต้องลากกระเป๋าเดินไกล/ต่อลิฟต์หลายจังหวะ <b>เดินเยอะสุด</b> ไม่เหมาะกับอาม่า<br>③ <span class="hl">รับรถเช่าที่สนามบิน</span> — ค่าเช่า +1 วัน (~¥15,000–18,000) + จอดโรงแรม (~¥2,000–4,000/คืน) + ทางด่วน ~¥3,000 ≈ <b>แพงกว่าบัสเท่าตัว แต่เดินน้อยเท่ากัน</b> (door-to-door ทั้งคู่) จึงไม่ได้เปรียบเรื่องเดิน แถมต้องขับ 1.5–2 ชม. หลังบินเหนื่อย ๆ</p></div>
-        <div class="slot"><b>ข้อยกเว้นเดียวที่รถสนามบินคุ้ม</b><p>ถ้าไฟลต์<span class="hl">ถึงก่อนเที่ยง</span>: รับรถที่สนามบินแล้ว<span class="hl">ขับตรงไปคาวากูจิโกะเลย</span> (นาริตะ ~3 ชม. / ฮาเนดะ ~2 ชม.) — ตัดคืนโตเกียวคืนแรกทิ้ง ได้บ้านพักคาวากูจิโกะเพิ่มเป็น 4 คืน ไม่ต้องแตะกระเป๋าเลยตั้งแต่สนามบินถึงบ้าน อันนี้เดินน้อยสุดของจริงและคุ้มกว่าทุกทาง (ค่าเช่าที่เพิ่มหักลบค่าบัส+โรงแรมโตเกียว 1 คืนแล้วพอ ๆ กันหรือถูกกว่า)</p></div>
-        <div class="slot"><b>เย็น–ค่ำ</b><p>เช็คอินโรงแรมย่าน<span class="hl">ชินจูกุ</span> มื้อค่ำเบา ๆ ใกล้โรงแรม • พักเร็ว พรุ่งนี้เริ่มภารกิจเก็บฟูจิ!</p></div>
-        <div class="cost">💴 งบวันนี้ (5 คน ไม่รวมที่พัก/ช้อปปิ้ง): ~¥21,000 ≈ 4,900 บาท (บัสเข้าเมือง + อาหาร)</div>
-        <div class="tip"><b>ทิปส์:</b> ทำ<b>ใบขับขี่สากล (IDP เจนีวา 1949)</b> ก่อนบิน • โหลด Google Maps ปักหมุดทุกจุด + กล้องดูฟูจิสด (Fuji Live Camera) ไว้เช็คฟ้าทุกเช้า</div>
+        <div class="day-meta"><span class="day-date">เสาร์ 3 ตุลาคม 2569</span><span class="zone z-travel">บิน + ขับตรงเข้าฟูจิ</span></div>
+        <h3 class="day-title">กรุงเทพฯ → คาวากูจิโกะ <span class="kanji">出発</span></h3>
+        <div class="slot"><b>⚠️ วันนี้คือหัวใจของโครง 2 ฐาน</b><p>โครงนี้อยู่ได้เพราะวันนี้ <b>ไม่แวะค้างโตเกียว</b> — รับรถที่สนามบินแล้ว<span class="hl">ขับตรงเข้าคาวากูจิโกะเลย</span> ได้บ้านพัก 5 คืนรวด ไม่ต้องแตะกระเป๋าอีกจนถึงวันย้าย<br><b>เงื่อนไขคือไฟลต์ต้องถึงก่อนเที่ยง</b> — ฮาเนดะขับ ~2 ชม. / นาริตะ ~3 ชม. • <span class="hl">ถ้าเลือกไฟลต์ได้ ให้ลงฮาเนดะรอบเช้า</span> สบายที่สุดทั้งระยะขับและความสดของคนขับ</p></div>
+        <div class="slot"><b>ถ้าไฟลต์ถึงบ่าย–เย็น</b><p>อย่าฝืนขับขึ้นเขาตอนมืดหลังบิน 6 ชม. พร้อมเด็ก 2 คน — <b>นอนโรงแรมใกล้สนามบิน 1 คืน</b> แล้วรับรถขับเช้าวันรุ่งขึ้นแทน เสียเวลาครึ่งวันแต่ปลอดภัยกว่ามาก (ทางขึ้นคาวากูจิโกะเป็นทางเขา โค้งและอุโมงค์เยอะ)</p></div>
+        <div class="slot"><b>รับรถ</b><p><span class="hl">มินิแวน 8 ที่นั่ง</span> (Noah/Voxy/Serena/Step WGN) — นั่ง 5 คนใน 2 แถวแรก พับแถว 3 ใส่กระเป๋า 23 กก. 3 ใบ + carry-on 2 ใบ • <b>แจ้งตอนจอง: คาร์ซีทสำหรับน้อง 4 ขวบ</b> (ต่ำกว่า 6 ขวบบังคับตามกฎหมายญี่ปุ่น) + บัตร ETC + ประกัน CDW</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>เข้า<span class="hl">บ้านพัก Airbnb คาวากูจิโกะ</span> — ทักโฮสต์ยืนยันเวลาถึงกับวิธีเปิดคีย์บ็อกซ์ตั้งแต่เช้าวันบิน • แวะซูเปอร์ <b>Ogino</b> หรือ Max Valu ตุนเสบียงมื้อเช้าไว้ทั้งอาทิตย์ (บ้านมีครัว = ประหยัด และอาม่าได้กินข้าวต้ม) • นอนเร็ว</p></div>
+        <div class="cost">💴 งบวันนี้ (5 คน ไม่รวมที่พัก): ~¥18,000 ≈ 4,200 บาท (ทางด่วนสนามบิน→คาวากูจิโกะ ~¥5,500 • น้ำมัน ~¥3,000 • อาหาร+ตุนเสบียง ~¥9,500)</div>
+        <div class="tip"><b>ทิปส์:</b> ทำ<b>ใบขับขี่สากล IDP (เจนีวา 1949)</b> ก่อนบิน — ขาดอันนี้เช่ารถไม่ได้เลย ต้องครบ 3 อย่าง: IDP + ใบขับขี่ไทย + พาสปอร์ต • โหลด Google Maps ปักหมุดทุกจุดล่วงหน้า + บุ๊กมาร์ก <b>Fuji Live Camera</b> ไว้เช็คฟ้าทุกเช้า</div>
       </div>
     </div>
   </article>
@@ -254,14 +257,15 @@
         </g>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">อาทิตย์ 4 ตุลาคม 2569</span><span class="zone z-fuji">รับรถ → ฟูจิ 🚗</span></div>
-        <h3 class="day-title">มุ่งหน้าคาวากูจิโกะ — โคเชียแดง <span class="kanji">河口湖</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Lake_Kawaguchi_(2015-10-26).jpg?width=1200" alt="ฟูจิจากทะเลสาบคาวากูจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ภูเขาไฟฟูจิจากทะเลสาบคาวากูจิ — ภาพถ่ายช่วงปลายตุลาคม ใกล้เคียงกับที่จะได้เห็นจริง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Oishi_Park.jpg?width=1200" alt="วิวฟูจิจาก Oishi Park" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 มุมไฮไลต์ Oishi Park: แปลงดอกไม้ + ทะเลสาบ + ฟูจิ ในเฟรมเดียว — นี่คือภาพที่ทุกคนมายืนถ่ายตรง "Flower Road" ห่างลานจอดไม่กี่ก้าว — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ รับ<span class="hl">มินิแวน 8 ที่นั่ง</span> (Noah/Voxy/Serena/Step WGN — นั่ง 5 คนใน 2 แถวแรก พับแถว 3 ใส่กระเป๋า 23 กก. 3 ใบ + carry-on 2 ใบ) • ขับทางด่วนชูโอ ~2 ชม. แวะจุดพักรถยืดเส้น • <span class="hl">อยากเก็บองุ่นไชน์มัสแคท?</span> แวะไร่ที่คัตสึนุมะได้เลย อยู่ติดเส้นทางด่วนชูโอพอดี (บวกเวลา ~1–1.5 ชม. จองไร่ล่วงหน้า 2–3 วัน)</p></div>
-        <div class="slot"><b>บ่าย</b><p>มื้อเที่ยง<span class="hl">โฮโต</span>อุด้งหม้อร้อน • <span class="hl">Oishi Park</span> <span class="walk">🟢</span> ลานจอดติดสวน ทางเรียบตลอด มีคาเฟ่ซอฟต์ครีมบลูเบอร์รี — มุมถ่ายรูป "ดอกไม้+ทะเลสาบ+ฟูจิ" อยู่ห่างที่จอดไม่กี่สิบก้าว • พูดตรง ๆ เรื่องโคเชีย: ช่วง 3–13 ต.ค. ต้นโคเชีย<span class="hl">เพิ่งเริ่มเปลี่ยนสี</span> (เขียวอมชมพู–แดงเรื่อ) จะแดงจัดช่วงกลาง–ปลายเดือน แต่วิวฟูจิ+ทะเลสาบสวยเต็มร้อยทุกวันที่ฟ้าเปิด • ขับเลียบทะเลสาบแวะจุดวิว<span class="hl">สะพาน Kawaguchiko Ohashi</span> <span class="walk">🟢</span> จอดริมทางถ่ายได้เลย</p></div>
-        <div class="slot"><b>เย็น–ค่ำ</b><p>เช็คอิน<span class="hl">บ้านพัก Airbnb</span> — ฐานคาวากูจิโกะ 3 คืน จัดของรอบเดียวจบ • แวะซูเปอร์ตุนเสบียง มื้อค่ำที่บ้านหรือร้านริมทะเลสาบ</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥24,000 ≈ 5,600 บาท (ทางด่วน+น้ำมัน ~¥5,500 • อาหาร 2 มื้อ+ตุนเสบียง ~¥18,500)</div>
-        <div class="tip"><b>ทิปส์:</b> จองรถแจ้ง: จำนวนกระเป๋า + คาร์ซีท (เด็กต่ำกว่า 6 ปีบังคับ) + บัตร ETC • สายถ่ายรูปที่อยากได้มุมโทริอิลอยฟ้า "เท็นคุโนะโทริอิ" 🔴 ต้องเดินขึ้นเนิน 10–15 นาที — ตัดออกจากแผนหลักตามโจทย์ ให้เป็นตัวเลือกของพ่อคนเดียวแวะถ่ายไว ๆ ได้</div>
+        <div class="day-meta"><span class="day-date">อาทิตย์ 4 ตุลาคม 2569</span><span class="zone z-fuji">ฟูจิ วันเต็มวันแรก 🚗</span></div>
+        <h3 class="day-title">Oishi Park – กระเช้า – ล่องเรือ <span class="kanji">河口湖</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Oishi_Park.jpg?width=1200" alt="วิวฟูจิจาก Oishi Park" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 มุมไฮไลต์ Oishi Park: แปลงดอกไม้ + ทะเลสาบ + ฟูจิ ในเฟรมเดียว ห่างลานจอดไม่กี่ก้าว — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Lake_Kawaguchi_(2015-10-26).jpg?width=1200" alt="ฟูจิจากทะเลสาบคาวากูจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ฟูจิจากทะเลสาบคาวากูจิ — ภาพถ่ายปลายตุลาคม ใกล้เคียงกับที่จะได้เห็นจริง — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p><span class="hl">Oishi Park</span> <span class="walk">🟢</span> ลานจอดติดสวน ทางเรียบตลอด มีคาเฟ่ซอฟต์ครีมบลูเบอร์รี — มุมถ่ายรูป "ดอกไม้+ทะเลสาบ+ฟูจิ" ห่างที่จอดไม่กี่สิบก้าว • <b>พูดตรง ๆ เรื่องโคเชีย:</b> ช่วง 3–13 ต.ค. ต้นโคเชีย<span class="hl">เพิ่งเริ่มเปลี่ยนสี</span> (เขียวอมชมพู–แดงเรื่อ) จะแดงจัดกลาง–ปลายเดือน แต่วิวฟูจิ+ทะเลสาบสวยเต็มร้อยทุกวันที่ฟ้าเปิด</p></div>
+        <div class="slot"><b>เที่ยง</b><p>มื้อเที่ยง<span class="hl">โฮโต</span> อุด้งหม้อร้อนเส้นแบนในซุปมิโสะฟักทอง อาหารประจำถิ่นยามานาชิ — ร้อน ๆ อาม่ากับเด็กกินง่าย</p></div>
+        <div class="slot"><b>บ่าย</b><p><span class="hl">กระเช้าพาโนรามา Mt. Fuji</span> + <span class="hl">ล่องเรือ Ensoleillé</span> <span class="walk">🟢</span> — <b>ท่าเรือกับสถานีกระเช้าอยู่ติดลานจอดเดียวกัน นั่งชมได้ทั้งครอบครัวโดยแทบไม่ต้องเดิน</b> เหมาะกับวันที่ยังปรับเวลาไม่ทัน • ตั๋วคอมโบกระเช้า+เรือคุ้มกว่าซื้อแยก</p></div>
+        <div class="slot"><b>เย็น</b><p>ขับเลียบทะเลสาบแวะ<span class="hl">สะพาน Kawaguchiko Ohashi</span> <span class="walk">🟢</span> จอดริมทางถ่ายฟูจิได้เลย • คาเฟ่ริมทะเลสาบแสงเย็น • มื้อค่ำที่บ้าน</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥21,000 ≈ 4,900 บาท (กระเช้า+เรือคอมโบ 5 คน ~¥7,500 • อาหาร ~¥12,000 • น้ำมัน ~¥1,500)</div>
+        <div class="tip"><b>ทิปส์:</b> เช้าไหนฟ้าใสจัด <b>สลับลำดับ Day 2–5 ได้อิสระทั้งหมด</b> เพราะนอนฐานเดียว 5 คืน — นี่คือข้อได้เปรียบใหญ่สุดของโครง 2 ฐาน เจอวันฟ้าปิดก็ยกจุดถ่ายรูปไปวันอื่นได้เลย ไม่มีอะไรผูกมัด</div>
       </div>
     </div>
   </article>
@@ -285,14 +289,14 @@
         <rect y="156" width="800" height="14" fill="#DAD2BC"/>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">จันทร์ 5 ตุลาคม 2569</span><span class="zone z-fuji">วันเจดีย์แดง 🚗</span></div>
-        <h3 class="day-title">ชูเรโตะ – ฮอนโจ – คิตะกุจิเซ็นเง็น <span class="kanji">忠霊塔</span></h3>
+        <div class="day-meta"><span class="day-date">จันทร์ 5 ตุลาคม 2569</span><span class="zone z-fuji">เจดีย์แดง + วันของเด็ก 🚗</span></div>
+        <h3 class="day-title">ชูเรโตะ – คิตะกุจิเซ็นเง็น – Thomas Land <span class="kanji">忠霊塔</span></h3>
         <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arakurayama_Sengen_Park_-_Japan.jpg?width=1200" alt="เจดีย์ชูเรโตะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 เจดีย์ชูเรโตะ + ฟูจิ มุมภาพจำของญี่ปุ่น — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Fuji_Sengen_Shrine_at_the_base_of_Mt._Fuji_26-Aug-2012.JPG?width=1200" alt="ศาลเจ้าคิตะกุจิเซ็นเง็น" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น — อาคารแดงชาดกลางป่าซีดาร์ยักษ์ — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้าตรู่</b><p><span class="hl">เจดีย์ชูเรโตะ</span> <span class="walk">🔴 ตัวเลือก</span> — จุดชมวิวเจดีย์แดง+ฟูจิยังต้องขึ้นบันไดแม้จอดลานบน จัดเป็น<span class="hl">ภารกิจของพ่อ–แม่–ลูก</span> ส่วนอาม่าชมฟูจิจากลานจอดด้านล่าง <span class="walk">🟢</span> (จอดติดลาน มีม้านั่ง) • มุมที่ทั้งบ้านเก็บได้เท่ากัน: <span class="hl">ถนนฮอนโจ</span> <span class="walk">🟢</span> จอดใกล้–ยืนถ่ายริมทางเท้า ฟูจิเต็มปลายถนนยุคโชวะ ไอคอนิกไม่แพ้เจดีย์</p></div>
-        <div class="slot"><b>สาย–เที่ยง</b><p><span class="hl">ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น</span> <span class="walk">🟡</span> — ลานจอดใน ~160 คันอยู่ชิดตัวศาลเจ้า ทางเดินโคมหิน–ซีดาร์พันปีเรียบตลอดไม่มีบันไดหนัก มุมไฮไลต์คือ<span class="hl">โทริอิไม้ยักษ์ 18 ม.</span>กลางป่า • เที่ยง<span class="hl">โยชิดะอุด้ง</span> เส้นเหนียวสุดในญี่ปุ่น ชามละ ~¥600–800 ถูกจนตกใจ</p></div>
-        <div class="slot"><b>บ่าย–เย็น</b><p>กลับฝั่งทะเลสาบ <span class="hl">กระเช้าพาโนรามา Mt. Fuji</span> + <span class="hl">ล่องเรือ Ensoleillé</span> <span class="walk">🟢</span> ท่าเรือ–สถานีกระเช้าติดลานจอด นั่งชมทั้งหมด ไม่ต้องเดิน (ตั๋วคอมโบกระเช้า+เรือคุ้มกว่า) • คาเฟ่แสงเย็นริมทะเลสาบ</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥21,000 ≈ 4,900 บาท (กระเช้า+เรือคอมโบ 5 คน ~¥7,500 • อาหาร ~¥12,000 • น้ำมัน ~¥1,500)</div>
-        <div class="tip"><b>ทิปส์:</b> เช้าไหนฟ้าใสจัด จัดลำดับ "จุดถ่ายฟูจิ" ก่อนเสมอ สลับวันได้หมดเพราะนอนฐานเดียว</div>
+        <div class="slot"><b>เช้าตรู่</b><p><span class="hl">เจดีย์ชูเรโตะ</span> <span class="walk">🔴 ตัวเลือก</span> — จุดชมวิวเจดีย์แดง+ฟูจิต้องขึ้นบันไดแม้จอดลานบน จัดเป็น<span class="hl">ภารกิจของพ่อ–แม่–ลูก</span> ส่วนอาม่าชมฟูจิจากลานจอดด้านล่าง <span class="walk">🟢</span> (จอดติดลาน มีม้านั่ง) • มุมที่ทั้งบ้านเก็บได้เท่ากัน: <span class="hl">ถนนฮอนโจ</span> <span class="walk">🟢</span> จอดใกล้–ยืนถ่ายริมทางเท้า ฟูจิเต็มปลายถนนยุคโชวะ ไอคอนิกไม่แพ้เจดีย์</p></div>
+        <div class="slot"><b>สาย–เที่ยง</b><p><span class="hl">ศาลเจ้าคิตะกุจิ ฮงงู ฟูจิ เซ็นเง็น</span> <span class="walk">🟡</span> — ลานจอดใน ~160 คันอยู่ชิดตัวศาลเจ้า ทางเดินโคมหิน–ซีดาร์พันปีเรียบตลอด ไม่มีบันไดหนัก มุมไฮไลต์คือ<span class="hl">โทริอิไม้ยักษ์ 18 ม.</span>กลางป่า • เที่ยง<span class="hl">โยชิดะอุด้ง</span> เส้นเหนียวที่สุดในญี่ปุ่น ชามละ ~¥600–800 ถูกจนตกใจ</p></div>
+        <div class="slot"><b>บ่าย — วันนี้เป็นของเด็ก ๆ 🚂</b><p><span class="hl">Thomas Land ที่ Fuji-Q Highland</span> <span class="walk">🟢</span> — อยู่<b>ฟูจิโยชิดะ เมืองเดียวกับชูเรโตะและคิตะกุจิเซ็นเง็น</b> ขับต่อจากร้านอุด้งไม่กี่นาที ไม่ต้องอ้อมเลย • <b>โซนธีมโทมัสออกแบบมาเพื่อเด็กวัย 4–6 ขวบพอดี</b> เครื่องเล่นนุ่มนวลกว่า 12 อย่าง บอลลูนเพอร์ซี่ รถไฟโทมัส จุดถ่ายรูปกับตัวการ์ตูน<br><span class="hl">จุดที่ลงตัวกับบ้านเรา:</span> <b>Fuji-Q เข้าฟรี จ่ายเฉพาะเครื่องเล่น</b> — อาม่ากับคนไม่เล่นเดินเข้าไปนั่งรอในสวนได้โดยไม่ต้องซื้อบัตร มีร้านอาหาร ม้านั่ง และวิวฟูจิเต็มตา • ซื้อ <b>Thomas Land Pass</b> (เริ่ม ~¥2,000) เฉพาะเด็ก 2 คนพอ</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥22,000 ≈ 5,200 บาท (Thomas Land Pass เด็ก 2 คน + เครื่องเล่นเพิ่ม ~¥6,000 • ที่จอด Fuji-Q ~¥1,500 • อาหาร ~¥13,000 • น้ำมัน ~¥1,500)</div>
+        <div class="tip"><b>ทิปส์:</b> <b>Fuji-Q ปิดไม่ตรงกันในแต่ละสัปดาห์</b> เช็คปฏิทินเปิด–ปิดในเว็บก่อนล็อกวัน — ถ้าปิดวันจันทร์ที่ 5 ให้<b>สลับ Thomas Land ไป Day 4 หรือ Day 5 ได้เลย</b> (ข้อดีของการนอนฐานเดียว) • ไปเจดีย์ให้เช้าที่สุด ฟ้ามักเปิดก่อน 10:00</div>
       </div>
     </div>
   </article>
@@ -322,13 +326,13 @@
         <div class="slot"><b>บ่าย</b><p><span class="hl">สวนดอกไม้ฮานะโนะมิยาโกะ</span> <span class="walk">🟡</span> ลานจอดติดสวน ทางเรียบหมด — <span class="hl">คอสมอสบานกลาง ก.ย.–กลาง ต.ค.</span> ตรงช่วงเราพอดี มุมไฮไลต์คือ<span class="hl">ทุ่งดอกไม้สุดตาที่มีฟูจิลอยอยู่หลังทุ่ง</span> • มีน้ำตกในสวน + โดมดอกไม้ในร่มเผื่อฝนตก เด็กวิ่งเล่นได้</p></div>
         <div class="slot"><b>เย็น–ค่ำ</b><p>ปิดวันที่ <span class="hl">Panorama-dai</span> <span class="walk">🟢</span> จุดชมวิวริมถนนมีลานจอดเล็ก ๆ ลงจากรถถึงวิวเลย — ฟูจิ+ทะเลสาบยามานากะย้อมแสงทอง • ขับกลับบ้าน ~40 นาที</p></div>
         <div class="cost">💴 งบวันนี้: ~¥19,000 ≈ 4,500 บาท (ค่าผ่านทาง Subaru Line ~¥2,100 • ค่าเข้าสวน+ที่จอด ~¥3,000 • อาหาร ~¥11,500 • น้ำมัน ~¥2,400)</div>
-        <div class="tip"><b>ทิปส์:</b> วันนี้แน่นสุดของทริป (4 จุด) — ถ้าดูแล้วอาม่าเหนื่อย <b>ตัดฮานะโนะมิยาโกะออกได้</b> เหลือชั้น 5 + โอชิโนะ + พระอาทิตย์ตก กำลังดี • ช่วง ต.ค. รถส่วนตัวขึ้น Subaru Line ได้ตามปกติ (ช่วงห้ามคือกลาง ก.ค.–ต้น ก.ย.) แต่<b>เช็คประกาศปิดถนนเพราะหิมะ/ลมแรงในเว็บก่อนออกทุกครั้ง</b> • ชั้น 5 หนาว ~5–8°C ลมแรง เตรียมเสื้อกันลม–หมวกไว้ในรถ ไม่ต้องขนขึ้นไป • ยามานากะสูง 1,000 ม. เย็นกว่าคาวากูจิโกะอีก • <b>คืนนี้เป็นคืนสุดท้ายที่คาวากูจิโกะ</b> จัดกระเป๋าให้พร้อม พรุ่งนี้เช็คเอาต์ย้ายไปฮาโกเน่</div>
+        <div class="tip"><b>ทิปส์:</b> วันนี้แน่นสุดของทริป (4 จุด) — ถ้าอาม่าเหนื่อย <b>ตัดฮานะโนะมิยาโกะออกได้</b> เหลือชั้น 5 + โอชิโนะ + พระอาทิตย์ตก กำลังดี • ช่วง ต.ค. รถส่วนตัวขึ้น Subaru Line ได้ตามปกติ (ช่วงห้ามคือกลาง ก.ค.–ต้น ก.ย.) แต่<b>เช็คประกาศปิดถนนเพราะหิมะ/ลมแรงในเว็บก่อนออกทุกครั้ง</b> • ชั้น 5 หนาว ~5–8°C ลมแรง เตรียมเสื้อกันลม–หมวกไว้ในรถ ไม่ต้องขนขึ้นไป</div>
       </div>
     </div>
   </article>
 
   <!-- DAY 5 -->
-  <article class="day" data-no="5" style="--dot:#6B4E8E">
+  <article class="day" data-no="5" style="--dot:#37517E">
     <div class="day-card">
       <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="โทริอิกลางน้ำและเรือโจรสลัดทะเลสาบอาชิ">
         <rect width="800" height="170" fill="#D7E2EE"/>
@@ -356,45 +360,53 @@
         <rect y="164" width="800" height="6" fill="#3C6685"/>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">พุธ 7 ตุลาคม 2569</span><span class="zone z-hakone">ย้ายฐาน → ฮาโกเน่ 🚗</span></div>
-        <h3 class="day-title">ทะเลสาบอาชิ – โอวาคุดานิ – ออนเซ็น <span class="kanji">箱根</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/LakeAshi_and_MtFuji_Hakone.JPG?width=1200" alt="ทะเลสาบอาชิและภูเขาไฟฟูจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ทะเลสาบอาชิ วันฟ้าเปิดจะเห็นฟูจิตั้งอยู่ปลายทะเลสาบพอดี — วิวนี้คือเหตุผลที่ต้องนั่งเรือ — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Lake_Ashi_with_Peace_Torii_gate,_Hakone,_Japan1.jpg?width=1200" alt="โทริอิแห่งสันติภาพกลางน้ำ ศาลเจ้าฮาโกเน่" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 "เฮวะโนะโทริอิ" โทริอิแดงกลางน้ำของศาลเจ้าฮาโกเน่ — มุมถ่ายรูปที่คนต่อคิวกันยาว ไปช่วงเย็นคนเบาบางลง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Owakudani_Valley_near_Owakudani_Station.JPG?width=1200" alt="หุบเขาโอวาคุดานิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 โอวาคุดานิ หุบเขาไอกำมะถันที่ยังคุกรุ่น ต้นกำเนิดไข่ดำในตำนาน — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p>เช็คเอาต์คาวากูจิโกะ ขับผ่านโกเท็มบะ <span class="hl">~1–1.5 ชม.</span> สู่ฮาโกเน่ — <span class="hl">ขาสั้นที่สุดของทริป</span> ออกสาย ๆ ได้สบาย ไม่ต้องรีบ • <span class="hl">อยากแวะ Gotemba Premium Outlets?</span> อยู่กลางทางพอดี วันฟ้าใสมีฟูจิเป็นฉากหลังทั้งเอาท์เล็ต (บวกเวลา ~2 ชม.) — แต่ถ้าจะเก็บของฝากวันท้าย ๆ ที่โตเกียวอยู่แล้ว ข้ามได้ไม่เสียดาย</p></div>
-        <div class="slot"><b>บ่าย</b><p><span class="hl">โอวาคุดานิ</span> <span class="walk">🟡</span> ขับขึ้นถึงลานจอดบนหุบเขาได้เลย ไม่ต้องต่อกระเช้า — ไอกำมะถันพวยพุ่งจากพื้นดินเห็นชัดจากลานชมวิวข้างที่จอด • <span class="hl">ไข่ดำคุโรทามาโกะ</span> ต้มในบ่อกำมะถันจนเปลือกดำ ตำนานว่ากินฟองละต่ออายุ 7 ปี (~¥500/5 ฟอง) เด็ก ๆ ชอบมาก • ต่อด้วย<span class="hl">ล่องเรือโจรสลัดทะเลสาบอาชิ</span> <span class="walk">🟢</span> จอดที่ท่าโมโตะฮาโกเน่แล้วซื้อตั๋วไป–กลับ นั่งยาวชมวิวไม่ต้องเดินเลย ดาดฟ้าเรือคือจุดถ่ายฟูจิเหนือทะเลสาบ</p></div>
-        <div class="slot"><b>เย็น</b><p><span class="hl">ศาลเจ้าฮาโกเน่ + เฮวะโนะโทริอิกลางน้ำ</span> <span class="walk">🟡</span> — โทริอิแดงตั้งอยู่ในน้ำ เดินจากลานจอดริมทะเลสาบ ~5 นาที ทางเรียบ (ตัวศาลเจ้าบนเนินมีบันไดยาว 🔴 ขึ้นเฉพาะใครไหว อาม่าถ่ายรูปที่โทริอิริมน้ำได้เต็มอิ่มแล้ว) • คิวถ่ายรูปโทริอิยาว ช่วงใกล้เย็นคนน้อยลงและแสงสวยกว่า</p></div>
-        <div class="slot"><b>ค่ำ — ไฮไลต์ของวัน</b><p>เช็คอิน<span class="hl">เรียวกังออนเซ็น</span> โซนโมโตะฮาโกเน่/โกระ — <span class="hl">แช่ออนเซ็นน้ำแร่ + ไคเซกิมื้อค่ำในห้อง</span> ใส่ยูกาตะเดินทั้งครอบครัว คืนเดียวแต่เป็นคืนที่จะจำที่สุดของทริป • จองแบบมี<span class="hl">ออนเซ็นส่วนตัว (คาชิคิริ)</span> ไว้ ครอบครัวแช่ด้วยกันได้ ไม่ต้องกังวลเรื่องแช่รวมกับคนแปลกหน้า</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥17,000 ≈ 4,000 บาท (เรือโจรสลัดไป–กลับ 5 คน ~¥9,000 • ไข่ดำ+ที่จอด ~¥1,500 • มื้อเที่ยง ~¥5,000 • น้ำมัน+ทางด่วน ~¥1,500) — <b>มื้อค่ำ+เช้ารวมในค่าเรียวกังแล้ว</b></div>
-        <div class="tip"><b>ทิปส์:</b> <b>โอวาคุดานิปิดเป็นครั้งคราวเมื่อระดับก๊าซภูเขาไฟสูง</b> เช็คประกาศเช้าวันนั้นก่อนขับขึ้น ถ้าปิดให้สลับไปพิพิธภัณฑ์กลางแจ้งฮาโกเน่แทน (ทางเรียบ เหมาะกับอาม่าเช่นกัน) • คนเป็นโรคหอบ/หัวใจไม่ควรอยู่โซนไอกำมะถันนาน • แจ้งเรียวกังล่วงหน้า: <b>ขอห้องเตียง/ชั้นล่างให้อาม่า</b> + แพ้อาหาร + เด็ก 2 คน • มีรอยสักอาจถูกห้ามลงบ่อรวม — อีกเหตุผลที่ควรจองห้องมีออนเซ็นส่วนตัว</div>
+        <div class="day-meta"><span class="day-date">พุธ 7 ตุลาคม 2569</span><span class="zone z-fuji">ทะเลสาบฝั่งตะวันตก 🚗</span></div>
+        <h3 class="day-title">อิยาชิโนะซาโตะ – โชจิ – โมโตสึ <span class="kanji">西湖</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Iyashinosato_village_02.jpg?width=1200" alt="อิยาชิโนะซาโตะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 หมู่บ้านหลังคาฟาง อิยาชิโนะซาโตะ เนมบะ ริมทะเลสาบไซโกะ — มุมไฮไลต์คือฟูจิโผล่หลังหลังคาฟาง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Lake_Motosu_2021-12-04.jpg?width=1200" alt="ทะเลสาบโมโตสึ วิวเดียวกับหลังธนบัตร ¥1,000" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 มุมไฮไลต์ทะเลสาบโมโตสึ: วิวเดียวกับหลังธนบัตร ¥1,000 — จุดชมวิวริมถนนฝั่งเหนือ จอดแล้วถึงเลย — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Fuji_from_Lake_Sh%C5%8Dji_(2015-10-26).jpg?width=1200" alt="ทะเลสาบโชจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ทะเลสาบโชจิ เล็กและเงียบที่สุดใน 5 ทะเลสาบ — ภาพถ่ายปลายตุลาคม ต้นไม้ริมน้ำเริ่มเปลี่ยนสี — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p><span class="hl">หมู่บ้านอิยาชิโนะซาโตะ เนมบะ</span> <span class="walk">🟡</span> ลานจอดหน้าหมู่บ้าน ทางเดินลาดเบา ๆ — มุมไฮไลต์คือ<span class="hl">แถวบ้านหลังคาฟางที่มีฟูจิโผล่หลังหลังคา</span> • <b>เช่าชุดกิโมโน/ซามูไรถ่ายรูปกลางหมู่บ้าน เด็ก ๆ ชอบมาก</b> มีชุดไซซ์เด็กด้วย • ร้านคราฟต์ทำมือ ของฝากไม่ซ้ำใคร</p></div>
+        <div class="slot"><b>บ่าย</b><p>ขับเลียบทะเลสาบไปทางตะวันตกตามถนน R139 — <span class="hl">ทะเลสาบโชจิ</span> <span class="walk">🟢</span> จุดจอดริมถนน ทะเลสาบจิ๋วที่เงียบสงบที่สุดใน 5 ทะเลสาบ • ปิดท้าย<span class="hl">ทะเลสาบโมโตสึ</span> <span class="walk">🟢</span> จุดชมวิวริมถนนจอดแล้วถึงเลย ภาพเดียวกับ<span class="hl">ธนบัตร ¥1,000</span> — <b>พกแบงก์พันไปเทียบมุมถ่ายกัน เด็ก ๆ สนุกกับเกมนี้</b></p></div>
+        <div class="slot"><b>ตัวเลือกเสริม</b><p><span class="hl">ถ้ำน้ำแข็งนารุซาวะ</span> <span class="walk">🔴 ตัวเลือก</span> อยู่บนเส้นทางเดียวกัน บันไดชัน–เพดานต่ำ จัดเป็นภารกิจพ่อกับลูกคนโต ~30 นาที ส่วนแม่ อาม่า และน้องเล็กจิบชาร้านหน้าถ้ำ (ติดลานจอด) — ไม่อินข้ามได้เลย ไม่เสียอรรถรส</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>ขับกลับเลียบทะเลสาบ • แวะร้าน <b>Fujiyama Cookie</b> สาขาใหญ่เก็บของฝาก • มื้อค่ำที่บ้าน <b>คืนนี้เริ่มจัดกระเป๋า พรุ่งนี้ย้ายฐานครั้งเดียวของทริป</b></p></div>
+        <div class="cost">💴 งบวันนี้: ~¥17,000 ≈ 4,000 บาท (ค่าเข้าอิยาชิโนะซาโตะ+เช่าชุด ~¥3,500 • อาหาร ~¥12,000 • น้ำมัน ~¥1,500)</div>
+        <div class="tip"><b>ทิปส์:</b> เส้นทะเลสาบฝั่งตะวันตกเป็นเส้นที่ <b>รถน้อยและวิวเปิดที่สุด</b> ในโซนฟูจิ ขับสบายเหมาะกับวันท้าย ๆ ที่ชินถนนแล้ว • ถ้าวันไหนก่อนหน้าฟ้าปิด ให้ยกวันนี้ไปสลับกับวันที่ฟ้าใสได้เลย</div>
       </div>
     </div>
   </article>
 
   <!-- DAY 6 -->
-  <article class="day" data-no="6" style="--dot:var(--pine)">
+  <article class="day" data-no="6" style="--dot:var(--grey)">
     <div class="day-card">
-      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="พระใหญ่คามาคูระ">
-        <rect width="800" height="170" fill="#E4EAD9"/>
-        <circle cx="150" cy="46" r="24" fill="#F3D9A0"/>
-        <g fill="#3E6B4F" opacity=".8"><path d="M0 170 L90 70 L180 170 Z"/><path d="M620 170 L710 60 L800 170 Z"/></g>
-        <g transform="translate(340,30)">
-          <ellipse cx="60" cy="128" rx="66" ry="14" fill="#5F6E5A"/>
-          <path d="M20 128 Q14 70 60 62 Q106 70 100 128 Z" fill="#6E8577"/>
-          <circle cx="60" cy="46" r="26" fill="#6E8577"/>
-          <path d="M34 44 Q60 20 86 44 L86 34 Q60 12 34 34 Z" fill="#5F6E5A"/>
-          <rect x="52" y="18" width="16" height="10" rx="4" fill="#5F6E5A"/>
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="สวนชินจูกุเกียวเอ็น สนามหญ้าและบ่อน้ำ">
+        <rect width="800" height="170" fill="#CFE0EF"/>
+        <circle cx="690" cy="40" r="24" fill="#F3D9A0"/>
+        <g fill="#8DA3C0" opacity=".35"><rect x="60" y="34" width="26" height="62" rx="3"/><rect x="96" y="48" width="20" height="48" rx="3"/><rect x="700" y="52" width="22" height="44" rx="3"/></g>
+        <rect y="94" width="800" height="76" fill="#7BA05B"/>
+        <path d="M0 94 Q200 84 400 94 T800 94 L800 104 L0 104 Z" fill="#8FB06A"/>
+        <ellipse cx="560" cy="140" rx="180" ry="26" fill="#5E93B5"/>
+        <ellipse cx="560" cy="136" rx="150" ry="18" fill="#7FB0CC" opacity=".7"/>
+        <g fill="#3E6B4F">
+          <ellipse cx="120" cy="72" rx="56" ry="34"/><rect x="114" y="96" width="11" height="26" fill="#6B4E30"/>
+          <ellipse cx="235" cy="82" rx="42" ry="26"/><rect x="230" y="100" width="9" height="22" fill="#6B4E30"/>
         </g>
-        <g fill="#C9744A"><circle cx="250" cy="130" r="10"/><circle cx="560" cy="140" r="10"/><circle cx="590" cy="124" r="7"/></g>
-        <rect y="158" width="800" height="12" fill="#D5DCC4"/>
+        <g fill="#C9744A">
+          <ellipse cx="340" cy="76" rx="38" ry="24"/><rect x="335" y="96" width="9" height="24" fill="#6B4E30"/>
+        </g>
+        <g fill="#C9962E"><ellipse cx="430" cy="86" rx="26" ry="17"/><rect x="426" y="100" width="7" height="18" fill="#6B4E30"/></g>
+        <g fill="#6B4E30"><rect x="60" y="132" width="72" height="6" rx="2"/><rect x="64" y="138" width="6" height="14"/><rect x="122" y="138" width="6" height="14"/><rect x="60" y="122" width="72" height="5" rx="2"/></g>
+        <g fill="#BC3A2B"><circle cx="250" cy="132" r="7"/><rect x="246" y="139" width="8" height="13" rx="3"/></g>
+        <g fill="#22304F"><circle cx="276" cy="136" r="6"/><rect x="272" y="142" width="7" height="11" rx="3"/></g>
+        <g fill="#F6F4ED" opacity=".85"><ellipse cx="200" cy="34" rx="54" ry="12"/><ellipse cx="470" cy="28" rx="44" ry="10"/></g>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">พฤหัสบดี 8 ตุลาคม 2569</span><span class="zone z-kamakura">ย้ายฐาน → คามาคูระ 🚗</span></div>
-        <h3 class="day-title">พระใหญ่ไดบุตสึ – พระอาทิตย์ตกเอโนะชิมะ <span class="kanji">鎌倉</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Buddha_of_K%C5%8Dtoku-in_%28Kamakura_Daibutsu%29.jpg?width=1200" alt="พระใหญ่ไดบุตสึคามาคูระ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 พระใหญ่ไดบุตสึ วัดโคโตคุอิน สูง 11.3 ม. นั่งกลางแจ้งมา 700 กว่าปี — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_in_Enoshima_Island.jpg?width=1200" alt="พระอาทิตย์ตกที่เอโนะชิมะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 พระอาทิตย์ตกที่เอโนะชิมะ — วันฟ้าเปิดเห็นเงาฟูจิเหนือทะเล — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ฮาโกเน่ ขับ <span class="hl">~1–1.5 ชม.</span> ลงสู่คามาคูระ • <span class="hl">พระใหญ่ไดบุตสึ วัดโคโตคุอิน</span> <span class="walk">🟢</span> ลานจอดใกล้ทางเข้า ลานวัดเรียบตลอด — มุมไฮไลต์คือยืนถ่ายกับพระใหญ่กลางแจ้ง เดินเข้าไปข้างในองค์พระได้ด้วย</p></div>
-        <div class="slot"><b>เที่ยง–บ่าย</b><p>เที่ยงถนน<span class="hl">โคมาจิโดริ</span> ของกินเพียบ (ชิราสุข้าวหน้าประจำเมือง โคโละเกะ ไอติม) • ต่อด้วย<span class="hl">วัดฮาเซเดระ</span> <span class="walk">🟡</span> เจ้าแม่กวนอิมไม้สูง 9 ม. + จุดชมวิวอ่าวคามาคูระ (มีทางลาดขึ้นเนินเบา ๆ อาม่ารอที่สวนด้านล่างได้ สวนญี่ปุ่นสวยมาก)</p></div>
-        <div class="slot"><b>เย็น</b><p>ขับข้ามสะพานสู่<span class="hl">เกาะเอโนะชิมะ</span> <span class="walk">🟡</span> — ชมพระอาทิตย์ตกทะเล วันฟ้าใสเห็น<span class="hl">เงาฟูจิเหนือผืนน้ำ</span> มุมถ่ายรูประดับตำนาน • ใครไหวขึ้นหอ Sea Candle ชมวิว 360° (มีลิฟต์) • ค่ำอาหารทะเลบนเกาะ</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥18,000 ≈ 4,200 บาท (ค่าเข้าวัด 5 คน ~¥2,500 • น้ำมัน+ทางด่วน ~¥3,500 • อาหาร ~¥12,000)</div>
-        <div class="tip"><b>ทิปส์:</b> ที่จอดรถในคามาคูระเต็มไว เล็งลานจอดใกล้วัดไว้ล่วงหน้าในแผนที่ • คืนนี้นอนคามาคูระ/ฟูจิซาวะ พรุ่งนี้ขับเข้าโตเกียวแค่ ~1 ชม.</div>
+        <div class="day-meta"><span class="day-date">พฤหัสบดี 8 ตุลาคม 2569</span><span class="zone z-travel">ย้ายฐานครั้งเดียวของทริป 🚗</span></div>
+        <h3 class="day-title">คาวากูจิโกะ → โตเกียว + สวนชินจูกุเกียวเอ็น <span class="kanji">新宿御苑</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shinjuku_gyoen_sunny_autumn_day.jpg?width=1200" alt="สวนชินจูกุเกียวเอ็น" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สวนชินจูกุเกียวเอ็น — สนามหญ้ากว้างกลางเมือง ทางเรียบทั้งสวน เดินจากที่พักย่านชินจูกุถึงได้ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>เช็คเอาต์บ้านคาวากูจิโกะ <b>เก็บของรอบเดียวจบ</b> — ขับทางด่วนชูโอ <span class="hl">~2 ชม.</span> เข้าโตเกียว • <b>นี่คือการย้ายที่พักครั้งเดียวของทั้งทริป</b> ต่างจากแผนเดิมที่ต้องเช็คอิน 5 ครั้ง • ออกสาย ๆ ได้ ไม่ต้องรีบ แวะจุดพักรถให้เด็กยืดเส้นสัก 1 ครั้ง</p></div>
+        <div class="slot"><b>สาย–เที่ยง</b><p><span class="hl">เติมน้ำมันเต็มถัง คืนรถสาขาในเมือง</span> — เช็คของทุกซอกโดยเฉพาะใต้เบาะที่เด็ก ๆ ชอบยัดของ 😄 • <b>ขนของเข้าบ้านเช่าให้เสร็จก่อนคืนรถ</b> เพราะ Airbnb ไม่มีเคาน์เตอร์ฝากกระเป๋า ถ้าเช็คอินยังไม่เปิดให้ขอโฮสต์วางของก่อน (ส่วนใหญ่ยอม) หรือฝากล็อกเกอร์/ecbo cloak • <b>ใช้รถคันสุดท้ายให้คุ้ม</b> ขนของฝากที่สะสมมาจากฟูจิลงบ้านรอบเดียว</p></div>
+        <div class="slot"><b>บ่าย</b><p><span class="hl">สวนชินจูกุเกียวเอ็น</span> <span class="walk">🟢</span> — <b>เดินจากที่พักถึงเลย ไม่ต้องขึ้นรถไฟซ้ำในวันที่ขับรถมาทั้งเช้า</b> สวนหลวงเก่า 58 เฮกตาร์ ทางเรียบทั้งสวน ม้านั่งทุกระยะ <b>สนามหญ้ากว้างให้เด็กวิ่ง อาม่านั่งใต้ร่มไม้</b> — วันย้ายฐานควรเป็นวันพักขาแบบไม่เสียของ • มีสวนญี่ปุ่น สวนอังกฤษ และ<span class="hl">เรือนกระจกใหญ่ในร่ม</span>เผื่อฝน • ~¥500/ผู้ใหญ่ <b>เด็กเข้าฟรี</b></p></div>
+        <div class="slot"><b>ค่ำ</b><p>มื้อค่ำใกล้ที่พัก — <b>วันนี้เริ่มโหมดไม่มีรถแล้ว</b> ตั้งแต่พรุ่งนี้ใช้รถไฟล้วน ให้ทุกคนรับ Suica ของตัวเองไว้เลย เด็กแตะเองสนุก ไม่ต้องอุ้มข้ามประตู</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥15,000 ≈ 3,500 บาท (ทางด่วน+น้ำมัน ~¥6,000 • ค่าเข้าสวน ~¥1,500 • อาหาร ~¥7,500)</div>
+        <div class="tip"><b>ทิปส์:</b> <b>คืนรถในเมืองแล้วไม่เช่าต่อ ตั้งใจให้เป็นแบบนั้น</b> — ที่จอดกลางโตเกียวส่วนใหญ่เป็นระบบยกอัตโนมัติ จำกัดความสูง 1.55 ม. รับมินิแวน 1.87 ม. ไม่ได้ ถ้าเก็บรถต่อจะกลายเป็นวนหาที่จอดพร้อมเด็กงอแงบนรถ • <b>สวนชินจูกุเกียวเอ็นปิดวันจันทร์</b> วันนี้พฤหัสจึงเปิดปกติ แต่จำไว้เผื่อจะสลับวัน</div>
       </div>
     </div>
   </article>
@@ -402,30 +414,33 @@
   <!-- DAY 7 -->
   <article class="day" data-no="7" style="--dot:var(--vermilion)">
     <div class="day-card">
-      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="อาซาบุได ฮิลส์ ตึกสูงสุดในญี่ปุ่น">
-        <rect width="800" height="170" fill="#B9C9E0"/>
-        <circle cx="150" cy="50" r="26" fill="#F3D9A0"/>
-        <g fill="#22304F" opacity=".9">
-          <rect x="330" y="20" width="70" height="150" rx="6"/>
-          <rect x="410" y="60" width="46" height="110" rx="5"/>
-          <rect x="280" y="80" width="40" height="90" rx="5"/>
-          <rect x="560" y="70" width="36" height="100" rx="4"/>
-          <rect x="610" y="96" width="30" height="74" rx="4"/>
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ประตูคามินาริมงและโตเกียวสกายทรี">
+        <rect width="800" height="170" fill="#F0E7D2"/>
+        <g fill="#BC3A2B" transform="translate(120,26)">
+          <rect x="-10" y="0" width="240" height="18" rx="4"/>
+          <rect x="6" y="18" width="18" height="108"/><rect x="196" y="18" width="18" height="108"/>
+          <rect x="60" y="30" width="100" height="66" rx="46" fill="#D9432F"/>
+          <ellipse cx="110" cy="63" rx="42" ry="34" fill="#C9302B"/>
+          <rect x="96" y="96" width="28" height="12" fill="#22304F"/>
         </g>
-        <g fill="#8DA3C0"><rect x="342" y="32" width="10" height="10"/><rect x="360" y="32" width="10" height="10"/><rect x="378" y="32" width="10" height="10"/><rect x="342" y="52" width="10" height="10"/><rect x="360" y="52" width="10" height="10"/><rect x="378" y="52" width="10" height="10"/><rect x="342" y="72" width="10" height="10"/><rect x="360" y="72" width="10" height="10"/><rect x="378" y="72" width="10" height="10"/><rect x="420" y="72" width="8" height="8"/><rect x="434" y="72" width="8" height="8"/><rect x="420" y="90" width="8" height="8"/><rect x="434" y="90" width="8" height="8"/></g>
-        <g fill="#3E6B4F"><ellipse cx="120" cy="160" rx="90" ry="18"/><ellipse cx="700" cy="162" rx="80" ry="16"/></g>
-        <rect y="160" width="800" height="10" fill="#DAD2BC"/>
+        <text x="230" y="96" font-family="'Noto Serif JP',serif" font-size="26" fill="#F6F4ED" text-anchor="middle" font-weight="700">雷門</text>
+        <g fill="#8DA3C0" transform="translate(600,10)">
+          <path d="M40 150 L52 20 L58 20 L70 150 Z"/>
+          <rect x="50" y="0" width="10" height="24"/>
+          <circle cx="55" cy="52" r="14" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
+          <circle cx="55" cy="96" r="11" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
+        </g>
+        <rect y="152" width="800" height="18" fill="#DAD2BC"/>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">ศุกร์ 9 ตุลาคม 2569</span><span class="zone z-tokyo">กลับโตเกียว คืนรถ 🚗</span></div>
-        <h3 class="day-title">ฮาจิมังกูเช้า → Azabudai Hills <span class="kanji">麻布台</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tsurugaoka_Hachimangu_001.jpg?width=1200" alt="ศาลเจ้าสึรุโกะโอกะฮาจิมังกู" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ศาลเจ้าสึรุโกะโอกะ ฮาจิมังกู ศาลเจ้าหลักของคามาคูระ — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Azabudai_Hills_4.jpg?width=1200" alt="Azabudai Hills" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 Azabudai Hills — ตึกสูงสุดในญี่ปุ่น (325 ม.) เพิ่งเปิดปลาย 2023 แลนด์มาร์กใหม่ล่าสุดของโตเกียว — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p><span class="hl">ศาลเจ้าสึรุโกะโอกะ ฮาจิมังกู</span> <span class="walk">🟡</span> ไปก่อน 9:00 คนน้อย — ทางเดินดันกุซากุระกลางถนน + ศาลเจ้าสีแดงชาดบนเนิน (อาม่ารอที่ลานด้านล่างได้ มีม้านั่งริมสระบัว) • ซื้อคุกกี้นกพิราบฮาโตะซาเบล์ของขึ้นชื่อถนนโคมาจิ</p></div>
-        <div class="slot"><b>สาย–เที่ยง</b><p>ขับทางด่วนโชนัน <span class="hl">~1–1.5 ชม. เข้าโตเกียว</span> — <span class="hl">สั้นกว่าขากลับจากฟูจิอีก</span> (ฟูจิ→ชินจูกุ ~2 ชม.) • <span class="hl">เติมน้ำมันเต็มถัง คืนรถสาขาชินจูกุ</span> (เช็คของทุกซอก โดยเฉพาะใต้เบาะที่เด็ก ๆ ชอบยัดของ 😄) • เช็คอินโรงแรมชินจูกุ ฝากกระเป๋าแล้วออกเที่ยวเมืองด้วยรถไฟ/แท็กซี่</p></div>
-        <div class="slot"><b>บ่าย</b><p><span class="hl">Azabudai Hills</span> <span class="walk">🟢</span> แลนด์มาร์กใหม่ล่าสุดของโตเกียว (เปิด พ.ย. 2023) — <span class="hl">ตึกสูงสุดในญี่ปุ่น 325 ม.</span> ห้าง Garden Plaza ออกแบบโดย Heatherwick Studio สวยแปลกตา ร้านค้า+ร้านอาหาร 150 ร้าน มีสวนกลางเมืองใหญ่ เดินเรียบทั้งหมด เหมาะกับอาม่า • ข้างในมี teamLab Borderless (ย้ายมาที่นี่) ถ้าอยากไปแนะนำจองล่วงหน้า</p></div>
-        <div class="slot"><b>ค่ำ</b><p>กลับชินจูกุ แวะ <span class="hl">Tokyu Kabukicho Tower</span> (เปิด 2023) ฟู้ดฮอลล์สไตล์เทศกาลถนน + โซนเกม/นัมโคะ • มื้อค่ำย่านโอโมอิเดะโยโกโจ ตรอกยากิโทริบรรยากาศยุคโชวะ</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥16,000 ≈ 3,800 บาท (ทางด่วน+น้ำมัน ~¥4,000 • อาหาร ~¥12,000 — ช้อปปิ้งแยกตามใจ)</div>
-        <div class="tip"><b>ทิปส์:</b> วันนี้เป็นวันแรกที่ไม่มีรถแล้ว — ใช้ Suica นั่งรถไฟ/เมโทรได้เลย ชินจูกุเป็นฮับใหญ่ไปได้ทุกทิศ • teamLab Borderless ตั๋วหมดไว จองออนไลน์ล่วงหน้าหลายสัปดาห์</div>
+        <div class="day-meta"><span class="day-date">ศุกร์ 9 ตุลาคม 2569</span><span class="zone z-tokyo">teamLab + อาซากุสะ 🚃</span></div>
+        <h3 class="day-title">teamLab Planets – เซ็นโซจิ – อควาเรียมสุมิดะ <span class="kanji">浅草</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Teamlab_toyosu.jpg?width=1200" alt="teamLab Planets โทโยสุ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 teamLab Planets โทโยสุ — พิพิธภัณฑ์ดิจิทัลเดินเท้าเปล่าลุยน้ำ — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Senso-ji_Kaminarimon_201503a.jpg?width=1200" alt="วัดเซ็นโซจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ประตูคามินาริมงโคมแดงยักษ์ วัดเซ็นโซจิ อาซากุสะ — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p><span class="hl">teamLab Planets</span> โทโยสุ <span class="walk">🟢</span> (จองรอบเช้าล่วงหน้า) — พิพิธภัณฑ์ดิจิทัลที่<span class="hl">เดินเท้าเปล่าลุยน้ำ</span>ท่ามกลางดอกไม้ดิจิทัลและกระจกไร้ขอบ <b>เด็กติดใจที่สุด</b> อาม่าถ่ายรูปสวยทุกมุม (มีเก้าอี้พักตามจุด ใส่กางเกงขาสั้นหรือมีกางเกงให้ยืม)</p></div>
+        <div class="slot"><b>บ่าย</b><p><b>ขาที่ยาวที่สุดของช่วงโตเกียว</b> — โทโยสุ→อาซากุสะ นั่งรถไฟ ~40 นาที ต่อ 2 ทอด และเด็กเพิ่งลุยน้ำเท้าเปล่ามาหมาด ๆ • <span class="hl">ขาเดียวนี้แนะนำเรียกแท็กซี่</span> ~25 นาทีถึงเลย (2 คัน ~¥6,000–7,000 หรือ jumbo taxi คันเดียวผ่านแอป GO) เด็กงีบในรถได้ ลงมามีแรงเดินต่อ • ไหว้พระ<span class="hl">วัดเซ็นโซจิ</span> <span class="walk">🟡</span> — มุมไฮไลต์คือ<span class="hl">ยืนใต้โคมแดงยักษ์คามินาริมง</span> + ถนนนากามิเสะ ลานเรียบตลอด ของกิน: นิงโยยากิ อาเกะมันจูทอดร้อน ๆ ไอติมมัทฉะ</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p>ข้ามไป <span class="hl">โซลามาจิ ห้างใต้โตเกียวสกายทรี</span> <span class="walk">🟢</span> — <b>อยู่ที่ฐานตึก ไม่ขึ้นจุดชมวิว</b> ถ่ายรูปสกายทรีจากด้านล่างสวยกว่าอยู่แล้ว และประหยัดไปหลักหมื่น<br>ในห้างมีของที่ตรงกับบ้านเราพอดี: <span class="hl">Sumida Aquarium</span> <span class="walk">🟢</span> อควาเรียมในร่ม มีเพนกวินกับแมงกะพรุน ทางเรียบ มีที่นั่ง <b>เด็กเล็กดูได้นาน อาม่านั่งชมสบาย</b> • <span class="hl">Pokémon Center Skytree Town</span> ชั้น 4 • ร้านอาหารครอบครัวเพียบ มีลิฟต์ทุกชั้น</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥33,000 ≈ 7,800 บาท (teamLab 5 คน ~¥19,000 • Sumida Aquarium 5 คน ~¥9,000 • รถไฟ ~¥2,500 • อาหาร ~¥8,500 — <b>ประหยัดค่าขึ้นสกายทรีไป ~¥10,000</b>)</div>
+        <div class="tip"><b>ทิปส์:</b> <b>teamLab ต้องจองออนไลน์ล่วงหน้าเท่านั้น ไม่มีขายหน้างาน</b> รอบเช้าคนน้อยสุด • น้อง 4 ขวบนั่งรถไฟฟรี (ต่ำกว่า 6 ขวบ) พี่ 6 ขวบครึ่งราคา • ตั้ง Google Maps โหมด <b>wheelchair accessible</b> จะเลือกเส้นที่มีลิฟต์ให้อัตโนมัติ ใช้ได้ทั้งรถเข็นเด็กและอาม่า</div>
       </div>
     </div>
   </article>
@@ -433,7 +448,7 @@
   <!-- DAY 8 -->
   <article class="day" data-no="8" style="--dot:var(--vermilion)">
     <div class="day-card">
-      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ชิบูย่ายามพระอาทิตย์ตกจากดาดฟ้า">
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ชิบูย่ายามพระอาทิตย์ตก">
         <defs><linearGradient id="d8sky" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stop-color="#3D5580"/><stop offset="55%" stop-color="#C9744A"/><stop offset="100%" stop-color="#E8B87A"/>
         </linearGradient></defs>
@@ -465,49 +480,46 @@
         <rect y="122" width="800" height="4" fill="#F6F4ED" opacity=".35"/>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">เสาร์ 10 ตุลาคม 2569</span><span class="zone z-tokyo">ฮาราจูกุ – ชิบูย่า</span></div>
-        <h3 class="day-title">ทาเคชิตะ – โอโมเตะซันโด – Shibuya Sky <span class="kanji">渋谷</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Takeshita_Street.jpg?width=1200" alt="ถนนทาเคชิตะ ฮาราจูกุ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ถนนทาเคชิตะ ฮาราจูกุ — ถนนคนเดินสายวัยรุ่นในตำนาน เครป ร้านขนม ร้านของกุ๊กกิ๊ก — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Omotesando_Avenue_at_sunset_from_pedestrian_bridge,_Jingumae,_Shibuya,_Tokyo.jpg?width=1200" alt="ถนนโอโมเตะซันโดยามเย็น" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 โอโมเตะซันโด ถนนต้นเซลโควาสองข้างทาง ทางเท้ากว้าง เดินสบายที่สุดในโตเกียว — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?width=1200" alt="สี่แยกข้ามถนนชิบูย่า" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สี่แยกสแครมเบิลชิบูย่า — จากดาดฟ้า Shibuya Sky จะเห็นคนไหลข้ามแยกนี้จากมุมสูง — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p>วันนี้<span class="hl">ไม่มีรถแล้ว ใช้รถไฟล้วน</span> — ชินจูกุ → ฮาราจูกุ สาย JR ยามาโนเตะแค่ 2 สถานี ~4 นาที • <span class="hl">ถนนทาเคชิตะ</span> <span class="walk">🟡</span> ถนนคนเดินสายวัยรุ่น เครปฮาราจูกุ ร้านขนม ร้านของกุ๊กกิ๊ก — <b>เด็ก ๆ จะสนุกที่สุดตรงนี้</b> • ถนนแคบและเสาร์คนแน่นมาก ให้อาม่ารอที่คาเฟ่ปากถนนแล้วค่อยไปเจอกันปลายทางได้</p></div>
-        <div class="slot"><b>สาย–เที่ยง</b><p><span class="hl">Harakado</span> <span class="walk">🟢</span> (เปิด เม.ย. 2024) ตึกใหม่ปากทางแยกฮาราจูกุ ดีไซน์กระจกเหลี่ยม — <span class="hl">ขึ้นลิฟต์ไปสวนดาดฟ้าชมวิวฟรี</span> นั่งพักขาได้ ตรงข้ามกันคือ Omohara ที่มีสวนดาดฟ้าเช่นกัน • เดินต่อลง<span class="hl">โอโมเตะซันโด</span> <span class="walk">🟢</span> ถนนต้นไม้สองข้างทาง ทางเท้ากว้างเรียบ ไม่มีบันได <b>เหมาะกับอาม่าที่สุดในย่านนี้</b> มีม้านั่งเป็นระยะ • มื้อเที่ยงในห้าง Omotesando Hills หรือ Tokyu Plaza</p></div>
-        <div class="slot"><b>บ่าย</b><p>เดิน/นั่งรถไฟหนึ่งป้ายลง<span class="hl">ชิบูย่า</span> — <span class="hl">รูปปั้นหมาฮาจิโกะ</span> ตำนานหมาซื่อสัตย์ (จุดถ่ายรูปยอดฮิต) • เดินข้าม<span class="hl">สี่แยกสแครมเบิล</span>สักรอบให้ครบพิธี • ห้าง Shibuya Scramble Square / Hikarie มีลิฟต์ทุกชั้น พักขา–หาของฝากได้</p></div>
-        <div class="slot"><b>เย็น — ไฮไลต์ของวัน</b><p><span class="hl">Shibuya Sky</span> <span class="walk">🟢</span> ดาดฟ้ากลางแจ้งชั้น 46 สูง <span class="hl">229 ม.</span> ลิฟต์ขึ้นตรงถึงชั้นดาดฟ้า — <span class="hl">จองรอบพระอาทิตย์ตกล่วงหน้า</span> (ต้น ต.ค. ตกราว 17:15 น. จองรอบ ~16:30) เห็นเมืองทั้งเมืองเปลี่ยนจากทองเป็นไฟระยิบ วันฟ้าเปิดเห็นฟูจิเป็นเงาที่ขอบฟ้า • มีโซนในร่มกระจกรอบด้านให้อาม่านั่งชมถ้าลมแรง • ค่ำกินข้าวย่านชิบูย่าแล้วนั่งรถไฟกลับชินจูกุ ~7 นาที</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥27,000 ≈ 6,300 บาท (Shibuya Sky 5 คน ~¥13,000 • รถไฟ ~¥2,000 • อาหาร ~¥12,000 — ช้อปปิ้งแยกตามใจ)</div>
-        <div class="tip"><b>ทิปส์:</b> <b>Shibuya Sky รอบพระอาทิตย์ตกเป็นรอบที่ขายหมดเร็วที่สุด</b> จองออนไลน์ล่วงหน้าทันทีที่เปิดขาย (ปกติเปิดล่วงหน้าประมาณ 1 เดือน) • บนดาดฟ้า<b>ห้ามนำกระเป๋า/ขาตั้งกล้องขึ้น</b> ต้องฝากล็อกเกอร์ฟรีด้านล่าง เตรียมสายคล้องมือถือไปด้วย • เสาร์คือวันที่ฮาราจูกุแน่นที่สุด ถ้าอยากเลี่ยงคน <b>สลับวันนี้กับ Day 9 (อาทิตย์ teamLab) ไม่ได้</b> เพราะอาทิตย์แน่นกว่า — ออกเช้าแทนจะได้ผลกว่า • ใครอยากได้ธรรมชาติเพิ่ม <span class="walk">🟡</span> ศาลเจ้าเมจิอยู่ติดสถานีฮาราจูกุ ทางเดินกรวดร่มรื่นแต่ยาว ~10 นาทีต่อขา ประเมินแรงอาม่าก่อน</div>
+        <div class="day-meta"><span class="day-date">เสาร์ 10 ตุลาคม 2569</span><span class="zone z-tokyo">ฮาราจูกุ – ชิบูย่า 🚃</span></div>
+        <h3 class="day-title">ทาเคชิตะ – โอโมเตะซันโด – โปเกมอนชิบูย่า <span class="kanji">渋谷</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Takeshita_Street.jpg?width=1200" alt="ถนนทาเคชิตะ ฮาราจูกุ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ถนนทาเคชิตะ ฮาราจูกุ — ถนนคนเดินสายวัยรุ่นในตำนาน เครป ร้านขนม ร้านของกุ๊กกิ๊ก — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Omotesando_Avenue_at_sunset_from_pedestrian_bridge,_Jingumae,_Shibuya,_Tokyo.jpg?width=1200" alt="ถนนโอโมเตะซันโดยามเย็น" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 โอโมเตะซันโด ถนนต้นเซลโควาสองข้างทาง ทางเท้ากว้าง เดินสบายที่สุดในโตเกียว — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?width=1200" alt="สี่แยกข้ามถนนชิบูย่า" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สี่แยกสแครมเบิลชิบูย่า — เดินข้ามเองสักรอบให้ครบพิธี ห้าง PARCO ที่มีโปเกมอน/นินเทนโดอยู่ห่างจากแยกนี้ ~5 นาที — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า</b><p>ชินจูกุ → ฮาราจูกุ สาย JR ยามาโนเตะแค่ 2 สถานี ~4 นาที • <span class="hl">ถนนทาเคชิตะ</span> <span class="walk">🟡</span> เครปฮาราจูกุ ร้านขนม ร้านของกุ๊กกิ๊ก — <b>เด็ก ๆ สนุกที่สุดตรงนี้</b> • ถนนแคบและเสาร์คนแน่นมาก ให้อาม่ารอที่คาเฟ่ปากถนนแล้วไปเจอกันปลายทางได้</p></div>
+        <div class="slot"><b>สาย–เที่ยง</b><p><span class="hl">Harakado</span> <span class="walk">🟢</span> (เปิด เม.ย. 2024) ตึกใหม่ปากทางแยกฮาราจูกุ — ขึ้นลิฟต์ไป<b>สวนบนหลังคาชมวิวฟรี</b> (เป็นสวนเตี้ย ๆ ไม่ใช่จุดชมวิวบนตึกสูง) นั่งพักขาได้ • เดินต่อลง<span class="hl">โอโมเตะซันโด</span> <span class="walk">🟢</span> ถนนต้นไม้สองข้างทาง ทางเท้ากว้างเรียบ ไม่มีบันได <b>เหมาะกับอาม่าที่สุดในย่านนี้</b> มีม้านั่งเป็นระยะ • มื้อเที่ยงในห้าง Omotesando Hills หรือ Tokyu Plaza</p></div>
+        <div class="slot"><b>บ่าย</b><p>นั่งรถไฟหนึ่งป้ายลง<span class="hl">ชิบูย่า</span> — <span class="hl">รูปปั้นหมาฮาจิโกะ</span> ตำนานหมาซื่อสัตย์ (จุดถ่ายรูปยอดฮิต เด็กชอบ) • เดินข้าม<span class="hl">สี่แยกสแครมเบิล</span>สักรอบให้ครบพิธี</p></div>
+        <div class="slot"><b>เย็น — ไฮไลต์ของเด็ก ๆ 🎮</b><p><span class="hl">ชั้น 6 ห้าง Shibuya PARCO — ชั้นเกม/อนิเมะทั้งชั้น</span> <span class="walk">🟢</span> เดินจากสถานี ~5 นาที ลิฟต์ขึ้นตรง เปิดถึง 21:00<br><b>ชั้นเดียวเก็บครบ:</b> <span class="hl">Pokémon Center Shibuya</span> + <span class="hl">Nintendo TOKYO</span> (อยู่ชั้นเดียวกัน) + Capcom Store + Jump Shop — <b>เด็ก 4 กับ 6 ขวบจะกรี๊ดที่สุดของทริปตรงนี้</b> และเป็นของฝากที่ได้ใช้จริงกว่าขนม • อยู่ในร่มทั้งหมด มีที่นั่งพัก • ค่ำกินข้าวแถวชิบูย่าแล้วกลับที่พัก ~7 นาที</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥16,000 ≈ 3,800 บาท (รถไฟ ~¥2,000 • อาหาร ~¥12,000 • ตั้งงบของเล่นให้เด็กคนละก้อน ~¥2,000 — ช้อปปิ้งผู้ใหญ่แยกตามใจ)</div>
+        <div class="tip"><b>ทิปส์:</b> เสาร์คือวันที่ฮาราจูกุแน่นที่สุด <b>ออกเช้าช่วยได้มากกว่าสลับวัน</b> (อาทิตย์คนยิ่งเยอะ) • Pokémon Center เสาร์เย็นคนแน่น ถ้าอยากสบายให้แวะตอนบ่ายแล้วค่อยไปชิบูย่าครอสซิ่งตอนเย็น • ใครอยากได้ธรรมชาติเพิ่ม <span class="walk">🟡</span> ศาลเจ้าเมจิอยู่ติดสถานีฮาราจูกุ ทางเดินกรวดร่มรื่นแต่ยาว ~10 นาทีต่อขา ประเมินแรงอาม่าก่อน</div>
       </div>
     </div>
   </article>
 
   <!-- DAY 9 -->
-  <article class="day" data-no="9" style="--dot:var(--vermilion)">
+  <article class="day" data-no="9" style="--dot:var(--pine)">
     <div class="day-card">
-      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="ประตูคามินาริมงและโตเกียวสกายทรี">
-        <rect width="800" height="170" fill="#F0E7D2"/>
-        <g fill="#BC3A2B" transform="translate(120,26)">
-          <rect x="-10" y="0" width="240" height="18" rx="4"/>
-          <rect x="6" y="18" width="18" height="108"/><rect x="196" y="18" width="18" height="108"/>
-          <rect x="60" y="30" width="100" height="66" rx="46" fill="#D9432F"/>
-          <ellipse cx="110" cy="63" rx="42" ry="34" fill="#C9302B"/>
-          <rect x="96" y="96" width="28" height="12" fill="#22304F"/>
+      <svg class="day-art" viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg" aria-label="พระใหญ่คามาคูระ">
+        <rect width="800" height="170" fill="#E4EAD9"/>
+        <circle cx="150" cy="46" r="24" fill="#F3D9A0"/>
+        <g fill="#3E6B4F" opacity=".8"><path d="M0 170 L90 70 L180 170 Z"/><path d="M620 170 L710 60 L800 170 Z"/></g>
+        <g transform="translate(340,30)">
+          <ellipse cx="60" cy="128" rx="66" ry="14" fill="#5F6E5A"/>
+          <path d="M20 128 Q14 70 60 62 Q106 70 100 128 Z" fill="#6E8577"/>
+          <circle cx="60" cy="46" r="26" fill="#6E8577"/>
+          <path d="M34 44 Q60 20 86 44 L86 34 Q60 12 34 34 Z" fill="#5F6E5A"/>
+          <rect x="52" y="18" width="16" height="10" rx="4" fill="#5F6E5A"/>
         </g>
-        <text x="230" y="96" font-family="'Noto Serif JP',serif" font-size="26" fill="#F6F4ED" text-anchor="middle" font-weight="700">雷門</text>
-        <g fill="#8DA3C0" transform="translate(600,10)">
-          <path d="M40 150 L52 20 L58 20 L70 150 Z"/>
-          <rect x="50" y="0" width="10" height="24"/>
-          <circle cx="55" cy="52" r="14" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
-          <circle cx="55" cy="96" r="11" fill="#F6F4ED" stroke="#8DA3C0" stroke-width="5"/>
-        </g>
-        <rect y="152" width="800" height="18" fill="#DAD2BC"/>
+        <g fill="#C9744A"><circle cx="250" cy="130" r="10"/><circle cx="560" cy="140" r="10"/><circle cx="590" cy="124" r="7"/></g>
+        <rect y="158" width="800" height="12" fill="#D5DCC4"/>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">อาทิตย์ 11 ตุลาคม 2569</span><span class="zone z-tokyo">teamLab + อาซากุสะ</span></div>
-        <h3 class="day-title">teamLab Planets – เซ็นโซจิ – สกายทรี <span class="kanji">浅草</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Teamlab_toyosu.jpg?width=1200" alt="teamLab Planets โทโยสุ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 teamLab Planets โทโยสุ — พิพิธภัณฑ์ดิจิทัลเดินเท้าเปล่าลุยน้ำ เปิด 2018 และขยายโซนใหม่ 2025 — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Senso-ji_Kaminarimon_201503a.jpg?width=1200" alt="วัดเซ็นโซจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ประตูคามินาริมงโคมแดงยักษ์ วัดเซ็นโซจิ อาซากุสะ — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p><span class="hl">teamLab Planets</span> โทโยสุ <span class="walk">🟢</span> (จองรอบเช้าล่วงหน้า) — พิพิธภัณฑ์ดิจิทัลชื่อดังที่<span class="hl">เดินเท้าเปล่าลุยน้ำ</span>ท่ามกลางดอกไม้ดิจิทัลและกระจกไร้ขอบ เด็กติดใจ อาม่าถ่ายรูปสวยทุกมุม (มีเก้าอี้พักตามจุด ใส่กางเกงขาสั้น/มีกางเกงให้ยืม)</p></div>
-        <div class="slot"><b>บ่าย</b><p>นั่งรถไฟต่อไปอาซากุสะ • ไหว้พระ<span class="hl">วัดเซ็นโซจิ</span> <span class="walk">🟡</span> — มุมไฮไลต์คือ<span class="hl">ยืนใต้โคมแดงยักษ์คามินาริมง</span> + ถนนนากามิเสะยาวเข้าตัววัด ลานเรียบตลอด ไม่มีบันไดหนัก • ของกินถนนนากามิเสะ: นิงโยยากิ อาเกะมันจูทอดร้อน ๆ ไอติมมัทฉะ</p></div>
-        <div class="slot"><b>เย็น–ค่ำ</b><p>ข้ามไป <span class="hl">โตเกียวสกายทรี + โซลามาจิ</span> <span class="walk">🟢</span> ห้างใต้ตึกร้านค้าเพียบ (มีลิฟต์ทุกชั้น) — ใครอยากขึ้นจุดชมวิว 350/450 ม. ชมไฟเมืองยามค่ำ • ค่ำกลับชินจูกุ</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥30,000 ≈ 7,000 บาท (teamLab 5 คน ~¥19,000 • รถไฟ ~¥2,500 • อาหาร ~¥8,500 — สกายทรีเพิ่ม ~¥10,000 ถ้าขึ้น)</div>
-        <div class="tip"><b>ทิปส์:</b> <b>teamLab ต้องจองออนไลน์ล่วงหน้าเท่านั้น</b> ไม่มีขายหน้างาน รอบเช้าคนน้อยสุด • รุ่งขึ้น (12 ต.ค.) เป็นวันหยุด Sports Day ของญี่ปุ่น ห้างใหญ่คนจะเยอะเป็นพิเศษ</div>
+        <div class="day-meta"><span class="day-date">อาทิตย์ 11 ตุลาคม 2569</span><span class="zone z-kamakura">เดย์ทริปคามาคูระ 🚃</span></div>
+        <h3 class="day-title">พระใหญ่ไดบุตสึ – เอโนเด็น – เอโนะชิมะ <span class="kanji">鎌倉</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Buddha_of_K%C5%8Dtoku-in_%28Kamakura_Daibutsu%29.jpg?width=1200" alt="พระใหญ่ไดบุตสึคามาคูระ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 พระใหญ่ไดบุตสึ วัดโคโตคุอิน สูง 11.3 ม. นั่งกลางแจ้งมา 700 กว่าปี — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_in_Enoshima_Island.jpg?width=1200" alt="พระอาทิตย์ตกที่เอโนะชิมะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 พระอาทิตย์ตกที่เอโนะชิมะ — วันฟ้าเปิดเห็นเงาฟูจิเหนือทะเล — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>⭐ ทำไมเป็นเดย์ทริป ไม่ใช่ฐานที่พัก</b><p>แผนเวอร์ชันก่อนนอนคามาคูระ 1 คืน ซึ่งเป็นต้นเหตุของการเช็คอินถี่และคืนเดี่ยวที่ Airbnb จองแทบไม่ได้ • <b>คามาคูระอยู่ห่างโตเกียวแค่ ~1 ชม.โดยรถไฟ</b> ไปเช้ากลับค่ำได้สบาย <span class="hl">ได้พระใหญ่กับทะเลครบโดยไม่ต้องขนกระเป๋าไปไหนเลย</span></p></div>
+        <div class="slot"><b>เช้า</b><p>นั่ง JR จากชินจูกุ ~1 ชม. ถึงคามาคูระ • <span class="hl">พระใหญ่ไดบุตสึ วัดโคโตคุอิน</span> <span class="walk">🟢</span> ลานวัดเรียบตลอด — มุมไฮไลต์คือยืนถ่ายกับพระใหญ่กลางแจ้ง <b>เดินเข้าไปข้างในองค์พระได้ด้วย เด็กตื่นเต้นมาก</b></p></div>
+        <div class="slot"><b>เที่ยง–บ่าย</b><p>ถนน<span class="hl">โคมาจิโดริ</span> ของกินเพียบ (ชิราสุข้าวหน้าประจำเมือง โคโรกเกะ ไอติม) + <b>คุกกี้นกพิราบฮาโตะซาเบล์</b> ของฝากขึ้นชื่อ • <span class="hl">วัดฮาเซเดระ</span> <span class="walk">🟡</span> เจ้าแม่กวนอิมไม้สูง 9 ม. + จุดชมวิวอ่าวคามาคูระ (มีทางลาดขึ้นเนินเบา ๆ อาม่ารอที่สวนด้านล่างได้ สวนญี่ปุ่นสวยมาก)</p></div>
+        <div class="slot"><b>เย็น</b><p>นั่ง<span class="hl">รถไฟสายเอโนเด็น</span> <span class="walk">🟢</span> — <b>รถไฟเก่าวิ่งเลียบชายทะเลผ่านหลังบ้านคน เด็ก ๆ ชอบที่สุด</b> เป็นไฮไลต์ของวันพอ ๆ กับพระใหญ่ • ลงที่เอโนะชิมะ ชมพระอาทิตย์ตกทะเล วันฟ้าใสเห็น<span class="hl">เงาฟูจิเหนือผืนน้ำ</span> — ถ่ายจากชายหาด/สะพานระดับพื้นสวยที่สุดอยู่แล้ว ไม่ต้องขึ้นหอชมวิว • ค่ำอาหารทะเล (ชิราสุสด ๆ) แล้วนั่งรถไฟกลับ ~1 ชม.</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥22,000 ≈ 5,200 บาท (รถไฟไป–กลับ + เอโนเด็น ~¥7,000 • ค่าเข้าวัด ~¥2,500 • อาหาร ~¥12,500)</div>
+        <div class="tip"><b>ทิปส์:</b> <b>อาทิตย์คนเยอะ ออกเช้าตั้งแต่ 8:00</b> จะได้พระใหญ่ตอนคนยังน้อย • เอโนเด็นช่วงเย็นคนแน่นมาก ถ้าอยากได้ที่นั่งให้ขึ้นจากต้นทาง • ถ้าวันนี้ฝนตกหรือใครเหนื่อย <b>ยกเลิกได้โดยไม่กระทบอะไรเลย</b> เพราะไม่ได้จองที่พักไว้ — สลับไปเดินห้างในเมืองแทนได้ทันที นี่คือข้อดีของการทำเป็นเดย์ทริป</div>
       </div>
     </div>
   </article>
@@ -541,14 +553,14 @@
         </g>
       </svg>
       <div class="day-body">
-        <div class="day-meta"><span class="day-date">จันทร์ 12 ตุลาคม 2569</span><span class="zone z-tokyo">วันของฝากโค้งสุดท้าย</span></div>
-        <h3 class="day-title">Tokyo Station + Don Quijote ส่งท้าย <span class="kanji">土産</span></h3>
-        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo-STA_Marunouchi-Entrance_2023.jpg?width=1200" alt="สถานีโตเกียว" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สถานีโตเกียว ตึกอิฐแดงฝั่งมารุโนะอุจิ — ชั้นใต้ดินคือแหล่งของฝาก — ภาพ: Wikimedia Commons</figcaption></figure></div>
-        <div class="slot"><b>เช้า</b><p>วันหยุด Sports Day ของญี่ปุ่น ห้างใหญ่คนเยอะ ออกเช้าหน่อย • <span class="hl">สถานีโตเกียว</span> ชั้นใต้ดิน <span class="hl">Character Street</span> (โปเกมอน จิบลิ ซานริโอ้) + ขนมดัง <span class="hl">Tokyo Banana / Press Butter Sand</span> • ถ่ายรูปตึกอิฐแดงสถานีโตเกียวฝั่งมารุโนะอุจิ</p></div>
-        <div class="slot"><b>บ่าย</b><p>กลับชินจูกุ <span class="hl">Don Quijote + ร้านยา</span> Tax-Free เก็บของฝากโค้งสุดท้าย (ขนม เครื่องสำอาง ยาสามัญ) • ใครอยากได้เสื้อผ้าแบรนด์ญี่ปุ่น แวะ Uniqlo/GU สาขาใหญ่ชินจูกุ</p></div>
-        <div class="slot"><b>เย็น–ค่ำ</b><p>มื้อพิเศษปิดทริป (ชาบู/ยากินิคุให้เด็กเลือก) • จัดกระเป๋า ชั่งน้ำหนัก กระจายของหนักลง 3 ใบใหญ่ อย่าแกะถุงซีล Tax-Free</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥18,000 ≈ 4,200 บาท (รถไฟ ~¥2,000 • อาหาร+มื้อพิเศษ ~¥16,000 — ของฝากแยก)</div>
-        <div class="tip"><b>ทิปส์:</b> ของเยอะเกิน ใช้ TA-Q-BIN (Yamato) ส่งกระเป๋าจากโรงแรมไปสนามบินล่วงหน้า สบายตัววันบิน</div>
+        <div class="day-meta"><span class="day-date">จันทร์ 12 ตุลาคม 2569</span><span class="zone z-tokyo">วันของฝากโค้งสุดท้าย 🚃</span></div>
+        <h3 class="day-title">อุเอโนะตึกม่วง – Tokyo Station – มื้อปิดทริป <span class="kanji">上野</span></h3>
+        <div class="photo-row"><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ueno_Station_Hirokoji_exit_2023_Nov_27_05-21PM.jpeg?width=1200" alt="หน้าสถานีอุเอโนะ ทางออกฮิโรโคจิ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 หน้าสถานีอุเอโนะ ทางออกฮิโรโคจิ — ร้านของเล่นยามาชิโรยะอยู่ฝั่งตรงข้ามถนนพอดี ออกจากสถานีปุ๊บเห็นเลย — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ameyoko_Market.jpg?width=1200" alt="ตลาดอาเมโยโกะ" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 ตลาดอาเมโยโกะ อยู่บนเส้นเดินจากยามาชิโรยะไปตึกม่วงพอดี — ขนม ผลไม้ ของแห้ง ถูกกว่าในห้าง — ภาพ: Wikimedia Commons</figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo-STA_Marunouchi-Entrance_2023.jpg?width=1200" alt="สถานีโตเกียว" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>📷 สถานีโตเกียว ตึกอิฐแดงฝั่งมารุโนะอุจิ — ชั้นใต้ดินคือแหล่งของฝาก — ภาพ: Wikimedia Commons</figcaption></figure></div>
+        <div class="slot"><b>เช้า — เส้นอุเอโนะเดินเส้นเดียวจบ</b><p>วันหยุด Sports Day ของญี่ปุ่น ห้างคนเยอะ ออกเช้าหน่อย • <b>สามจุดนี้เรียงเป็นเส้นตรงลงใต้ เดินรวมแค่ ~10 นาที ไม่ต้องย้อนไปมา</b><br>① <span class="hl">ยามาชิโรยะ (ヤマシロヤ) ร้านของเล่นหน้าสถานี</span> <span class="walk">🟢</span> ออกทางออก<span class="hl">ฮิโรโคจิ</span>แล้วข้ามถนนถึงเลย — ตึกของเล่นล้วนหลายชั้น กันดั้ม โปเกมอน ซานริโอ้ ฟิกเกอร์ <b>เด็ก ๆ อยู่ได้เป็นชั่วโมง</b> ตึกแคบชั้นเยอะ มีลิฟต์แต่คนแน่น อาม่านั่งรอคาเฟ่ชั้นล่างได้<br>② เดินต่อลงใต้ผ่าน<span class="hl">ตลาดอาเมโยโกะ</span> <span class="walk">🟡</span> ~5 นาที — ขนม ผลไม้ ของแห้ง ถูกกว่าห้าง ต่อราคาได้ (ทางแคบคนเยอะ ถ้าอาม่าไม่ไหว เดินถนนใหญ่ชูโอโดริที่ขนานกันแทนได้)<br>③ <span class="hl">ตึกม่วง "ทาเคยะ" (多慶屋)</span> <span class="walk">🟢</span> ย่านโอคาจิมาจิ — ร้านลดราคาทาสีม่วงทั้งหลัง สังเกตง่ายมาก <b>ขนม เครื่องสำอาง ยาสามัญ ของใช้ ถูกกว่าห้างทั่วไป</b> Tax-Free มีเคาน์เตอร์คืนภาษีในตัว — <b>นี่คือจุดเก็บของฝากหลักของทริป</b></p></div>
+        <div class="slot"><b>บ่าย</b><p><span class="hl">สถานีโตเกียว</span> ชั้นใต้ดิน <span class="hl">Character Street</span> (โปเกมอน จิบลิ ซานริโอ้) + ขนมดัง <span class="hl">Tokyo Banana / Press Butter Sand</span> • ถ่ายรูปตึกอิฐแดงฝั่งมารุโนะอุจิ • <span class="hl">อย่าหิ้วเดินทั้งวัน</span> — ของที่ซื้อตอนเช้ายัดล็อกเกอร์ที่สถานีอุเอโนะ (~¥400–700) ไว้ก่อน แล้วเก็บตอนจะกลับ</p></div>
+        <div class="slot"><b>เย็น–ค่ำ</b><p><b>เรียกแท็กซี่ขนของกลับที่พักทีเดียว</b> (~¥3,000–4,000 หรือ jumbo taxi คันเดียว) — ตัดจากงบแท็กซี่สำรองที่ตั้งไว้ คุ้มกว่าหิ้วขึ้นรถไฟชั่วโมงเร่งด่วนมาก • มื้อพิเศษปิดทริป (ชาบู/ยากินิคุให้เด็กเลือก) • จัดกระเป๋า ชั่งน้ำหนัก กระจายของหนักลง 3 ใบใหญ่ <b>อย่าแกะถุงซีล Tax-Free</b></p></div>
+        <div class="cost">💴 งบวันนี้: ~¥23,000 ≈ 5,400 บาท (รถไฟ ~¥2,500 • แท็กซี่ขนของกลับ ~¥3,500 • ล็อกเกอร์ ~¥1,000 • อาหาร+มื้อพิเศษ ~¥16,000 — ของฝากแยกตามใจ)</div>
+        <div class="tip"><b>ทิปส์:</b> <b>ทาเคยะมีหลายอาคารในบล็อกเดียวกัน ม่วงทุกหลัง</b> แยกหมวดสินค้าคนละตึก ถามพนักงานได้ว่าของที่ต้องการอยู่ตึกไหน จะได้ไม่เดินวน • <b>Tax-Free ต้องครบ ¥5,500 ต่อร้าน</b> ที่ทาเคยะรวมยอดข้ามตึกได้ ให้รวบตีตั๋วทีเดียวตอนท้าย พกพาสปอร์ตตัวจริงไปทุกคน • <b>พักบ้านเช่าอย่าสั่งให้ร้านส่งของถึงที่พัก</b> เพราะไม่มีคนรับแทนและของมักถึงวันรุ่งขึ้นซึ่งเราบินกลับพอดี • วันนี้เป็นวันหยุดญี่ปุ่น เช็คเวลาเปิด–ปิดร้านในแผนที่เช้าวันนั้นอีกรอบ</div>
       </div>
     </div>
   </article>
@@ -574,11 +586,11 @@
       <div class="day-body">
         <div class="day-meta"><span class="day-date">อังคาร 13 ตุลาคม 2569</span><span class="zone z-travel">วันเดินทางกลับ</span></div>
         <h3 class="day-title">โตเกียว → กรุงเทพฯ <span class="kanji">帰国</span></h3>
-        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ เผื่อเวลาไปสนามบิน <span class="hl">3–3.5 ชม.ก่อนไฟลต์</span> — ครอบครัว 5 คน + กระเป๋า 5 ใบ แนะนำ<span class="hl">ลีมูซีนบัสหน้าโรงแรม</span> ขนของทีเดียวถึงเทอร์มินัล</p></div>
+        <div class="slot"><b>เช้า</b><p>เช็คเอาต์ เผื่อเวลาไปสนามบิน <span class="hl">3–3.5 ชม.ก่อนไฟลต์</span> — <b>⚠️ ลีมูซีนบัสไม่ได้มารับหน้าบ้านเช่า</b> ต่างจากตอนพักโรงแรม ขากลับมี 2 ทางที่ใช้ได้จริง:<br>① <span class="hl">แท็กซี่เหมาคัน (แวน/jumbo) จองล่วงหน้าให้มารับหน้าบ้าน ✅ แนะนำ</span> — ขนของขึ้นรอบเดียวถึงเทอร์มินัล ฮาเนดะ ~¥12,000–18,000 / นาริตะ ~¥25,000–35,000<br>② <span class="hl">แท็กซี่ไป Busta ชินจูกุ แล้วต่อลีมูซีนบัส</span> ~¥2,000–3,000 + ~¥15,000 — ถูกกว่านิดหน่อยแต่ต้องขนของ 2 รอบ<br><b>ทางลัดที่ควรทำไม่ว่าเลือกทางไหน:</b> ส่งกระเป๋าใบใหญ่ด้วย TA-Q-BIN ไปสนามบินล่วงหน้าตั้งแต่ Day 9–10 (ต้องเผื่อ 1–2 วัน) — พักบ้านเช่าไม่มีเคาน์เตอร์โรงแรมจัดการให้ แต่<b>ลากไปหย่อนที่ 7-Eleven/FamilyMart ใกล้บ้านได้เลย</b> คอนบินิรับส่ง Yamato ทุกสาขา</p></div>
         <div class="slot"><b>ตัวเลือกโบนัส</b><p>บิน<span class="hl">นาริตะ</span>ไฟลต์บ่าย/เย็น: แวะ <span class="hl">Shisui Premium Outlets</span> ห่างสนามบิน ~15 นาที เก็บเอาท์เล็ตรอบสองก่อนขึ้นเครื่อง</p></div>
-        <div class="slot"><b>ก่อนขึ้นเครื่อง</b><p>Royce'–Shiroi Koibito ในสนามบิน • เยนเหรียญเหลือจัดการที่ตู้กาชาปอง • ถึงไทยโดยสวัสดิภาพ — おつかれさまでした!</p></div>
-        <div class="cost">💴 งบวันนี้: ~¥20,000 ≈ 4,700 บาท (ลีมูซีนบัสไปสนามบิน 5 คน ~¥15,000 • อาหาร ~¥5,000)</div>
-        <div class="tip"><b>ทิปส์:</b> คืน Suica/Pasmo ที่สนามบิน หรือเก็บไว้ทริปหน้า (อายุ 10 ปีนับจากใช้ครั้งสุดท้าย)</div>
+        <div class="slot"><b>ก่อนขึ้นเครื่อง</b><p>Royce' – Shiroi Koibito ในสนามบิน • เยนเหรียญเหลือจัดการที่ตู้กาชาปอง (เด็กชอบ) • ถึงไทยโดยสวัสดิภาพ — おつかれさまでした!</p></div>
+        <div class="cost">💴 งบวันนี้: ~¥22,000 ≈ 5,200 บาท (แท็กซี่/บัสไปสนามบิน ~¥16,000 • อาหาร ~¥6,000)</div>
+        <div class="tip"><b>ทิปส์:</b> คืน Suica/Pasmo ที่สนามบิน หรือเก็บไว้ทริปหน้า (อายุ 10 ปีนับจากใช้ครั้งสุดท้าย) — เด็ก ๆ มักอยากเก็บไว้เป็นที่ระลึก</div>
       </div>
     </div>
   </article>
@@ -594,85 +606,120 @@
     <span class="sub">ตุลาคม = ต้นฤดูใบไม้ร่วงรอบฟูจิ</span>
   </div>
   <div class="info-grid">
+
     <div class="info-card">
-      <h3><span class="kanji">季節</span> อะไร "ตามฤดูกาล" ช่วง 3–13 ต.ค.</h3>
+      <h3><span class="kanji">構成</span> ทำไมถึงเหลือ 2 ฐาน</h3>
       <ul>
-        <li>คอสมอสฮานะโนะมิยาโกะ — พีคพอดีช่วงนี้ • โคเชีย Oishi Park เพิ่งเริ่มเปลี่ยนสี (แดงจัดกลาง–ปลายเดือน)</li>
-        <li>ต้นลาร์ช (คารามัตสึ) สีทองบน Subaru Line ชั้น 5 — พีคต้น–กลาง ต.ค. ตรงช่วงเราพอดี + หิมะเริ่มแต้มยอดฟูจิ</li>
-        <li>โอวาคุดานิ ไอกำมะถัน+ไข่ดำ เที่ยวได้ทั้งปี • วันฟ้าใสเห็นฟูจิจากเรือโจรสลัด/จุดชมวิวฮาโกเน่</li>
-        <li>อยากเก็บองุ่นไชน์มัสแคท แวะไร่คัตสึนุมะระหว่างขับไปคาวากูจิโกะ Day 2 ได้ (อยู่ติดทางด่วนชูโอ)</li>
-        <li>หมายเหตุตรง ๆ: ใบไม้แดงจัดรอบฮาโกเน่/คามาคูระจะพีคช่วง <b>กลาง พ.ย.–ต้น ธ.ค.</b> ตอนเราไปยังเขียวอยู่ ไฮไลต์ของสองเมืองนี้คือออนเซ็น วัดศาลเจ้า และทะเล ไม่ใช่ใบไม้แดง — <b>ใบไม้เปลี่ยนสีที่ได้เห็นจริงคือป่าลาร์ชสีทองบน Subaru Line ชั้น 5</b> เพราะที่สูง 2,000 ม. เปลี่ยนสีก่อนพื้นราบเป็นเดือน</li>
+        <li><b>ปัญหาของเวอร์ชันก่อน:</b> นอน 4 ฐาน (โตเกียว→ฟูจิ→ฮาโกเน่→คามาคูระ→โตเกียว) ต้อง<b>เช็คอิน 5 ครั้งใน 10 คืน</b> และมี<b>คืนเดี่ยว 2 คืนติดกัน</b> ซึ่งเป็นช่วงที่เหนื่อยที่สุดของทริป</li>
+        <li><b>ชนกับ Airbnb โดยตรง:</b> เจ้าของส่วนใหญ่ตั้งขั้นต่ำ 2–3 คืน คืนเดี่ยวจึงหายากมากและราคาต่อคืนแพงกว่าปกติ</li>
+        <li><b>เวอร์ชันนี้:</b> คาวากูจิโกะ 5 คืน → โตเกียว 5 คืน <b>ย้ายครั้งเดียว จัดกระเป๋า 2 รอบจบ</b></li>
+        <li><b>ไม่ข้ามฟาก:</b> เส้นทางวิ่งไปทางเดียว สนามบิน → ตะวันตก (ฟูจิ) → กลับเข้าเมือง ไม่มีการวิ่งอ้อมโตเกียวไปอีกฝั่ง (เหตุผลที่<b>ตัดนิกโก้ทิ้ง</b> แม้ใบไม้แดงจะพีคพอดี เพราะมันอยู่เหนือโตเกียว ต้องข้ามเมืองไปอีกฟาก)</li>
+        <li><b>โบนัสที่ได้มาฟรี:</b> นอนฐานเดียว 5 คืนที่ฟูจิ = <b>สลับลำดับ Day 2–5 ได้อิสระตามสภาพฟ้า</b> เจอวันฟ้าปิดก็ยกจุดถ่ายรูปไปวันอื่นได้ทันที</li>
+        <li><b>ที่ตัดออกไปคือ ฮาโกเน่ + ออนเซ็น</b> (ไม่อิน) และ<b>คามาคูระในฐานะที่พัก</b> — แต่คามาคูระยังอยู่ในแผน แค่เปลี่ยนเป็น<b>เดย์ทริปรถไฟ Day 9</b> ได้ของครบโดยไม่ต้องขนกระเป๋า</li>
       </ul>
     </div>
+
+    <div class="info-card">
+      <h3><span class="kanji">宿</span> ที่พัก — Airbnb ทั้งหลัง 2 ที่</h3>
+      <ul>
+        <li><b>เพดานที่ตั้งไว้: ไม่เกิน 4,000 บาท/คืน ≈ ¥17,000/คืน</b> → 10 คืน ≈ <b>¥170,000 (40,000 บาท)</b></li>
+        <li><b>① คาวากูจิโกะ 5 คืน — ต้องมีที่จอดรถ</b><br>โซนหาบ้านง่าย: <b>Funatsu/Kodachi</b> (ใกล้ร้านอาหาร+ซูเปอร์), <b>ฝั่ง Oishi</b> (วิวฟูจิจากบ้าน แต่แพงกว่า), <b>ชิโมโยชิดะ</b> (ถูกกว่า ~20–30% ใกล้ชูเรโตะและ Fuji-Q) — <b>งบนี้ทำได้จริงถ้าจองเนิ่น ๆ</b> และพัก 5 คืนรวดมักได้ส่วนลดรายสัปดาห์</li>
+        <li><b>② โตเกียว 5 คืน — ไม่ต้องมีที่จอด</b> (คืนรถไปแล้ว) ทำให้งบยืดหยุ่นขึ้นเยอะ<br><b>ไม่จำเป็นต้องชินจูกุแท้ ๆ</b> ขอแค่เดินถึงสถานีสาย JR ยามาโนเตะหรือรถไฟสายหลัก — <b>นากาโนะ / โคเอ็นจิ / ทาคาดาโนะบาบะ / ชินโอคุโบ</b> ถูกกว่าใจกลาง 20–30% และนั่งรถไฟเข้าเมือง 5–15 นาที</li>
+        <li><b>ต้องกรองทุกหลัง:</b> เลขใบอนุญาต 民泊/旅館業 แสดงในประกาศ (ไม่มีเลข = เสี่ยงโดนยกเลิกนาทีสุดท้าย) • <b>มีลิฟต์ หรืออยู่ชั้นล่าง</b> — อพาร์ตเมนต์ญี่ปุ่นเก่าหลายที่เป็นตึกเดินขึ้น อาม่ากับกระเป๋า 23 กก. ขึ้นไม่ไหว • เตียงไม่ใช่ฟูกพื้นล้วนสำหรับอาม่า • <b>เครื่องซักผ้า</b> (พัก 5 คืน = ขนเสื้อผ้าน้อยลงครึ่งหนึ่ง) • ฮีตเตอร์ (คืน ต.ค. ที่ฟูจิ ~8–12°C)</li>
+        <li><b>อ่านรีวิวเรื่อง "เช็คอิน" เป็นพิเศษ</b> — Airbnb ญี่ปุ่นเป็นคีย์บ็อกซ์เกือบทั้งหมด ถ้ารีวิวบ่นว่าหาทางเข้ายาก ให้ข้าม เพราะเราไปถึงพร้อมเด็ก 2 คนและกระเป๋า 5 ใบ</li>
+        <li>กฎหมาย 民泊 จำกัดปล่อยเช่าได้ <b>180 คืน/ปี</b> ทำให้ที่ว่างจริงน้อยกว่าที่เห็น — <b>จองล่วงหน้าให้เร็วที่สุด</b></li>
+      </ul>
+    </div>
+
     <div class="info-card">
       <h3><span class="kanji">予算</span> งบรวมทั้งทริป (5 คน โดยประมาณ)</h3>
       <ul>
-        <li>รถเช่ามินิแวน 8 ที่นั่ง 6 วัน (Day 2–7) รวม ETC/คาร์ซีท: ~¥95,000–115,000</li>
-        <li>น้ำมัน + ทางด่วนทั้งทริป: ~¥18,000–24,000 (เส้นทางสั้นลงกว่าเดิมเยอะ)</li>
-        <li>ที่พักชินจูกุ 5 คืน (2 ห้อง หรือห้องครอบครัว): ~¥150,000–250,000</li>
-        <li>บ้าน Airbnb คาวากูจิโกะ 3 คืน: ~¥75,000–130,000</li>
-        <li>เรียวกังออนเซ็นฮาโกเน่ 1 คืน พร้อมไคเซกิ 2 มื้อ (5 คน): ~¥75,000–130,000</li>
-        <li>โรงแรมคามาคูระ/ฟูจิซาวะ 1 คืน: ~¥30,000–50,000</li>
-        <li>ค่ากิน + ค่าเข้าชม + เดินทางรายวัน (รวมจากงบท้ายการ์ดทั้ง 11 วัน = ¥231,000): ~¥225,000–235,000</li>
-        <li><b>รวม ≈ ¥670,000–930,000 ≈ 157,000–219,000 บาท</b> (ไม่รวมตั๋วเครื่องบิน 5 ที่นั่ง และงบช้อปปิ้งส่วนตัว)</li>
+        <li>รถเช่ามินิแวน 8 ที่นั่ง <b>6 วัน (Day 1–6)</b> รวม ETC/คาร์ซีท: ~¥95,000–115,000</li>
+        <li>น้ำมัน + ทางด่วนทั้งทริป: ~¥20,000–26,000</li>
+        <li><b>Airbnb 10 คืน (เพดาน 4,000 บาท/คืน): ~¥150,000–170,000</b></li>
+        <li>ค่ากิน + ค่าเข้าชม + เดินทางรายวัน (รวมจากงบท้ายการ์ดทั้ง 11 วัน): <b>~¥228,000</b></li>
+        <li>งบแท็กซี่สำรองช่วงโตเกียว: ~¥12,000 (ขาโทโยสุ→อาซากุสะ Day 7 + ขนของฝาก Day 10)</li>
+        <li><b>รวม ≈ ¥505,000–551,000 ≈ 119,000–130,000 บาท</b> (ไม่รวมตั๋วเครื่องบิน 5 ที่นั่ง และงบช้อปปิ้งส่วนตัว)</li>
+        <li><b>ถูกลงจากเวอร์ชัน 4 ฐานราว ¥110,000–300,000 (~26,000–70,000 บาท)</b> — มาจากตัดเรียวกัง/บ้านฮาโกเน่ ตัดโรงแรมคามาคูระ ตัดคืนเดี่ยวราคาแพง และคุมเพดานค่าที่พัก</li>
         <li>อัตราที่ใช้คำนวณ ~¥100 ≈ 23.5 บาท — เช็คเรตจริงใกล้วันเดินทางอีกครั้ง</li>
       </ul>
     </div>
+
     <div class="info-card">
-      <h3><span class="kanji">車</span> รถเช่า — สเปคที่ต้องจอง</h3>
+      <h3><span class="kanji">車</span> รถเช่า 6 วัน — สเปคที่ต้องจอง</h3>
       <ul>
-        <li><b>มินิแวน 8 ที่นั่ง:</b> Toyota Noah/Voxy, Nissan Serena, Honda Step WGN — นั่ง 5 คนใน 2 แถวแรก พับเก็บเบาะแถว 3 → ใส่กระเป๋า 23 กก. 3 ใบ + carry-on 2 ใบ สบาย</li>
+        <li><b>มินิแวน 8 ที่นั่ง:</b> Toyota Noah/Voxy, Nissan Serena, Honda Step WGN — นั่ง 5 คนใน 2 แถวแรก พับเบาะแถว 3 → ใส่กระเป๋า 23 กก. 3 ใบ + carry-on 2 ใบ สบาย</li>
         <li>7 ที่นั่ง/SUV ทั่วไป (Sienta, RAV4) <b>ไม่พอ</b> สำหรับ 5 คน + กระเป๋าชุดนี้</li>
-        <li>แจ้งตอนจอง: จำนวนกระเป๋า • คาร์ซีท (เด็กต่ำกว่า 6 ปีบังคับ) • บัตร ETC • ประกัน CDW+NOC</li>
-        <li>เอกสาร: IDP (เจนีวา 1949) + ใบขับขี่ไทย + พาสปอร์ต ครบ 3 อย่าง</li>
+        <li><b>รับที่สนามบิน คืนที่สาขาในโตเกียว</b> (คนละสาขาได้ อาจมีค่าธรรมเนียม one-way เล็กน้อย ถามตอนจอง)</li>
+        <li>แจ้งตอนจอง: จำนวนกระเป๋า • <b>คาร์ซีทสำหรับน้อง 4 ขวบ</b> (ต่ำกว่า 6 ขวบบังคับตามกฎหมาย พี่ 6 ขวบไม่บังคับแต่ควรมีบูสเตอร์) • บัตร ETC • ประกัน CDW+NOC</li>
+        <li>เอกสาร: <b>IDP (เจนีวา 1949) + ใบขับขี่ไทย + พาสปอร์ต ครบ 3 อย่าง</b></li>
         <li>ขับเลนซ้ายเหมือนไทย • คืนรถเติมน้ำมันเต็มถัง • นำทางด้วยเบอร์โทร/Map Code แม่นสุด</li>
+        <li><b>ไม่ต่อรถในโตเกียว</b> — ที่จอดกลางเมืองส่วนใหญ่เป็นระบบยกอัตโนมัติ จำกัดสูง 1.55 ม. แต่มินิแวนสูง ~1.87 ม. เข้าไม่ได้ • เก็บรถต่อ 4 วันมีค่าใช้จ่ายรวม ~¥96,000–129,000 เทียบกับนั่งรถไฟทั้งช่วง ~¥10,000</li>
       </ul>
     </div>
+
     <div class="info-card">
-      <h3><span class="kanji">宿</span> ที่พัก 4 ฐาน — เช็คลิสต์</h3>
+      <h3><span class="kanji">季節</span> อะไร "ตามฤดูกาล" ช่วง 3–13 ต.ค.</h3>
       <ul>
-        <li><b>คาวากูจิโกะ 3 คืน (Day 2–4)</b> — โซนหาบ้านง่าย: <b>Funatsu/Kodachi</b> (ใกล้สถานี+ร้านอาหาร), <b>ฝั่ง Oishi</b> (วิวฟูจิจากบ้าน), <b>ชิโมโยชิดะ</b> (ถูกกว่า ~20–30% ใกล้ชูเรโตะ)</li>
-        <li><b>เรียวกังฮาโกเน่ 1 คืน (Day 5)</b> — โซนโมโตะฮาโกเน่/โกระ ใกล้จุดเที่ยวสุด • เลือกแบบมีออนเซ็นส่วนตัว (kashikiri) + ห้องชั้นล่าง/เตียงให้อาม่า • แพ็กเกจพร้อมไคเซกิ 2 มื้อคุ้มสุด • ต.ค. ไฮซีซั่น จองล่วงหน้าหลายเดือน</li>
-        <li><b>คามาคูระ/ฟูจิซาวะ 1 คืน (Day 6)</b> — โรงแรมใกล้สถานีฟูจิซาวะ/เอโนะชิมะ มีที่จอดรถง่ายกว่าในตัวเมืองคามาคูระมาก</li>
-        <li><b>ชินจูกุ 5 คืน (Day 1 + Day 7–10)</b> — ฐานโตเกียว ใกล้สถานี JR ชินจูกุ นั่งรถไฟไปฮาราจูกุ/ชิบูย่า/อาซากุสะสะดวกสุด</li>
-        <li>ต้องมีทุกที่: ที่จอดรถฟรีรองรับมินิแวน (ช่วงมีรถ) • เตียง/ห้องนอนชั้นล่างให้อาม่า • ฮีตเตอร์ (คืน ต.ค. บนภูเขา ~8–12°C)</li>
-        <li>เช็คเลขใบอนุญาตที่พัก (民泊) สำหรับ Airbnb ชัวร์เรื่องถูกกฎหมาย</li>
+        <li><b>ป่าลาร์ช (คารามัตสึ) สีทองบน Subaru Line ชั้น 5</b> — พีคต้น–กลาง ต.ค. ตรงช่วงเราพอดี + หิมะเริ่มแต้มยอดฟูจิ <b>นี่คือใบไม้เปลี่ยนสีที่จะได้เห็นจริงในทริปนี้</b> เพราะที่สูง 2,300 ม. เปลี่ยนสีก่อนพื้นราบเป็นเดือน</li>
+        <li><b>คอสมอสฮานะโนะมิยาโกะ</b> — บานกลาง ก.ย.–กลาง ต.ค. พีคพอดีช่วงเรา</li>
+        <li>โคเชีย Oishi Park เพิ่งเริ่มเปลี่ยนสี (แดงจัดกลาง–ปลายเดือน) แต่วิวฟูจิ+ทะเลสาบสวยเต็มร้อยทุกวันที่ฟ้าเปิด</li>
+        <li>อยากเก็บองุ่นไชน์มัสแคท แวะไร่<b>คัตสึนุมะ</b>ระหว่างขับเข้าคาวากูจิโกะได้ (อยู่ติดทางด่วนชูโอ จองล่วงหน้า 2–3 วัน)</li>
+        <li><b>หมายเหตุตรง ๆ:</b> ใบไม้แดงพื้นราบ (นิกโก้ตอนล่าง, ฮาโกเน่, โครังเค, ทาคายามะ) พีคปลาย ต.ค.–กลาง พ.ย. <b>ช่วงเราไปยังเขียวอยู่</b> — ไฮไลต์ของทริปนี้คือฟูจิกับเมือง ไม่ใช่ใบไม้แดง</li>
       </ul>
     </div>
+
     <div class="info-card">
       <h3><span class="kanji">天気</span> สภาพอากาศ &amp; แผนสำรองฟ้า</h3>
       <ul>
-        <li>คาวากูจิโกะกลางวัน ~15–20°C เช้า–ค่ำ ~8–12°C • ชั้น 5 เหลือ ~5–8°C</li>
-        <li>ฮาโกเน่บนสูง (โอวาคุดานิ ~1,000 ม.) กลางวัน ~13–17°C ลมแรง • คามาคูระ/เอโนะชิมะติดทะเล กลางวัน ~18–22°C สบายกว่า • โตเกียวกลางวัน ~20–23°C</li>
-        <li>ฟูจิเห็นชัดสุดช่วงเช้าตรู่ ฟ้ามักเปิดก่อน 10:00 บ่ายเมฆก่อตัว</li>
-        <li>เช็คกล้องสด Fuji Live Camera ทุกเช้าช่วงอยู่คาวากูจิโกะ แล้วค่อยตัดสินใจว่าวันนี้ลุยจุดถ่ายฟูจิหรือสลับเป็นกิจกรรมในร่ม</li>
-        <li>แผนในร่มสำรอง: Music Forest, โดมดอกไม้ฮานะโนะมิยาโกะ, ถ้ำน้ำแข็งนารุซาวะ, พิพิธภัณฑ์, คาเฟ่ • ช่วงโตเกียวฝนตกก็ไม่กระทบ เพราะเป็นห้าง/พิพิธภัณฑ์ในร่มเกือบทั้งหมด</li>
-        <li><b>จุดสำรองโซนฟูจิ (ถ้าฟ้าปิดวันหนึ่ง หรืออยากสลับแทนจุดใดจุดหนึ่ง)</b> — ทะเลสาบฝั่งตะวันตกเป็นเส้นวันเดียวจบ: <b>อิยาชิโนะซาโตะ เนมบะ</b> หมู่บ้านหลังคาฟาง+เช่าชุดกิโมโน 🟡 • <b>ทะเลสาบโชจิ</b> เล็กและเงียบสุดใน 5 ทะเลสาบ 🟢 • <b>ทะเลสาบโมโตสึ</b> วิวเดียวกับหลังธนบัตร ¥1,000 จอดริมถนนถึงเลย 🟢 (พกแบงก์ไปเทียบมุมกัน) • ระหว่างทางผ่านร้าน Fujiyama Cookie สาขาใหญ่</li>
-        <li>ต้น ต.ค. อาจมีหางไต้ฝุ่น — ช่วงฟูจิ 3 คืนนอนฐานเดียว สลับลำดับ Day 2–4 กันเองได้ทั้งหมด นี่คือจุดแข็งของแผนนี้ • แต่ <b>Day 5–6 (ฮาโกเน่/คามาคูระ) สลับไม่ได้</b> เพราะผูกกับคืนเรียวกังที่จองไว้</li>
+        <li>คาวากูจิโกะกลางวัน ~15–20°C เช้า–ค่ำ ~8–12°C • <b>ชั้น 5 เหลือ ~5–8°C ลมแรง</b> เตรียมเสื้อกันลมไว้ในรถ</li>
+        <li>โตเกียวกลางวัน ~20–23°C สบาย • คามาคูระ/เอโนะชิมะติดทะเล ~18–22°C</li>
+        <li><b>ฟูจิเห็นชัดสุดช่วงเช้าตรู่ ฟ้ามักเปิดก่อน 10:00 บ่ายเมฆก่อตัว</b> — เช็คกล้องสด Fuji Live Camera ทุกเช้าแล้วค่อยตัดสินใจว่าวันนี้ลุยจุดถ่ายฟูจิหรือสลับเป็นกิจกรรมในร่ม</li>
+        <li>แผนในร่มโซนฟูจิ: Thomas Land (บางเครื่องเล่นในร่ม), โดมดอกไม้ฮานะโนะมิยาโกะ, ถ้ำน้ำแข็งนารุซาวะ, Music Forest, คาเฟ่ริมทะเลสาบ</li>
+        <li>ช่วงโตเกียวฝนตกแทบไม่กระทบ เพราะเป็นห้าง/พิพิธภัณฑ์ในร่มเกือบทั้งหมด (teamLab, อควาเรียม, PARCO, ตึกม่วง)</li>
+        <li>ต้น ต.ค. อาจมีหางไต้ฝุ่น — <b>นอนฐานเดียว 5 คืนที่ฟูจิจึงได้เปรียบมาก สลับลำดับ Day 2–5 กันเองได้ทั้งหมด</b> และเดย์ทริปคามาคูระ Day 9 ยกเลิกได้ฟรีเพราะไม่ได้จองที่พักไว้</li>
       </ul>
     </div>
+
     <div class="info-card">
-      <h3><span class="kanji">土産</span> แผนที่ของฝากทั้งทริป</h3>
+      <h3><span class="kanji">電車</span> โตเกียว 5 วันไม่มีรถ — ชุดกันลำบาก</h3>
       <ul>
-        <li>คาวากูจิโกะ: Fujiyama Cookie, ชินเก็นโมจิ, โฮโตแบบแห้งเอากลับบ้าน (ถ้าได้แวะอิยาชิโนะซาโตะตามแผนสำรอง มีงานคราฟต์ทำมือที่ไม่ซ้ำใคร)</li>
-        <li>ชั้น 5: โปสการ์ดส่งจากไปรษณีย์บนฟูจิ + ของที่ระลึกเฉพาะบนเขา</li>
-        <li>ฮาโกเน่: ไข่ดำโอวาคุดานิ งานไม้โยเซกิไซคุ (ลวดลายไม้ในตำนาน) ขนมออนเซ็นมันจู</li>
-        <li>คามาคูระ: คุกกี้นกพิราบฮาโตะซาเบล์ ของที่ระลึกพระใหญ่ ชิราสุแห้ง</li>
-        <li>โตเกียว: Tokyo Banana, Press Butter Sand, Character Street, Don Quijote, ร้านยา, ของเล่น Kabukicho Tower</li>
-        <li>Tax-Free ครบ ¥5,500/ร้าน ใช้พาสปอร์ต — ห้ามแกะถุงซีลจนกว่าจะออกนอกญี่ปุ่น</li>
+        <li><b>ค่าโดยสารเด็ก:</b> น้อง 4 ขวบ <b>นั่งฟรี</b> (ต่ำกว่า 6 ขวบ) • พี่ 6 ขวบจ่ายครึ่งราคา — ทั้งบ้านจ่ายจริงแค่ ~3.5 ที่นั่ง</li>
+        <li><b>ของช้อปปิ้ง — หลักการคือ "ไม่หิ้วเดิน":</b> ล็อกเกอร์หยอดเหรียญมีทุกสถานี (~¥400–700) ฝากตอนเช้าเก็บตอนเย็น • ซื้อของหนักไว้<b>จุดสุดท้ายของวัน</b> แล้วเรียกแท็กซี่กลับบ้านทีเดียว</li>
+        <li><b>พักบ้านเช่าจะสั่งร้านส่งของถึงที่พักไม่ได้</b>เหมือนตอนพักโรงแรม เพราะไม่มีคนรับแทนและของมักถึงวันรุ่งขึ้น</li>
+        <li><b>แท็กซี่ไว้ใช้ตอนเหนื่อยจริง:</b> <b>5 คนนั่งคันเดียวไม่ได้ ต้อง 2 คัน</b> หรือเรียก <b>jumbo taxi 9 ที่นั่ง</b> ผ่านแอป <b>GO</b> ให้จบคันเดียว • ตั้งงบสำรอง ~¥12,000 ทั้งช่วง</li>
+        <li><b>เลี่ยงชั่วโมงเร่งด่วน</b> 7:30–9:00 และ 17:30–19:00 — เราเป็นนักท่องเที่ยว ออก 9:30 กำลังดี</li>
+        <li>สถานีใหญ่มีลิฟต์ครบ แต่บางทีอ้อม — ตั้ง Google Maps โหมด <b>wheelchair accessible</b> จะเลือกเส้นที่มีลิฟต์ให้อัตโนมัติ ใช้ได้ทั้งรถเข็นเด็กและอาม่า</li>
+        <li>ให้เด็กถือ <b>Suica ของตัวเอง</b> คนละใบ แตะเองสนุก ไม่ต้องอุ้มข้ามประตู • เขียนชื่อ–เบอร์พ่อแม่ใส่การ์ดในกระเป๋าเด็กเผื่อพลัดหลง</li>
       </ul>
     </div>
+
     <div class="info-card">
       <h3><span class="kanji">家族</span> เที่ยวกับอาม่า &amp; เด็ก ๆ</h3>
       <ul>
-        <li>ทุกจุดหลักในแผนเป็น 🟢/🟡 (จอดใกล้ ทางเรียบ) — จุด 🔴 ที่มีบันได (ชูเรโตะชั้นบน, ถ้ำ, เท็นคุโนะโทริอิ) เป็น "ตัวเลือกของพ่อแม่ลูก" เท่านั้น อาม่ามีจุดรอวิวสวยติดลานจอดเสมอ</li>
+        <li>ทุกจุดหลักในแผนเป็น 🟢/🟡 (จอดใกล้ ทางเรียบ) — จุด 🔴 ที่มีบันได (ชูเรโตะชั้นบน, ถ้ำน้ำแข็ง) เป็น <b>"ตัวเลือกของพ่อแม่ลูก" เท่านั้น</b> อาม่ามีจุดรอวิวสวยติดลานจอดเสมอ</li>
+        <li><b>🚂🎮🐧 วันที่เป็นของเด็ก ๆ โดยเฉพาะ:</b> Day 3 <b>Thomas Land</b> • Day 5 เช่าชุดซามูไรที่อิยาชิโนะซาโตะ • Day 7 <b>teamLab + อควาเรียมสุมิดะ</b> • Day 8 <b>Pokémon Center + Nintendo TOKYO</b> • Day 9 <b>รถไฟเอโนเด็นเลียบทะเล</b> • Day 10 <b>ร้านของเล่นยามาชิโรยะ</b></li>
+        <li><b>ตัดจุดชมวิวบนตึกออกทั้งหมด</b> (Shibuya Sky / สกายทรี / Sea Candle) — ทั้งบ้านไม่อิน ประหยัด ~¥23,000 และไม่ต้องต่อคิวลิฟต์กับเด็กเล็ก จุดถ่ายรูประดับพื้นสวยกว่าอยู่แล้ว</li>
+        <li><b>ข้อดีใหญ่ของการนอนฐานเดียว 5 คืน:</b> ช่วงฟูจิกลับบ้านงีบกลางวันได้ทุกวัน เด็ก 4 ขวบกับอาม่าไม่ต้องอดทนทั้งวัน</li>
         <li>วันละ 2–3 จุดหลักพอ ใช้รถเป็นฐานพัก เหนื่อยเมื่อไหร่กลับมานั่งพักได้เสมอ</li>
-        <li>เกือบทุกจุดในแผนชมได้จากใกล้ลานจอด จุดที่มีบันไดมีแผนสำรองให้อาม่าเสมอ</li>
         <li>พกกระติกน้ำอุ่น ขนมติดรถ ยากันเมา • แวะห้องน้ำจุดพักรถทุก 1–1.5 ชม.</li>
-        <li>ยาประจำตัวอาม่า + ชื่อยาภาษาอังกฤษ • บัตรที่อยู่บ้านพักภาษาญี่ปุ่นติดตัวอาม่าและเด็ก</li>
-        <li>บ้านมีครัว = ข้าวต้มมื้อเช้าให้อาม่า ของจากซูเปอร์ Ogino ในเมือง</li>
+        <li>ยาประจำตัวอาม่า + ชื่อยาภาษาอังกฤษ • <b>บัตรที่อยู่บ้านพักภาษาญี่ปุ่นติดตัวอาม่าและเด็กทุกคน</b></li>
+        <li>บ้านมีครัว = ข้าวต้มมื้อเช้าให้อาม่า ของจากซูเปอร์ Ogino</li>
       </ul>
     </div>
+
+    <div class="info-card">
+      <h3><span class="kanji">土産</span> แผนที่ของฝากทั้งทริป</h3>
+      <ul>
+        <li><b>อุเอโนะ (Day 10) = จุดเก็บของฝากหลัก</b> — <b>ตึกม่วงทาเคยะ</b> ขนม/เครื่องสำอาง/ยาสามัญ ถูกกว่าห้าง Tax-Free ในตัว • <b>ยามาชิโรยะ</b> ของเล่นหน้าสถานี • <b>อาเมโยโกะ</b> ขนม–ผลไม้–ของแห้ง ต่อราคาได้</li>
+        <li>คาวากูจิโกะ: <b>Fujiyama Cookie</b>, ชินเก็นโมจิ, โฮโตแบบแห้งเอากลับบ้าน, งานคราฟต์ทำมือที่อิยาชิโนะซาโตะ</li>
+        <li>ชั้น 5: โปสการ์ดส่งจากไปรษณีย์บนฟูจิ + ของที่ระลึกเฉพาะบนเขา</li>
+        <li>คามาคูระ (Day 9): <b>คุกกี้นกพิราบฮาโตะซาเบล์</b> ของที่ระลึกพระใหญ่ ชิราสุแห้ง</li>
+        <li>โตเกียว: Tokyo Banana, Press Butter Sand, Character Street สถานีโตเกียว, Pokémon Center, Nintendo TOKYO</li>
+        <li><b>Tax-Free ครบ ¥5,500/ร้าน ใช้พาสปอร์ต</b> — ห้ามแกะถุงซีลจนกว่าจะออกนอกญี่ปุ่น</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -680,7 +727,7 @@
 
 <footer>
   <span class="kanji">良い旅を</span>
-  แผนขับรถเก็บฟูจิ + ฮาโกเน่ + คามาคูระ + โตเกียวแลนด์มาร์กใหม่ 3–13 ตุลาคม 2569 • นอน 4 ฐาน: ชินจูกุ 5 คืน + คาวากูจิโกะ 3 คืน + ฮาโกเน่ 1 คืน + คามาคูระ 1 คืน • ขับทุกขาไม่เกิน 2 ชม. — ขอให้ครอบครัวเที่ยวให้สนุกครับ 🗻🚗🗼
+  แผน 2 ฐาน ขับรถเก็บฟูจิ + โตเกียวเมืองและของฝาก • 3–13 ตุลาคม 2569 • <b>คาวากูจิโกะ 5 คืน + โตเกียว 5 คืน — ย้ายที่พักครั้งเดียวทั้งทริป</b> • ขับไปทางเดียวไม่ย้อนข้ามฟาก — ขอให้ครอบครัวเที่ยวให้สนุกครับ 🗻🚗🎮
 </footer>
 
 </body>
